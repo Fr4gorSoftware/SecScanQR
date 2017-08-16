@@ -8,7 +8,6 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Scanning QR-Codes
   - Scanned QR-Codes can be shared to friends and doing a web search with the infromation from the QR-Code
   - Generating QR-Codes
-  - Drag and drop images (requires your Dropbox account be linked)
 
 # Planed Features
   - Save generated QR-Codes as a picture
