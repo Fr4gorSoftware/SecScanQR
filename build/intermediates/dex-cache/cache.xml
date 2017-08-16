@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thore Dankworth\AndroidStudioProjects\SecScanQR\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f2d5196f3ccb2488b412da8aac41f9fdee68b57c">
+        <dex dex="C:\Users\Thore Dankworth\AndroidStudioProjects\SecScanQR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4ae1b52bc8fd06dac49f56412fe014329a67b0fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Thore Dankworth\AndroidStudioProjects\SecScanQR\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Thore Dankworth\AndroidStudioProjects\SecScanQR\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0e57e26362c555a0059319bd9dbb48a9bef84967\classes.dex" />
+    </item>
+
+</items>
