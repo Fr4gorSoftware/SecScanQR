@@ -1,0 +1,34 @@
+<resources>
+    <!-- MainActivity-->
+    <string name="app_name">SecScanQR</string>
+    <string name="title_generate">Generate QR</string>
+    <string name="default_text_main_activity">Press on the "Scan" Button to scan the Barcode</string>
+    <string name="send_to">Share with</string>
+    <string name="xzing_label">Hold the QR-Code in the marked area</string>
+    <string name="notice_clipoard">Copied to Clipboard</string>
+    <string name="btn_copy">Copy</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_deleete">Delete</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Scan a QR-Code first</string>
+    <string name="error_canceled_scan">You cancelled the scanning</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_label">QR-Code Information:</string>
+    <string name="title_search">Web Search</string>
+    <string name="title_scan">Scan</string>
+
+    <!-- GenerateActivity-->
+    <string name="title_activity_generate">SecScanQR Generator</string>
+    <string name="hint_textfield">Enter some text and press the "+" Button</string>
+    <!-- GenerateActivity Erorrs-->
+    <string name="error_text_first">First type in some Text</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">About</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">About</string>
+    <string name="copyright">Copyright Notice</string>
+
+
+</resources>

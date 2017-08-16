@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_open_in_browser_black_24dp"
+        android:title="@string/title_search" />
+
+    <item
+        android:id="@+id/navigation_scan"
+        android:icon="@drawable/ic_camera_enhance_black_24dp"
+        android:title="@string/title_scan" />
+
+    <item
+        android:id="@+id/navigation_generate"
+        android:icon="@drawable/ic_add_box_black_24dp"
+        android:title="@string/title_generate" />
+
+</menu>
