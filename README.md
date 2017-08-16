@@ -1,7 +1,6 @@
 # SecScanQR
+![Logo](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/web_hi_res_512.png)
 The QR-Code Scanner/Generator who cares about your privacy!
-
-Personal Data should be highly secured and schould not be a value of goods. Most QR-Code Scanners in the Play Store want access to your contact list, GPS and many more because they make money with this information or they are overloaded with advertisements. Most of them would work just fine without it.  
 
 # Features
 
@@ -23,3 +22,8 @@ License
 ----
 
 GNU Public License v3
+
+# Screenshots
+![Screenshot 1](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/2017_08_16_12_47_23.png)
+![Screenshot 2](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/2017_08_16_12_47_56.png)
+
