@@ -1,7 +1,7 @@
 # SecScanQR
 ![Logo](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/web_hi_res_512.png)
 
-The QR-Code Scanner/Generator who cares about your privacy!
+The QR-Code Scanner/Generator that cares about your privacy!
 
 # Features
 
