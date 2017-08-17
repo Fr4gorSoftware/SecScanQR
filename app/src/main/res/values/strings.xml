@@ -11,7 +11,7 @@
     <string name="btn_deleete">Delete</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Scan a QR-Code first</string>
-    <string name="error_canceled_scan">You cancelled the scanning</string>
+    <string name="error_canceled_scan">You canceled the scanning</string>
     <!-- MainActivity Navigation-->
     <string name="title_label">QR-Code Information:</string>
     <string name="title_search">Web Search</string>
