@@ -19,7 +19,7 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Camera Access
   
 # Donating
-[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HY4RFEZBQP7TL)
+[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
 
 
 License
