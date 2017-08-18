@@ -3,6 +3,11 @@
 
 The QR-Code Scanner/Generator that cares about your privacy!
 
+
+# Download
+
+[![Amazon App Store Link](http://www.sdkbox.com/assets/img/amazon4.jpg)](https://www.amazon.de/dp/B074W1S82C/ref=sr_1_1?ie=UTF8&qid=1503044477&sr=8-1&keywords=secscanqr)
+
 # Features
 
   - Scanning QR-Codes
