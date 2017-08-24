@@ -14,7 +14,8 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Scanned QR-Codes can be shared with friends and do a web search with the information from the QR-Code
   - Generating QR-Codes
 
-# Planed Features
+# Planed Features / Goals
+  - Download over F-Droid Store
   - Save generated QR-Codes as a picture
   - History
   - Settings
