@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">QR-Code generieren</string>
+    <string name="activity_history">Verlauf</string>
+    <string name="activity_history_details">Verlauf</string>
+    <!-- MainActivity-->
+    <string name="default_text_main_activity">Drücken Sie auf den "Scannen" Button, um einen QR-Code/Barcode zu scannen</string>
+    <string name="send_to">Teilen mit:</string>
+    <string name="xzing_label">Halten Sie einen QR-Code in den makierten Bereich</string>
+    <string name="notice_clipoard">In Zwischenablage kopiert</string>
+
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Scanne zuerst einen QR-Code</string>
+    <string name="error_canceled_scan">Scanvorgang abgebrochen</string>
+    <string name="error_add_to_database">Konnte QR-Code nicht zum Verlauf hinzufügen</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_label">QR-Code Information:</string>
+    <string name="title_scan">Scannen</string>
+    <string name="title_generate">Generieren</string>
+    <string name="title_history">Verlauf</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Kopieren</string>
+    <string name="title_share">Teilen</string>
+    <string name="title_deleete">Zurücksetzen</string>
+    <string name="title_search">Suche</string>
+
+    <!-- GenerateActivity-->
+    <string name="hint_textfield">Geben Sie zum Beispiel einen Text in das Textfeld und drücken Sie auf den "+" Button</string>
+    <!-- GenerateActivity Erorrs-->
+    <string name="error_text_first">Geben Sie erst einen Text in das Textfeld ein</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Wurde nicht gefunden</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Aus dem Verlauf gelöscht</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Löschen</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">Über</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">Über</string>
+    <string name="copyright">Copyright Notice</string>
+</resources>

@@ -10,7 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +20,15 @@
         </activity>
         <activity
             android:name=".GenerateActivity"
-            android:label="@string/title_activity_generate"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/activity_generate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/activity_history" />
+        <activity
+            android:name=".HistoryDetailsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/activity_history_details"/>
     </application>
 
 </manifest>

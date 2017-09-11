@@ -1,27 +1,41 @@
 <resources>
-    <!-- MainActivity-->
+    <!--Activity labels -->
     <string name="app_name">SecScanQR</string>
-    <string name="title_generate">Generate QR</string>
-    <string name="default_text_main_activity">Press on the "Scan" Button to scan the Barcode</string>
-    <string name="send_to">Share with</string>
+    <string name="activity_generate">Generate QR-Code</string>
+    <string name="activity_history">History</string>
+    <string name="activity_history_details">History</string>
+    <!-- MainActivity-->
+    <string name="default_text_main_activity">Press on the "Scan" Button to scan a QR-Code/Barcode</string>
+    <string name="send_to">Share with:</string>
     <string name="xzing_label">Hold the QR-Code in the marked area</string>
     <string name="notice_clipoard">Copied to Clipboard</string>
-    <string name="btn_copy">Copy</string>
-    <string name="btn_share">Share</string>
-    <string name="btn_deleete">Delete</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Scan a QR-Code first</string>
     <string name="error_canceled_scan">You canceled the scanning</string>
+    <string name="error_add_to_database">Was not able to add QR-Code to the history</string>
     <!-- MainActivity Navigation-->
-    <string name="title_label">QR-Code Information:</string>
-    <string name="title_search">Web Search</string>
+    <string name="title_label">QR-Code information:</string>
     <string name="title_scan">Scan</string>
+    <string name="title_generate">Generate</string>
+    <string name="title_history">History</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Copy</string>
+    <string name="title_share">Share</string>
+    <string name="title_reset">Reset</string>
+    <string name="title_search">Web Search</string>
 
     <!-- GenerateActivity-->
-    <string name="title_activity_generate">SecScanQR Generator</string>
     <string name="hint_textfield">Enter some text and press the "+" Button</string>
     <!-- GenerateActivity Erorrs-->
     <string name="error_text_first">First type in some Text</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Was not found in the history database</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Deleted from the History</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Delete</string>
 
     <!-- Optionsmenu-->
     <string name="settings_menu_about">About</string>

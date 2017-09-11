@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_action_navigation_copy"
+        android:icon="@drawable/ic_copy_24dp"
+        android:title="@string/title_copy" />
+
+    <item
+        android:id="@+id/main_action_navigation_search"
+        android:icon="@drawable/ic_search_24dp"
+        android:title="@string/title_search" />
+
+    <item
+        android:id="@+id/main_action_navigation_share"
+        android:icon="@drawable/ic_share_24dp"
+        android:title="@string/title_share" />
+
+    <item
+        android:id="@+id/main_action_navigation_reset"
+        android:icon="@drawable/ic_delete_24dp"
+        android:title="@string/title_reset" />
+
+</menu>
