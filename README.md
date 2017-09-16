@@ -33,6 +33,7 @@ License
 GNU Public License v3
 
 # Screenshots
-![Screenshot 1](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/2017_08_16_12_47_23.png)
-![Screenshot 2](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/2017_08_16_12_47_56.png)
+![Screenshot 1 - MainActivity](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/SecScanQR Main.png)
+![Screenshot 2 - Generator](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/SecScanQR Generator.png)
+![Screenshot 3 - History](https://raw.githubusercontent.com/t-dankworth/SecScanQR/master/pictures/SecScanQR History.png)
 
