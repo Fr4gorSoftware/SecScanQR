@@ -13,10 +13,10 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Scanning QR-Codes
   - Scanned QR-Codes can be shared with friends and do a web search with the information from the QR-Code
   - Generating QR-Codes
+  - History
 
 # Planed Features
   - Save generated QR-Codes as a picture
-  - History
   - Settings
   - I am open for your ideas
 
