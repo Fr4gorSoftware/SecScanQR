@@ -1,30 +1,34 @@
 package de.t_dankworth.secscanqr;
 
 import android.app.Activity;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
+import de.t_dankworth.secscanqr.util.ButtonHandler;
+import de.t_dankworth.secscanqr.util.DatabaseHelper;
+
+import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.resetScreenInformation;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.webSearch;
+
 /**
  * Created by Thore Dankworth
- * Last Update: 15.08.2017
+ * Last Update: 09.09.2017
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -32,18 +36,15 @@ import com.google.zxing.integration.android.IntentResult;
  *
  * Planed for upcoming Releases:
  * - Save generated QR-Code as a picture
- * - History
  * - Settings
- * - support for more languages
- * TODO: getResources().getText(R.string.send_to));
  */
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-    private ConstraintLayout buttonContainer;
-    private Button btnCopy, btnShare, btnDelete;
+    private BottomNavigationView action_navigation;
     final Activity activity = this;
     private String qrcode = "";
+    private DatabaseHelper mDatabaeHelper;
     private static final String STATE_QRCODE = MainActivity.class.getName();
 
     /**
@@ -55,14 +56,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_search:
-                    if(qrcode.equals("")){
-                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_scan_first), Toast.LENGTH_SHORT).show();
-                    } else {
-                        Uri uri = Uri.parse("http://www.google.com/#q=" + qrcode);
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        startActivity(intent);
-                    }
+                case R.id.navigation_history:
+                    startActivity(new Intent(MainActivity.this, HistoryActivity.class));
                     return true;
                 case R.id.navigation_scan:
                     zxingScan();
@@ -70,6 +65,21 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_generate:
                     startActivity(new Intent(MainActivity.this, GenerateActivity.class));
                     return true;
+                //Following cases using a method from ButtonHandler
+                case R.id.main_action_navigation_copy:
+                    copyToClipboard(mTextMessage, qrcode, activity);
+                    return true;
+                case R.id.main_action_navigation_reset:
+                    resetScreenInformation(mTextMessage, qrcode, action_navigation);
+                    return true;
+                case R.id.main_action_navigation_search:
+                    webSearch(qrcode, activity);
+                    return true;
+                case R.id.main_action_navigation_share:
+                    shareTo(qrcode, activity);
+                    return true;
+
+
             }
             return false;
         }
@@ -95,32 +105,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTextMessage = (TextView) findViewById(R.id.txtqrcode);
-        btnCopy = (Button) findViewById(R.id.btn_copy);
-        btnDelete = (Button) findViewById(R.id.btn_delete);
-        buttonContainer = (ConstraintLayout) findViewById(R.id.container_btn);
-        btnShare = (Button) findViewById(R.id.btn_share);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        mDatabaeHelper = new DatabaseHelper(this);
 
-        //All the OnClickListener
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                deleteScreenInformation();
-            }
-        });
-        btnCopy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                copyToClipboard();
-            }
-        });
-        btnShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                shareTo();
-            }
-        });
+        BottomNavigationView main_navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(main_navigation);
+        main_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        main_navigation.clearFocus();
+
+        action_navigation = (BottomNavigationView) findViewById(R.id.main_action_navigation);
+        BottomNavigationViewHelper.disableShiftMode(action_navigation);
+        action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         //If the device were rotated then restore information
         if(savedInstanceState != null){
@@ -129,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             } else {
                 mTextMessage.setText(qrcode);
-                buttonContainer.setVisibility(View.VISIBLE);
+                action_navigation.setVisibility(View.VISIBLE);
 
             }
 
@@ -172,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
                 qrcode = result.getContents();
                 if(!qrcode.equals("")){
                     mTextMessage.setText(qrcode);
-                    buttonContainer.setVisibility(View.VISIBLE);
+                    action_navigation.setVisibility(View.VISIBLE);
+                    addToDatabase(mTextMessage.getText().toString());
                 }
 
             }
@@ -189,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void zxingScan(){
         IntentIntegrator integrator = new IntentIntegrator(activity);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
         integrator.setPrompt((String) getResources().getText(R.string.xzing_label));
         integrator.setCameraId(0);
         integrator.setBeepEnabled(false);
@@ -198,32 +193,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method resets all the information that were shown on screen
+     * Takes the scanned code hands over the code to the method addData in the DatabaseHelper
+     * @param newCode = scanned qr-code/barcode
      */
-    public void deleteScreenInformation(){
-        mTextMessage.setText(R.string.default_text_main_activity);
-        qrcode = "";
-        buttonContainer.setVisibility(View.INVISIBLE);
-    }
-
-    /**
-     * This method copies the information of the QR-Code to the clipboard
-     */
-    public void copyToClipboard(){
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText(mTextMessage.getText(), qrcode);
-        clipboard.setPrimaryClip(clip);
-        Toast.makeText(this, getResources().getText(R.string.notice_clipoard), Toast.LENGTH_LONG).show();
-    }
-
-    /**
-     * This method handles the sharing functionality
-     */
-    public void shareTo(){
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, qrcode);
-        sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
+    public void addToDatabase(String newCode){
+        boolean insertData = mDatabaeHelper.addData(newCode);
+        if(!insertData){
+            Toast.makeText(this, getResources().getText(R.string.error_add_to_database), Toast.LENGTH_LONG).show();
+        }
     }
 }

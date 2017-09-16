@@ -19,8 +19,14 @@
         </activity>
         <activity
             android:name=".GenerateActivity"
-            android:label="@string/title_activity_generate"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/activity_generate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/activity_history" />
+        <activity
+            android:name=".HistoryDetailsActivity"
+            android:label="@string/activity_history_details"/>
     </application>
 
 </manifest>

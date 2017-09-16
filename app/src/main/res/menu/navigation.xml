@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_open_in_browser_black_24dp"
-        android:title="@string/title_search" />
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_history_24dp"
+        android:title="@string/title_history" />
 
     <item
         android:id="@+id/navigation_scan"
-        android:icon="@drawable/ic_camera_enhance_black_24dp"
+        android:icon="@drawable/ic_scan_black_24dp"
         android:title="@string/title_scan" />
 
     <item
