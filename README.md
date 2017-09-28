@@ -5,8 +5,9 @@ The QR-Code Scanner/Generator that cares about your privacy!
 
 
 # Download
+[![Fdroid Link](https://camo.githubusercontent.com/fe347c40e0d48baa25fc425d0e54fb4671d543c9/68747470733a2f2f662d64726f69642e6f72672f77696b692f696d616765732f302f30362f462d44726f69642d627574746f6e5f6765742d69742d6f6e2e706e67)](https://f-droid.org/packages/de.t_dankworth.secscanqr/)
 
-[![Amazon App Store Link](http://www.sdkbox.com/assets/img/amazon4.jpg)](https://www.amazon.de/dp/B074W1S82C/ref=sr_1_1?ie=UTF8&qid=1503044477&sr=8-1&keywords=secscanqr)
+[Amazon App Store](https://www.amazon.de/dp/B074W1S82C/ref=sr_1_1?ie=UTF8&qid=1503044477&sr=8-1&keywords=secscanqr)
 
 # Features
 
@@ -15,11 +16,9 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Generating QR-Codes
   - History
 
-# Planed Features / Goals
-  - Download over F-Droid Store
-  - Save generated QR-Codes as a picture
-  - Settings
-  - I am open for your ideas
+# Upcoming Features
+[List of upcoming Features](https://github.com/Fr4gorSoftware/SecScanQR/wiki/Upcoming-Features)
+ 
 
 # Needed Permissions
   - Camera Access
