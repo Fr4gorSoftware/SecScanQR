@@ -84,7 +84,7 @@ public class HistoryActivity extends AppCompatActivity {
                     historyDetails.putExtra("code", code);
                     startActivity(historyDetails);
                 } else {
-                    Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_canceled_scan), Toast.LENGTH_LONG).show();
+                    Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_generate), Toast.LENGTH_LONG).show();
                 }
 
             }

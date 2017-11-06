@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Created by romainrossi from Github-->
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">Générer QR-Code</string>
+    <string name="activity_history">Historique</string>
+    <string name="activity_history_details">Historique</string>
+    <!-- MainActivity-->
+    <string name="default_text_main_activity">Appuyez sur le bouton \"Scanner\" pour scanner un QR-Code ou un Code-barres</string>
+    <string name="send_to">Partager avec:</string>
+    <string name="xzing_label">Activer la lampe de poche à l\'aide des touches de volume</string>
+    <string name="notice_clipoard">Copié dans le presse-papier</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Commencez par scanner un QR-Code</string>
+    <string name="error_canceled_scan">Scan interrompu</string>
+    <string name="error_add_to_database">Impossible d\'ajouter le QR-Code dans l\'historique</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_label">Informations du QR-Code:</string>
+    <string name="title_scan">Scanner</string>
+    <string name="title_generate">Générer</string>
+    <string name="title_history">Historique</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Copier</string>
+    <string name="title_share">Partager</string>
+    <string name="title_reset">Réinitialiser</string>
+    <string name="title_search">Recherche Web</string>
+
+    <!-- GenerateActivity-->
+    <string name="hint_textfield">Saisir le texte et appuyer le bouton \"+"</string>
+    <!-- GenerateActivity Erorrs-->
+    <string name="error_text_first">Commencez par saisir le texte</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Non trouvé dans l\'historique</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Supprimé de l\'historique</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Supprimer</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">À propos</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">À propos</string>
+    <string name="copyright">Informations de Copyright</string>
+
+
+</resources>

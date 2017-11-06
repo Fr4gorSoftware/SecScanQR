@@ -7,7 +7,7 @@
     <!-- MainActivity-->
     <string name="default_text_main_activity">Press on the "Scan" Button to scan a QR-Code/Barcode</string>
     <string name="send_to">Share with:</string>
-    <string name="xzing_label">Hold the QR-Code in the marked area</string>
+    <string name="xzing_label">Activate the flashlight using the volume keys</string>
     <string name="notice_clipoard">Copied to Clipboard</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Scan a QR-Code first</string>
@@ -26,8 +26,24 @@
 
     <!-- GenerateActivity-->
     <string name="hint_textfield">Enter some text and press the "+" Button</string>
+    <string name="btn_save">Save as picture</string>
+    <string name="tv_format">Format: </string>
+    <string-array name="formats_array">
+        <item>AZTEC</item>
+        <item>CODABAR</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>QR_CODE</item>
+        <item>UPC_A</item>
+
+    </string-array>
     <!-- GenerateActivity Erorrs-->
     <string name="error_text_first">First type in some Text</string>
+    <string name="error_generate">No valid input for this format</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Was not found in the history database</string>
@@ -39,10 +55,36 @@
 
     <!-- Optionsmenu-->
     <string name="settings_menu_about">About</string>
+    <string name="settings_settings">Settings</string>
 
     <!-- AboutDialog-->
     <string name="about_dialog">About</string>
     <string name="copyright">Copyright Notice</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Scanner</string>
+
+    <string name="pref_title_auto_scan">Autostart scanner</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">Smart clipboard</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>Add scanned code automatically to clipboard</item>
+        <item>Don\'t add scanned code automatically to clipboard</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
 
 
 </resources>

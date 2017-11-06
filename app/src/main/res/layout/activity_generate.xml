@@ -50,7 +50,22 @@
             android:id="@+id/txtQR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_textfield" />
+            android:hint="@string/hint_textfield"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:paddingLeft="5dp"
+            android:text="@string/tv_format" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00" />
 
         <ImageView
             android:id="@+id/image"

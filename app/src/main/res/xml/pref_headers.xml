@@ -1,0 +1,10 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="de.t_dankworth.secscanqr.SettingsActivity$ScannerPreferenceFragment"
+        android:icon="@drawable/ic_scan_black_24dp"
+        android:title="@string/pref_header_scanner" />
+
+</preference-headers>
