@@ -11,9 +11,9 @@ The QR-Code Scanner/Generator that cares about your privacy!
 
 # Features
 
-  - Scanning QR-Codes
+  - Scan QR-Codes, Barcodes and many more formats
   - Scanned QR-Codes can be shared with friends and do a web search with the information from the QR-Code
-  - Generating QR-Codes
+  - Generate QR-Codes, Barcodes and many more formats
   - History
 
 # Upcoming Features
