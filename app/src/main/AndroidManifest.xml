@@ -20,13 +20,25 @@
         <activity
             android:name=".GenerateActivity"
             android:label="@string/activity_generate"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HistoryActivity"
             android:label="@string/activity_history" />
         <activity
             android:name=".HistoryDetailsActivity"
-            android:label="@string/activity_history_details"/>
+            android:label="@string/activity_history_details" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

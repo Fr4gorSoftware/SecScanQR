@@ -8,7 +8,7 @@
     <!-- MainActivity-->
     <string name="default_text_main_activity">Drücken Sie auf den "Scannen" Button, um einen QR-Code/Barcode zu scannen</string>
     <string name="send_to">Teilen mit:</string>
-    <string name="xzing_label">Halten Sie einen QR-Code in den makierten Bereich</string>
+    <string name="xzing_label">Taschenlampe über die Lautstärketasten aktivieren</string>
     <string name="notice_clipoard">In Zwischenablage kopiert</string>
 
     <!--MainActivity Errors-->
@@ -27,9 +27,11 @@
     <string name="title_search">Suche</string>
 
     <!-- GenerateActivity-->
-    <string name="hint_textfield">Geben Sie zum Beispiel einen Text in das Textfeld und drücken Sie auf den "+" Button</string>
+    <string name="hint_textfield">Hier soll Text hinein</string>
+    <string name="btn_save">Als Bild speichern</string>
     <!-- GenerateActivity Erorrs-->
     <string name="error_text_first">Geben Sie erst einen Text in das Textfeld ein</string>
+    <string name="error_generate">Keine gültige Eingabe für dieses Format</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Wurde nicht gefunden</string>
@@ -41,8 +43,26 @@
 
     <!-- Optionsmenu-->
     <string name="settings_menu_about">Über</string>
+    <string name="settings_settings">Einstellungen</string>
 
     <!-- AboutDialog-->
     <string name="about_dialog">Über</string>
     <string name="copyright">Copyright Notice</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Einstellungen</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Scanner</string>
+
+    <string name="pref_title_auto_scan">Autostart Scanner</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>An</item>
+        <item>Aus</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">Smarte Zwischenablage</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>Füge gescannten Code automatisch in die Zwischenablage hinzu</item>
+        <item>Füge gescannten Code nicht automatisch in die Zwischenablage hinzu</item>
+    </string-array>
 </resources>

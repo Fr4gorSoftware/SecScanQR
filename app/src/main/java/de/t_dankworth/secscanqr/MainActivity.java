@@ -2,7 +2,9 @@ package de.t_dankworth.secscanqr;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -28,15 +30,11 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.webSearch;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 09.09.2017
+ * Last Update: 06.11.2017
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
  * From here the User can start a QR-Code scan and can go to the Generate Activity
- *
- * Planed for upcoming Releases:
- * - Save generated QR-Code as a picture
- * - Settings
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -127,7 +125,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        } else {
+            //Autostart Scanner if activated
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            String auto_scan = prefs.getString("pref_auto_scan", "");
+            if(auto_scan.equals("true")){
+                zxingScan();
+            }
         }
+
 
     }
 
@@ -148,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
                 aboutDialog.setTitle(R.string.about_dialog);
                 aboutDialog.show();
                 return true;
+            case R.id.settings:
+                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -168,6 +176,12 @@ public class MainActivity extends AppCompatActivity {
                     mTextMessage.setText(qrcode);
                     action_navigation.setVisibility(View.VISIBLE);
                     addToDatabase(mTextMessage.getText().toString());
+                    //Automatic Clipboard if activated
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                    String auto_scan = prefs.getString("pref_auto_clipboard", "");
+                    if(auto_scan.equals("true")){
+                        copyToClipboard(mTextMessage, qrcode, activity);
+                    }
                 }
 
             }
