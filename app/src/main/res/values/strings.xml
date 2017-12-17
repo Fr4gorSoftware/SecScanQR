@@ -1,10 +1,16 @@
 <resources>
     <!--Activity labels -->
     <string name="app_name">SecScanQR</string>
-    <string name="activity_generate">Generate QR-Code</string>
+    <string name="activity_generate">QR-Code Generator</string>
     <string name="activity_history">History</string>
     <string name="activity_history_details">History</string>
+    <string name="title_activity_geo_generator">Geo Generator</string>
+    <string name="title_activity_text_generator">Text Generator</string>
+    <string name="title_activity_barcode_generate">Barcode Generator</string>
+    <string name="title_activity_vcard_generator">VCard Generator</string>
     <!-- MainActivity-->
+    <string name="title_format">Code format:</string>
+    <string name="title_information">Code information:</string>
     <string name="default_text_main_activity">Press on the "Scan" Button to scan a QR-Code/Barcode</string>
     <string name="send_to">Share with:</string>
     <string name="xzing_label">Activate the flashlight using the volume keys</string>
@@ -14,7 +20,6 @@
     <string name="error_canceled_scan">You canceled the scanning</string>
     <string name="error_add_to_database">Was not able to add QR-Code to the history</string>
     <!-- MainActivity Navigation-->
-    <string name="title_label">QR-Code information:</string>
     <string name="title_scan">Scan</string>
     <string name="title_generate">Generate</string>
     <string name="title_history">History</string>
@@ -25,25 +30,69 @@
     <string name="title_search">Web Search</string>
 
     <!-- GenerateActivity-->
-    <string name="hint_textfield">Enter some text and press the "+" Button</string>
-    <string name="btn_save">Save as picture</string>
-    <string name="tv_format">Format: </string>
-    <string-array name="formats_array">
-        <item>AZTEC</item>
-        <item>CODABAR</item>
+    <string-array name="generators">
+        <item>BARCODE</item>
+        <item>GEO</item>
+        <item>TEXT</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Barcode Generator</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
         <item>CODE_128</item>
         <item>CODE_39</item>
         <item>EAN_13</item>
         <item>EAN_8</item>
         <item>ITF</item>
         <item>PDF_417</item>
-        <item>QR_CODE</item>
         <item>UPC_A</item>
 
     </string-array>
-    <!-- GenerateActivity Erorrs-->
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">Here you can enter some text</string>
+    <string name="tv_format">Format: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">First type in some Text</string>
     <string name="error_generate">No valid input for this format</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">latitude example: 43.73</string>
+    <string name="hint_longtitude">longtitude example: -10.73</string>
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">north</string>
+    <string name="cbLongtitude">east</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">First fill in valid values for the latitude and longtitude</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">name</string>
+    <string name="hint_fn">first name</string>
+    <string name="hint_org">organization</string>
+    <string name="hint_web">website</string>
+    <string name="hint_email">e-mail</string>
+    <string name="hint_mobil">mobil</string>
+    <string name="hint_tele_work">telephone(work)</string>
+    <string name="hint_tele_private">telephone(private)</string>
+    <string name="hint_street">street</string>
+    <string name="hint_plz">postcode</string>
+    <string name="hint_city">city</string>
+    <string name="hint_state">state</string>
+    <string name="hint_country">country</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">First type in a name or first name</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Was not found in the history database</string>
@@ -78,13 +127,14 @@
 
     <string name="pref_title_auto_clipboard">Smart clipboard</string>
     <string-array name="pref_auto_clipboard_entries">
-        <item>Add scanned code automatically to clipboard</item>
-        <item>Don\'t add scanned code automatically to clipboard</item>
+        <item>On</item>
+        <item>Off</item>
     </string-array>
     <string-array name="pref_auto_clipboard_values">
         <item>true</item>
         <item>false</item>
     </string-array>
+
 
 
 </resources>
