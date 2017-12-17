@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,9 +18,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GenerateActivity"
+            android:name=".activities.generator.GenerateActivity"
             android:label="@string/activity_generate"
-            android:screenOrientation="portrait"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:label="@string/activity_history" />
+        <activity
+            android:name=".activities.HistoryDetailsActivity"
+            android:label="@string/activity_history_details" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.t_dankworth.secscanqr.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.generator.GeoGeneratorActivity"
+            android:label="@string/title_activity_geo_generator"
+            android:parentActivityName=".activities.generator.GenerateActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+        </activity>
+        <activity
+            android:name=".activities.generator.TextGeneratorActivity"
+            android:label="@string/activity_generate"
+            android:parentActivityName=".activities.generator.GenerateActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -29,16 +57,37 @@
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
         </activity>
         <activity
-            android:name=".HistoryActivity"
-            android:label="@string/activity_history" />
+            android:name=".activities.generator.BarcodeGenerateActivity"
+            android:label="@string/activity_barcode_generator"
+            android:parentActivityName=".activities.generator.GenerateActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+        </activity>
         <activity
-            android:name=".HistoryDetailsActivity"
-            android:label="@string/activity_history_details" />
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:name=".activities.generator.VCardGeneratorActivity"
+            android:label="@string/title_activity_vcard_generator"
+            android:parentActivityName=".activities.generator.GenerateActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+        </activity>
     </application>
 
 </manifest>

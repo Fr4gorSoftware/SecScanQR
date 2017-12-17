@@ -3,7 +3,7 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="de.t_dankworth.secscanqr.SettingsActivity$ScannerPreferenceFragment"
+        android:fragment="de.t_dankworth.secscanqr.activities.SettingsActivity$ScannerPreferenceFragment"
         android:icon="@drawable/ic_scan_black_24dp"
         android:title="@string/pref_header_scanner" />
 
