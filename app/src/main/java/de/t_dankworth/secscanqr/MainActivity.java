@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.txtqrcode);
+        mTextMessage = (TextView) findViewById(R.id.labelInformation);
         mDatabaeHelper = new DatabaseHelper(this);
 
         BottomNavigationView main_navigation = (BottomNavigationView) findViewById(R.id.navigation);

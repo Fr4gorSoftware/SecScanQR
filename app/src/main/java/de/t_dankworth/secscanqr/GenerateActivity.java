@@ -60,7 +60,7 @@ public class GenerateActivity extends AppCompatActivity  implements AdapterView.
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.formats_array, android.R.layout.simple_spinner_item);
+                R.array.barcode_formats_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
