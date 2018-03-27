@@ -21,16 +21,21 @@ The QR-Code Scanner/Generator that cares about your privacy!
  
 
 # Needed Permissions
-  - Camera Access
+  - CAMERA ACCESS
+  - WRITE EXTERNAL STORAGE
   
 # Donating
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
 
+# Designer
+Logo: [s-yous](https://github.com/s-yous)
 
 License
 ----
 
 GNU Public License v3
+
+
 
 # Screenshots
 ![Screenshot 1](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20Main.png)
