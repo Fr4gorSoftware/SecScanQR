@@ -27,13 +27,22 @@ public class ButtonHandler {
 
     /**
      * This method resets all the information that were shown on the MainActivty
-     * @param tv = TextView were the qrcode is shown
+     * @param tvInformation = TextView were the qrcode is shown
+     * @param tvFormat = TextView were the qrcode format is shown
+     * @param mLabelInformation = TextView were the qrcode headline is shown
+     * @param mLabelFormat = TextView were the qrcode format headline is shown
      * @param qrcode = the qrcode as a String - Needs to be reset for orientation switches
+     * @param format= the qrcode format as a String - Needs to be reset for orientation switches
      * @param buttonContainer = The Container as a LinearLayout with all the Buttons
      */
-    public static void resetScreenInformation(TextView tv, String qrcode, BottomNavigationView buttonContainer){
-        tv.setText(R.string.default_text_main_activity);
+    public static void resetScreenInformation(TextView tvInformation, TextView tvFormat, TextView mLabelInformation, TextView mLabelFormat, String qrcode, String format, BottomNavigationView buttonContainer){
+        tvInformation.setText(R.string.default_text_main_activity);
+        tvFormat.setText("");
+        tvFormat.setVisibility(View.GONE);
+        mLabelInformation.setVisibility(View.GONE);
+        mLabelFormat.setVisibility(View.GONE);
         qrcode = "";
+        format = "";
         buttonContainer.setVisibility(View.INVISIBLE);
     }
 
@@ -64,17 +73,23 @@ public class ButtonHandler {
     }
 
     /**
-     * This method searches for the qr/barcode on the internet
+     * The method will open the qrcode as a website in the browser if it is valid web url. If not it will start a google search request.
      * @param qrcode = the qrcode as a String
      * @param activity = Activty were the method was called.Needed for Toast and web intent
      */
-    public static void webSearch(String qrcode, Activity activity){
+    public static void openInWeb(String qrcode, Activity activity){
         if(qrcode.equals("")){
             Toast.makeText(activity.getApplicationContext(), activity.getResources().getText(R.string.error_scan_first), Toast.LENGTH_SHORT).show();
         } else {
-            Uri uri = Uri.parse("http://www.google.com/#q=" + qrcode);
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            activity.startActivity(intent);
+            try {
+                Uri uri = Uri.parse(qrcode);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                activity.startActivity(intent);
+            } catch (Exception e){
+                Uri uri = Uri.parse("http://www.google.com/#q=" + qrcode);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                activity.startActivity(intent);
+            }
         }
     }
 

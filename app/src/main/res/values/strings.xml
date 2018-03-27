@@ -27,9 +27,13 @@
     <string name="title_copy">Copy</string>
     <string name="title_share">Share</string>
     <string name="title_reset">Reset</string>
-    <string name="title_search">Web Search</string>
+    <string name="title_openInWeb">Open in Web</string>
 
     <!-- GenerateActivity-->
+    <string name="btn_save">Save</string>
+    <string name="toast_save">Saved in "SecScanQR" folder on the internal storage</string>
+    <string name="toast_permission_needed">Permission is needed</string>
+    <string name="toast_erorr">An error had occur</string>
     <string-array name="generators">
         <item>BARCODE</item>
         <item>GEO</item>

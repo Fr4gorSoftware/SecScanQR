@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,13 +24,13 @@ import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.resetScreenInformation;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
-import static de.t_dankworth.secscanqr.util.ButtonHandler.webSearch;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 06.11.2017
+ * Last Update: 17.03.2019
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -68,16 +69,14 @@ public class MainActivity extends AppCompatActivity {
                     copyToClipboard(mTvInformation, qrcode, activity);
                     return true;
                 case R.id.main_action_navigation_reset:
-                    resetScreenInformation(mTvInformation, qrcode, action_navigation);
+                    resetScreenInformation(mTvInformation, mTvFormat, mLabelInformation, mLabelFormat, qrcode, qrcodeFormat, action_navigation);
                     return true;
-                case R.id.main_action_navigation_search:
-                    webSearch(qrcode, activity);
+                case R.id.main_action_navigation_openInWeb:
+                    openInWeb(qrcode, activity);
                     return true;
                 case R.id.main_action_navigation_share:
                     shareTo(qrcode, activity);
                     return true;
-
-
             }
             return false;
         }

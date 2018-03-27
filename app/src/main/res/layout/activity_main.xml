@@ -83,6 +83,8 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         android:visibility="invisible"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorAccent"
         app:menu="@menu/main_action_navigation"/>
 
     <android.support.design.widget.BottomNavigationView
@@ -91,6 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorAccent"
         app:menu="@menu/navigation"/>
 
 </LinearLayout>

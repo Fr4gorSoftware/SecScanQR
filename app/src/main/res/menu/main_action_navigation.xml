@@ -7,9 +7,9 @@
         android:title="@string/title_copy" />
 
     <item
-        android:id="@+id/main_action_navigation_search"
+        android:id="@+id/main_action_navigation_openInWeb"
         android:icon="@drawable/ic_search_24dp"
-        android:title="@string/title_search" />
+        android:title="@string/title_openInWeb" />
 
     <item
         android:id="@+id/main_action_navigation_share"

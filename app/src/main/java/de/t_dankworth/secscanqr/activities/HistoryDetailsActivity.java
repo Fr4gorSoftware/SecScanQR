@@ -17,13 +17,13 @@ import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.resetScreenInformation;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
-import static de.t_dankworth.secscanqr.util.ButtonHandler.webSearch;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 09.09.2017
+* Last Update: 17.03.2019
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -60,14 +60,12 @@ public class HistoryDetailsActivity extends AppCompatActivity {
                 case R.id.history_action_navigation_copy:
                     copyToClipboard(tvCode, selectedCode, activity);
                     return true;
-                case R.id.history_action_navigation_search:
-                    webSearch(selectedCode, activity);
+                case R.id.main_action_navigation_openInWeb:
+                    openInWeb(selectedCode, activity);
                     return true;
                 case R.id.history_action_navigation_share:
                     shareTo(selectedCode, activity);
                     return true;
-
-
             }
             return false;
         }

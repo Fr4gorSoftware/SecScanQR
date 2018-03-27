@@ -28,7 +28,13 @@
     <string name="title_copy">Kopieren</string>
     <string name="title_share">Teilen</string>
     <string name="title_deleete">Zurücksetzen</string>
-    <string name="title_search">Suche</string>
+    <string name="title_openInWeb">Öffnen im Web</string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">Speichern</string>
+    <string name="toast_save">Im "SecScanQR" Ordner gespeichert</string>
+    <string name="toast_permission_needed">Berechtigung wird zum Fortfahren benötigt</string>
+    <string name="toast_erorr">Es ist ein Fehler aufgetreten</string>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Hier soll Text hinein</string>

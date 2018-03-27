@@ -26,7 +26,7 @@ import de.t_dankworth.secscanqr.util.AppCompatPreferenceActivity;
  * settings are split by category, with category headers shown to the left of
  * the list of settings.
  *
- * Last Update: 06.11.2017
+ * Last Update: 10.03.2018
  * Last Update by Thore Dankworth
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
@@ -162,5 +162,16 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                super.onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

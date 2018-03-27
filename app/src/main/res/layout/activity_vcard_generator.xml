@@ -51,6 +51,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.00"
+                    android:paddingLeft="5dp"
+                    android:text="@string/tv_format" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.00" />
+
                 <EditText
                     android:id="@+id/txtName"
                     android:layout_width="match_parent"
@@ -154,25 +168,6 @@
                     android:hint="@string/hint_country"
                     android:inputType="textPersonName" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00"
-                    android:paddingLeft="5dp"
-                    android:text="@string/tv_format" />
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00" />
-
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="358dp"
-                    android:layout_weight="0.91" />
             </LinearLayout>
         </ScrollView>
 
