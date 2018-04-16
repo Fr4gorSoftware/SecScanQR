@@ -1,0 +1,144 @@
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">QR-kode sortzailea</string>
+    <string name="activity_history">Historia</string>
+    <string name="activity_history_details">Historia</string>
+    <string name="title_activity_geo_generator">Geo sortzailea</string>
+    <string name="title_activity_text_generator">Testu sortzailea</string>
+    <string name="title_activity_barcode_generate">Barra-kode sortzailea</string>
+    <string name="title_activity_vcard_generator">VCard sortzailea</string>
+    <!-- MainActivity-->
+    <string name="title_format">Kodearen formatua:</string>
+    <string name="title_information">Kodearen informazioa:</string>
+    <string name="default_text_main_activity">Sakatu "Eskaneatu" botoia QR-kode edo barra-kode bat eskaneatzeko</string>
+    <string name="send_to">Partekatu honekin:</string>
+    <string name="xzing_label">Piztu ezazu linterna bolumenaren teklak erabiliz</string>
+    <string name="notice_clipoard">Arbelera kopiatu da</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Eskaneatu ezazu QR-kode bat lehenago</string>
+    <string name="error_canceled_scan">Eskaneatzea bertan behera utzi duzu</string>
+    <string name="error_add_to_database">Ezin izan da QR-kodea historiara gehitu</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">Eskaneatu</string>
+    <string name="title_generate">Sortu</string>
+    <string name="title_history">Historia</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Kopiatu</string>
+    <string name="title_share">Partekatu</string>
+    <string name="title_reset">Berrezarri</string>
+    <string name="title_openInWeb">Nabigatzailean ireki</string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">Gorde</string>
+    <string name="toast_save">Barneko biltekigo "SecScanQR" karpetan gorde da</string>
+    <string name="toast_permission_needed">Baimena behar da</string>
+    <string name="toast_erorr">Akats bat gertatu da</string>
+    <string-array name="generators">
+        <item>BARRA-KODEA</item>
+        <item>GEO</item>
+        <item>TESTUA</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Barra-kode sortzailea</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+
+    </string-array>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">Hemen idatzi dezakezu</string>
+    <string name="tv_format">Formatua: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">Idatzi ezazu zerbait lehenago</string>
+    <string name="error_generate">Idatzitakoa ez du balio formatu honetarako</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">latitudearen eredua: 43.73</string>
+    <string name="hint_longtitude">longitudearen eredua: -10.73</string>
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">iparra</string>
+    <string name="cbLongtitude">ekialdea</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">Idatzi latitude eta longitude baliodunak lehenago</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">Izena</string>
+    <string name="hint_fn">Lehen izena</string>
+    <string name="hint_org">Erakundea</string>
+    <string name="hint_web">Webgunea</string>
+    <string name="hint_email">Posta elektronikoa</string>
+    <string name="hint_mobil">Mugikorra</string>
+    <string name="hint_tele_work">Telefonoa (lana)</string>
+    <string name="hint_tele_private">Telefonoa (pribatua)</string>
+    <string name="hint_street">Kalea</string>
+    <string name="hint_plz">Posta kodea</string>
+    <string name="hint_city">Hiria</string>
+    <string name="hint_state">Estatua</string>
+    <string name="hint_country">Herrialdea</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">Idatzi ezazu izen edo lehen izen bat lehenago</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Ez da historiaren datu basean aurkitu</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Historiatik ezabatu da</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Ezabatu</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">Honi buruz</string>
+    <string name="settings_settings">Ezarpenak</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">Honi buruz</string>
+    <string name="copyright">Copyright oharra</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Ezarpenak</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Eskanerra</string>
+
+    <string name="pref_title_auto_scan">Eskanerra automatikoki abiarazi</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>Piztuta</item>
+        <item>Itzalita</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">Arbel adimenduna</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>Piztuta</item>
+        <item>Itzalita</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+
+
+</resources>
