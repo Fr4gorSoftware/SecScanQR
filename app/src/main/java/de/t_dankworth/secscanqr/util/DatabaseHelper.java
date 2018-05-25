@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.11.2017
+ * Last Update: 25.04.2018
  * Last Update by Thore Dankworth
  *
  * This class handles all operations regarding the sql database
@@ -98,6 +98,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL(query);
     }
 
+    /**
+     * Reset database
+     */
     public void resetDatabase(){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_SCANNED;

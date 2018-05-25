@@ -69,8 +69,12 @@
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Gebe zuerst einen Nachnamen oder Vornamen an</string>
 
+    <!-- HistoryActivity -->
+    <string name="reset_database">Zurücksetzen</string>
+
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Wurde nicht gefunden</string>
+    <string name="error_sqlexception">Dieses Format wird für die Verlaufsfunktion nicht unterstützt</string>
 
     <!-- HistoryDetailsActivity-->
     <string name="notice_deleted_from_database">Aus dem Verlauf gelöscht</string>
@@ -98,6 +102,12 @@
 
     <string name="pref_title_auto_clipboard">Smarte Zwischenablage</string>
     <string-array name="pref_auto_clipboard_entries">
+        <item>An</item>
+        <item>Aus</item>
+    </string-array>
+
+    <string name="pref_title_history">Verlauf</string>
+    <string-array name="pref_history_entries">
         <item>An</item>
         <item>Aus</item>
     </string-array>

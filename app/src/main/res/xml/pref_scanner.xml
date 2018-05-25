@@ -16,4 +16,13 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/pref_title_auto_clipboard" />
+
+    <ListPreference
+        android:defaultValue="true"
+        android:entries="@array/pref_history_entries"
+        android:entryValues="@array/pref_history_values"
+        android:key="pref_history"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_history" />
 </PreferenceScreen>

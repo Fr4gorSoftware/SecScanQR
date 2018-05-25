@@ -8,7 +8,6 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,7 +29,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.03.2019
+ * Last Update: 25.05.2019
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -41,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvInformation, mTvFormat, mLabelInformation, mLabelFormat;
     private BottomNavigationView action_navigation;
     final Activity activity = this;
-    private String qrcode = "", qrcodeFormat = "";
+    private String qrcode = "", qrcodeFormat = "", history ="";
     private DatabaseHelper mDatabaeHelper;
     private static final String STATE_QRCODE = MainActivity.class.getName();
-    private static final String STATE_QRCODEFORMAT = "";
+    private static final String STATE_QRCODEFORMAT = "format";
+    private static final String STATE_HISTORY = "history";
 
     /**
      * This method handles the main navigation
@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString(STATE_QRCODE, qrcode);
         savedInstanceState.putString(STATE_QRCODEFORMAT, qrcodeFormat);
+        savedInstanceState.putString(STATE_HISTORY, history);
     }
 
     /**
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState != null){
             qrcode = savedInstanceState.getString(STATE_QRCODE);
             qrcodeFormat = savedInstanceState.getString(STATE_QRCODEFORMAT);
+            qrcodeFormat = savedInstanceState.getString(STATE_HISTORY);
             if(qrcode.equals("")){
 
             } else {
@@ -188,9 +190,16 @@ public class MainActivity extends AppCompatActivity {
                     mTvFormat.setText(qrcodeFormat);
                     mTvInformation.setText(qrcode);
                     action_navigation.setVisibility(View.VISIBLE);
-                    addToDatabase(mTvInformation.getText().toString());
-                    //Automatic Clipboard if activated
+
+                    //Check if history is activated
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                    String history_setting = prefs.getString("pref_history", "");
+                    if(history_setting.equals("false")){
+                        //Don't save QR-Code in history
+                    } else {
+                        addToDatabase(mTvInformation.getText().toString());
+                    }
+                    //Automatic Clipboard if activated
                     String auto_scan = prefs.getString("pref_auto_clipboard", "");
                     if(auto_scan.equals("true")){
                         copyToClipboard(mTvInformation, qrcode, activity);
