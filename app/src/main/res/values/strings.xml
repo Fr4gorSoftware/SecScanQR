@@ -98,8 +98,12 @@
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">First type in a name or first name</string>
 
+    <!-- HistoryActivity -->
+    <string name="reset_database">Reset</string>
+
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Was not found in the history database</string>
+    <string name="error_sqlexception">This format is not supported for the history feature</string>
 
     <!-- HistoryDetailsActivity-->
     <string name="notice_deleted_from_database">Deleted from the History</string>
@@ -135,6 +139,16 @@
         <item>Off</item>
     </string-array>
     <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_history">History</string>
+    <string-array name="pref_history_entries">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_history_values">
         <item>true</item>
         <item>false</item>
     </string-array>

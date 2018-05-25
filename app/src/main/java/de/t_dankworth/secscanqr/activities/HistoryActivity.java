@@ -3,8 +3,11 @@ package de.t_dankworth.secscanqr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,7 +22,7 @@ import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 05.09.2017
+ * Last Update: 25.05.2018
  * Last Update by Thore Dankworth
  *
  * This class is the HistoryActivity and lists all scanned qr-codes
@@ -55,6 +58,23 @@ public class HistoryActivity extends AppCompatActivity {
         showDataInListView();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.history_optionsmenu, menu);
+        return true;
+    }
+
+    @Override
+    public  boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == R.id.history_optionsmenu_delete){
+            resetDatabase();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     /**
      * This method gets all the data from the table with the column codes and add it to a ArrayList.
      * The ArrayList will be handed over to a ListAdapter and the listview takes this ListAdapter.
@@ -73,22 +93,35 @@ public class HistoryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String code = adapterView.getItemAtPosition(i).toString();
+                try{
+                    Cursor data = historyDatabaseHelper.getItemID(code);
+                    int itemID = -1;
+                    while(data.moveToNext()){
+                        itemID = data.getInt(0);
+                    }
+                    if(itemID > -1){
+                        Intent historyDetails = new Intent(HistoryActivity.this, HistoryDetailsActivity.class);
+                        historyDetails.putExtra("id", itemID);
+                        historyDetails.putExtra("code", code);
+                        startActivity(historyDetails);
+                    } else {
+                        Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_not_in_database), Toast.LENGTH_LONG).show();
+                    }
+                    //Catch Exception for DataMatrix codes
+                } catch (SQLException e){
+                    Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_sqlexception), Toast.LENGTH_LONG).show();
 
-                Cursor data = historyDatabaseHelper.getItemID(code);
-                int itemID = -1;
-                while(data.moveToNext()){
-                    itemID = data.getInt(0);
                 }
-                if(itemID > -1){
-                    Intent historyDetails = new Intent(HistoryActivity.this, HistoryDetailsActivity.class);
-                    historyDetails.putExtra("id", itemID);
-                    historyDetails.putExtra("code", code);
-                    startActivity(historyDetails);
-                } else {
-                    Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_generate), Toast.LENGTH_LONG).show();
-                }
-
             }
         });
     }
+
+    /**
+     * This method will call the resetDatabase method of the DatabaseHelper
+     */
+    private void resetDatabase(){
+        historyDatabaseHelper.resetDatabase();
+        super.finish();
+    }
+
 }

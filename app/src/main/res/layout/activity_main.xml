@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorWhiteBackground"
-    tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
+    tools:context="de.t_dankworth.secscanqr.activities.MainActivity"
+    >
 
     <FrameLayout
         android:id="@+id/content"
@@ -82,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
         app:menu="@menu/main_action_navigation"/>

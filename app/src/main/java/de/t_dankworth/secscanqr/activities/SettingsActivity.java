@@ -151,6 +151,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("pref_auto_scan"));
             bindPreferenceSummaryToValue(findPreference("pref_auto_clipboard"));
+            bindPreferenceSummaryToValue(findPreference("pref_history"));
         }
 
         @Override
