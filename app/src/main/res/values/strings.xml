@@ -100,7 +100,7 @@
 
     <!-- HistoryActivity -->
     <string name="reset_database">Reset</string>
-    <string name="share_database">Reset</string>
+    <string name="share_database">Share</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Was not found in the history database</string>
