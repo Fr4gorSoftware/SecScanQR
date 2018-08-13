@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,10 +21,12 @@ import java.util.ArrayList;
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
+import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
+
 /**
  * Created by Thore Dankworth
- * Last Update: 25.05.2018
- * Last Update by Thore Dankworth
+ * Last Update: 10.08.2018
+ * Last Update by Nicolas Lazzari
  *
  * This class is the HistoryActivity and lists all scanned qr-codes
  */
@@ -68,8 +71,21 @@ public class HistoryActivity extends AppCompatActivity {
     public  boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
 
-        if(id == R.id.history_optionsmenu_delete){
+
+        if(id == R.id.history_optionsmenu_delete) {
             resetDatabase();
+        } else if (id == R.id.history_optionsmenu_share) {
+            Cursor data = historyDatabaseHelper.getData();
+            String codes = "";
+            // Concatenates all the codes in a string separated by a newline
+            while(data.moveToNext()){
+                codes += data.getString(1); // column 1:code
+
+                if (!data.isLast())
+                    codes += "\n";
+            }
+
+            shareTo(codes, activity);
         }
 
         return super.onOptionsItemSelected(item);
