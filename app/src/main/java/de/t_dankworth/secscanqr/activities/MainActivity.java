@@ -225,8 +225,8 @@ public class MainActivity extends AppCompatActivity {
         integrator.setPrompt((String) getResources().getText(R.string.xzing_label));
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String history_setting = prefs.getString("pref_camera", "");
-        if(history_setting.equals("1")){
+        String camera_setting = prefs.getString("pref_camera", "");
+        if(camera_setting.equals("1")){
             integrator.setCameraId(1);
         } else {
             integrator.setCameraId(0);
