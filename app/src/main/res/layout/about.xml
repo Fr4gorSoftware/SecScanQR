@@ -2,7 +2,8 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:minHeight="200dp">
+    android:minHeight="200dp"
+    android:background="?attr/backgroundcolor">
 
     <TableRow android:minHeight="100dp">
 
@@ -20,7 +21,8 @@
             android:layout_gravity="end|center"
             android:gravity="center"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
+            android:paddingRight="10dp"
+            android:textColor="?attr/textcolor"/>
     </TableRow>
 
     <TableRow>
@@ -33,7 +35,8 @@
             android:gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="@string/copyright"/>
+            android:text="@string/copyright"
+            android:textColor="?attr/textcolor"/>
     </TableRow>
 
     <TableRow>
@@ -46,7 +49,8 @@
             android:layout_margin="10dp"
             android:layout_span="2"
             android:textSize="12sp"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:textColor="?attr/textcolor"/>
     </TableRow>
 
 </TableLayout>

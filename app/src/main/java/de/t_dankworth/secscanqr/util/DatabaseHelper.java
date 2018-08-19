@@ -44,14 +44,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * This method adds
-     * @param item = item that will be added to the database
+     * This method adds a scanned qr code
+     * @param code = qrcode that will be added to the database
      * @return a boolean if the code was added to the database or not
      */
-    public boolean addData(String item){
+    public boolean addData(String code){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_SCANNED_QRCODE, item);
+        values.put(COLUMN_SCANNED_QRCODE, code);
         //Insert Data into Database with a checking if the insert into the database worked
         long result = db.insert(TABLE_SCANNED, null, values);
         if(result == -1){
@@ -62,6 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             return true;
         }
     }
+
 
     /**
      * Returns all the data from the database
@@ -90,9 +91,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     /**
      * Delete a specific Item from database
      * @param id
-     * @param code
      */
-    public void deleteItem(int id, String code){
+    public void deleteItem(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "DELETE FROM " + TABLE_SCANNED + " WHERE " + COLUMN_SCANNED_ID + " = '" + id + "'";
         db.execSQL(query);

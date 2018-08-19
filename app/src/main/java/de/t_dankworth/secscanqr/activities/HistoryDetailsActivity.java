@@ -23,7 +23,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 17.03.2019
+* Last Update: 17.03.2018
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -52,7 +52,7 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.history_action_navigation_delete:
-                    historyDatabaseHelper.deleteItem(selectedID, selectedCode);
+                    historyDatabaseHelper.deleteItem(selectedID);
                     Toast.makeText(activity, activity.getResources().getText(R.string.notice_deleted_from_database), Toast.LENGTH_LONG).show();
                     activity.finish();
                     return true;
@@ -63,6 +63,7 @@ public class HistoryDetailsActivity extends AppCompatActivity {
                 case R.id.main_action_navigation_openInWeb:
                     openInWeb(selectedCode, activity);
                     return true;
+
                 case R.id.history_action_navigation_share:
                     shareTo(selectedCode, activity);
                     return true;

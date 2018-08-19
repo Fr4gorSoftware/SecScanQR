@@ -5,7 +5,9 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.design.widget.BottomNavigationView;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -17,7 +19,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 04.09.2017
+ * Last Update: 18.08.2018
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -73,6 +75,7 @@ public class ButtonHandler {
     }
 
     /**
+     * ONLY for history: The method will open the qrcode as a website in the browser if it is valid web url. If not it will start a google search request.
      * The method will open the qrcode as a website in the browser if it is valid web url. If not it will start a google search request.
      * @param qrcode = the qrcode as a String
      * @param activity = Activty were the method was called.Needed for Toast and web intent
@@ -86,11 +89,105 @@ public class ButtonHandler {
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 activity.startActivity(intent);
             } catch (Exception e){
-                Uri uri = Uri.parse("http://www.google.com/#q=" + qrcode);
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+                String search_engine = prefs.getString("pref_search_engine", "");
+                String tempUrl;
+                if(search_engine.equals("1")) {
+                    tempUrl = "https://www.bing.com/search?q=";
+                }else if(search_engine.equals("2")){
+                    tempUrl = "https://duckduckgo.com/?q=";
+                }else if(search_engine.equals("3")){
+                    tempUrl = "http://www.google.com/#q=";
+                }else if(search_engine.equals("4")){
+                    tempUrl = "https://www.qwant.com/?q=";
+                }else if(search_engine.equals("5")){
+                    tempUrl = "https://lite.qwant.com/?q=";
+                }else if(search_engine.equals("6")){
+                    tempUrl = "https://search.yahoo.com/search?p=";
+                }else if(search_engine.equals("7")){
+                    tempUrl = "https://www.yandex.ru/search/?text=";
+                } else {
+                    tempUrl = "http://www.google.com/#q=";
+                }
+
+                Uri uri = Uri.parse(tempUrl + qrcode);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 activity.startActivity(intent);
             }
         }
     }
 
+    /**
+     * The method will open the qrcode as a website in the browser if it is valid web url. If not it will start a google search request.
+     * @param qrcode = the qrcode as a String
+     * @param format = format of the code
+     * @param activity = Activty were the method was called.Needed for Toast and web intent
+     */
+    public static void openInWeb(String qrcode, String format, Activity activity){
+        if(qrcode.equals("")){
+            Toast.makeText(activity.getApplicationContext(), activity.getResources().getText(R.string.error_scan_first), Toast.LENGTH_SHORT).show();
+        } else {
+            try {
+                Uri uri = Uri.parse(qrcode);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                activity.startActivity(intent);
+            } catch (Exception e){
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+                String search_engine = prefs.getString("pref_search_engine", "");
+                String barcode_engine = prefs.getString("pref_barcode_search_engine", "");
+                String tempUrl;
+                if(barcode_engine.equals("0")){
+                    if(search_engine.equals("1")) {
+                        tempUrl = "https://www.bing.com/search?q=";
+                    }else if(search_engine.equals("2")){
+                        tempUrl = "https://duckduckgo.com/?q=";
+                    }else if(search_engine.equals("3")){
+                        tempUrl = "http://www.google.com/#q=";
+                    }else if(search_engine.equals("4")){
+                        tempUrl = "https://www.qwant.com/?q=";
+                    }else if(search_engine.equals("5")){
+                        tempUrl = "https://lite.qwant.com/?q=";
+                    }else if(search_engine.equals("6")){
+                        tempUrl = "https://search.yahoo.com/search?p=";
+                    }else if(search_engine.equals("7")){
+                        tempUrl = "https://www.yandex.ru/search/?text=";
+                    } else {
+                        tempUrl = "http://www.google.com/#q=";
+                    }
+                } else {
+                    if(format.equals("QR_CODE") || format.equals("AZTEC")){
+                        if(search_engine.equals("1")) {
+                            tempUrl = "https://www.bing.com/search?q=";
+                        }else if(search_engine.equals("2")){
+                            tempUrl = "https://duckduckgo.com/?q=";
+                        }else if(search_engine.equals("3")){
+                            tempUrl = "http://www.google.com/#q=";
+                        }else if(search_engine.equals("4")){
+                            tempUrl = "https://www.qwant.com/?q=";
+                        }else if(search_engine.equals("5")){
+                            tempUrl = "https://lite.qwant.com/?q=";
+                        }else if(search_engine.equals("6")){
+                            tempUrl = "https://search.yahoo.com/search?p=";
+                        }else if(search_engine.equals("7")){
+                            tempUrl = "https://www.yandex.ru/search/?text=";
+                        } else {
+                            tempUrl = "http://www.google.com/#q=";
+                        }
+                    } else {
+                        if(barcode_engine.equals("1")){
+                            tempUrl = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=";
+                        } else if(barcode_engine.equals("2")){
+                            tempUrl = "https://www.codecheck.info/product.search?q=";
+                        } else {
+                            tempUrl = "http://www.google.com/#q=";
+                        }
+                    }
+                }
+
+                Uri uri = Uri.parse(tempUrl + qrcode);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                activity.startActivity(intent);
+            }
+        }
+    }
 }

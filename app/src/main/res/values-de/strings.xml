@@ -93,7 +93,14 @@
     <string name="title_activity_settings">Einstellungen</string>
     <!-- Scanner settings -->
     <string name="pref_header_scanner">Scanner</string>
+    <string name="pref_header_history_settings">Verlauf</string>
+    <string name="pref_header_search_engine_settings">Suchmaschine</string>
 
+    <string name="pref_title_camera">Kamera</string>
+    <string-array name="pref_camera_entries">
+        <item>Kamera auf der Rückseite</item>
+        <item>Kamera auf der Vorderseite</item>
+    </string-array>
     <string name="pref_title_auto_scan">Autostart Scanner</string>
     <string-array name="pref_auto_scan_entries">
         <item>An</item>
@@ -106,9 +113,34 @@
         <item>Aus</item>
     </string-array>
 
-    <string name="pref_title_history">Verlauf</string>
+    <string name="pref_title_day_night_mode">Tag/Nacht Modus (ALPHA Version)</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>Tag (Benötigt Neustart)</item>
+        <item>Nacht (Benötigt Neustart)</item>
+    </string-array>
+
+    <string name="pref_title_history">Verlauf (an/aus)</string>
     <string-array name="pref_history_entries">
         <item>An</item>
         <item>Aus</item>
     </string-array>
+
+    <string name="pref_title_search_engine">Suchmaschine</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Yahoo</item>
+        <item>Yandex (RUS)</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">Barcode Suchmaschine</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>Keine extra Suchmaschine für Barcodes</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+
 </resources>
