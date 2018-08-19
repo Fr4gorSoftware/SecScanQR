@@ -3,6 +3,8 @@ package de.t_dankworth.secscanqr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.client.android.Intents;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -29,7 +32,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 25.05.2019
+ * Last Update: 19.08.2018
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -40,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvInformation, mTvFormat, mLabelInformation, mLabelFormat;
     private BottomNavigationView action_navigation;
     final Activity activity = this;
-    private String qrcode = "", qrcodeFormat = "", history ="";
+    private String qrcode = "", qrcodeFormat = "";
+    private int camera = 0;
     private DatabaseHelper mDatabaeHelper;
     private static final String STATE_QRCODE = MainActivity.class.getName();
     private static final String STATE_QRCODEFORMAT = "format";
-    private static final String STATE_HISTORY = "history";
 
     /**
      * This method handles the main navigation
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     resetScreenInformation(mTvInformation, mTvFormat, mLabelInformation, mLabelFormat, qrcode, qrcodeFormat, action_navigation);
                     return true;
                 case R.id.main_action_navigation_openInWeb:
-                    openInWeb(qrcode, activity);
+                    openInWeb(qrcode, qrcodeFormat, activity);
                     return true;
                 case R.id.main_action_navigation_share:
                     shareTo(qrcode, activity);
@@ -91,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString(STATE_QRCODE, qrcode);
         savedInstanceState.putString(STATE_QRCODEFORMAT, qrcodeFormat);
-        savedInstanceState.putString(STATE_HISTORY, history);
     }
 
     /**
@@ -101,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadTheme();
         setContentView(R.layout.activity_main);
-
         mTvInformation = (TextView) findViewById(R.id.tvTxtqrcode);
         mTvFormat = (TextView) findViewById(R.id.tvFormat);
         mLabelInformation = (TextView) findViewById(R.id.labelInformation);
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState != null){
             qrcode = savedInstanceState.getString(STATE_QRCODE);
             qrcodeFormat = savedInstanceState.getString(STATE_QRCODEFORMAT);
-            qrcodeFormat = savedInstanceState.getString(STATE_HISTORY);
+
             if(qrcode.equals("")){
 
             } else {
@@ -143,7 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 zxingScan();
             }
         }
-
 
     }
 
@@ -197,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                     if(history_setting.equals("false")){
                         //Don't save QR-Code in history
                     } else {
-                        addToDatabase(mTvInformation.getText().toString());
+                        addToDatabase(mTvInformation.getText().toString(), mTvFormat.getText().toString());
                     }
                     //Automatic Clipboard if activated
                     String auto_scan = prefs.getString("pref_auto_clipboard", "");
@@ -222,7 +223,15 @@ public class MainActivity extends AppCompatActivity {
         IntentIntegrator integrator = new IntentIntegrator(activity);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
         integrator.setPrompt((String) getResources().getText(R.string.xzing_label));
-        integrator.setCameraId(0);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String camera_setting = prefs.getString("pref_camera", "");
+        if(camera_setting.equals("1")){
+            integrator.setCameraId(1);
+        } else {
+            integrator.setCameraId(0);
+        }
+
         integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(false);
         integrator.initiateScan();
@@ -232,10 +241,22 @@ public class MainActivity extends AppCompatActivity {
      * Takes the scanned code hands over the code to the method addData in the DatabaseHelper
      * @param newCode = scanned qr-code/barcode
      */
-    public void addToDatabase(String newCode){
+    public void addToDatabase(String newCode, String format){
         boolean insertData = mDatabaeHelper.addData(newCode);
         if(!insertData){
             Toast.makeText(this, getResources().getText(R.string.error_add_to_database), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Depending on the saved settings. The day or night mode will be loaded
+     */
+    private void loadTheme(){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String history_setting = prefs.getString("pref_day_night_mode", "");
+        if(history_setting.equals("1")){
+            setTheme(R.style.darktheme);
+        } else {
         }
     }
 }

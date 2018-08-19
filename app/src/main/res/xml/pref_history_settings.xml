@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="true"
+        android:entries="@array/pref_history_entries"
+        android:entryValues="@array/pref_history_values"
+        android:key="pref_history"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_history" />
+</PreferenceScreen>

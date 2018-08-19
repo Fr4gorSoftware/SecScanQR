@@ -26,7 +26,7 @@ import de.t_dankworth.secscanqr.util.AppCompatPreferenceActivity;
  * settings are split by category, with category headers shown to the left of
  * the list of settings.
  *
- * Last Update: 10.03.2018
+ * Last Update: 19.08.2018
  * Last Update by Thore Dankworth
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
@@ -130,7 +130,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      */
     protected boolean isValidFragment(String fragmentName) {
         return PreferenceFragment.class.getName().equals(fragmentName)
-                || ScannerPreferenceFragment.class.getName().equals(fragmentName);
+                || ScannerPreferenceFragment.class.getName().equals(fragmentName)
+                || HistoryPreferenceFragment.class.getName().equals(fragmentName)
+                || SearchEnginePreferenceFragment.class.getName().equals(fragmentName);
     }
 
     /**
@@ -149,9 +151,64 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
+            bindPreferenceSummaryToValue(findPreference("pref_camera"));
             bindPreferenceSummaryToValue(findPreference("pref_auto_scan"));
             bindPreferenceSummaryToValue(findPreference("pref_auto_clipboard"));
+            bindPreferenceSummaryToValue(findPreference("pref_day_night_mode"));
+
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class HistoryPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_history_settings);
+            setHasOptionsMenu(true);
+
+            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
+            // to their values. When their values change, their summaries are
+            // updated to reflect the new value, per the Android Design
+            // guidelines.
             bindPreferenceSummaryToValue(findPreference("pref_history"));
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            int id = item.getItemId();
+            if (id == android.R.id.home) {
+                startActivity(new Intent(getActivity(), SettingsActivity.class));
+                return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    public static class SearchEnginePreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_search_engine);
+            setHasOptionsMenu(true);
+
+            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
+            // to their values. When their values change, their summaries are
+            // updated to reflect the new value, per the Android Design
+            // guidelines.
+            bindPreferenceSummaryToValue(findPreference("pref_search_engine"));
+            bindPreferenceSummaryToValue(findPreference("pref_barcode_search_engine"));
         }
 
         @Override
@@ -174,5 +231,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+
     }
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorWhiteBackground"
+    android:background="?attr/backgroundcolor"
     tools:context="de.t_dankworth.secscanqr.activities.MainActivity"
     >
 
@@ -34,7 +34,7 @@
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
 
                     android:text="@string/title_format"
-
+                    android:textColor="?attr/textcolor"
                     android:textSize="24sp"
                     android:visibility="gone" />
 
@@ -47,7 +47,8 @@
                     android:layout_marginLeft="@dimen/activity_horizontal_margin"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:textSize="18sp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:textColor="?attr/textcolor"/>
 
                 <TextView
                     android:id="@+id/labelInformation"
@@ -58,7 +59,8 @@
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
                     android:text="@string/title_information"
                     android:textSize="24sp"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:textColor="?attr/textcolor"/>
 
                 <TextView
                     android:id="@+id/tvTxtqrcode"
@@ -70,7 +72,8 @@
                     android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:text='@string/default_text_main_activity'
                     android:textSize="18sp"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    android:textColor="?attr/textcolor"/>
 
             </RelativeLayout>
         </ScrollView>
@@ -82,7 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="?attr/bottomnavcolor"
         android:visibility="gone"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
@@ -93,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="?attr/bottomnavcolor"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
         app:menu="@menu/navigation"/>

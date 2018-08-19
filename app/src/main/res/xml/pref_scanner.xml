@@ -1,6 +1,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_camera_entries"
+        android:entryValues="@array/pref_camera_values"
+        android:key="pref_camera"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_camera"
+        />
+
+    <ListPreference
         android:defaultValue="false"
         android:entries="@array/pref_auto_scan_entries"
         android:entryValues="@array/pref_auto_scan_values"
@@ -18,11 +28,11 @@
         android:title="@string/pref_title_auto_clipboard" />
 
     <ListPreference
-        android:defaultValue="true"
-        android:entries="@array/pref_history_entries"
-        android:entryValues="@array/pref_history_values"
-        android:key="pref_history"
+        android:defaultValue="0"
+        android:entries="@array/pref_day_night_mode_entries"
+        android:entryValues="@array/pref_day_night_mode_values"
+        android:key="pref_day_night_mode"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
-        android:title="@string/pref_title_history" />
+        android:title="@string/pref_title_day_night_mode" />
 </PreferenceScreen>

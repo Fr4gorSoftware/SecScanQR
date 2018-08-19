@@ -23,6 +23,7 @@ import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
+
 /**
  * Created by Thore Dankworth
  * Last Update: 10.08.2018
@@ -71,7 +72,6 @@ public class HistoryActivity extends AppCompatActivity {
     public  boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
 
-
         if(id == R.id.history_optionsmenu_delete) {
             resetDatabase();
         } else if (id == R.id.history_optionsmenu_share) {
@@ -80,11 +80,9 @@ public class HistoryActivity extends AppCompatActivity {
             // Concatenates all the codes in a string separated by a newline
             while(data.moveToNext()){
                 codes += data.getString(1); // column 1:code
-
                 if (!data.isLast())
                     codes += "\n";
             }
-
             shareTo(codes, activity);
         }
 
