@@ -1,0 +1,211 @@
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">Генератор QR-кодов</string>
+    <string name="activity_history">История</string>
+    <string name="activity_history_details">История</string>
+    <string name="title_activity_geo_generator">Гео Генератор</string>
+    <string name="title_activity_text_generator">Текстовый Генератор</string>
+    <string name="title_activity_barcode_generate">Генератор Штрих-кодов</string>
+    <string name="title_activity_vcard_generator">vCard Генератор</string>
+    <!-- MainActivity-->
+    <string name="title_format">Формат кода:</string>
+    <string name="title_information">Информация о кодах:</string>
+    <string name="default_text_main_activity">Нажмите кнопку «Сканировать» для сканирования QR-кода/штрих-кода</string>
+    <string name="send_to">Поделиться с:</string>
+    <string name="xzing_label">Для активации вспышки используйте клавиши регулировки громкости</string>
+    <string name="notice_clipoard">Скопировано в буфер обмена</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Сначала просканируйте QR-код</string>
+    <string name="error_canceled_scan">Вы отменили сканирование</string>
+    <string name="error_add_to_database">Не удалось добавить QR-код в историю</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">Сканирование</string>
+    <string name="title_generate">Генерация</string>
+    <string name="title_history">История</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Копировать</string>
+    <string name="title_share">Поделиться</string>
+    <string name="title_reset">Сбросить</string>
+    <string name="title_openInWeb">Открыть в Интернете</string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">Сохранить</string>
+    <string name="toast_save">Сохранено в папке «SecScanQR» на внутренней памяти</string>
+    <string name="toast_permission_needed">Требуется разрешение</string>
+    <string name="toast_erorr">Произошла ошибка</string>
+    <string-array name="generators">
+        <item>ШТРИХ-КОД</item>
+        <item>ГЕОПОЗИЦИЯ</item>
+        <item>ТЕКСТ</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Генератор Штрих-кодов</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+
+    </string-array>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">Здесь вы можете ввести текст</string>
+    <string name="tv_format">Формат: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">Сначала введите текст</string>
+    <string name="error_generate">Недействительный ввод для этого формата</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">Пример широты: 43.73</string>
+    <string name="hint_longtitude">Пример долготы: -10.73</string>
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">Север</string>
+    <string name="cbLongtitude">Восток</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">Сначала заполните действительные значения широты и долготы</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">Имя</string>
+    <string name="hint_fn">Фамилия</string>
+    <string name="hint_org">Организация</string>
+    <string name="hint_web">Веб-сайт</string>
+    <string name="hint_email">Эл. почта</string>
+    <string name="hint_mobil">Мобильный номер</string>
+    <string name="hint_tele_work">Рабочий номер</string>
+    <string name="hint_tele_private">Личный номер</string>
+    <string name="hint_street">Улица</string>
+    <string name="hint_plz">Индекс</string>
+    <string name="hint_city">Город</string>
+    <string name="hint_state">Штат/Пригород</string>
+    <string name="hint_country">Страна</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">Сначала введите имя или фамилию</string>
+
+    <!-- HistoryActivity -->
+    <string name="reset_database">Сбросить</string>
+    <string name="share_database">Поделиться</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Не найдено в базе данных истории</string>
+    <string name="error_sqlexception">Этот формат не поддерживается историей</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Удалено из истории</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Удалить</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">О приложении</string>
+    <string name="settings_settings">Настройки</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">О приложении</string>
+    <string name="copyright">Уведомление об авторских правах</string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Настройки</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Сканер</string>
+    <string name="pref_header_history_settings">История</string>
+    <string name="pref_header_search_engine_settings">Настройки поиска</string>
+
+    <string name="pref_title_camera">Камера</string>
+    <string-array name="pref_camera_entries">
+        <item>Задняя камера</item>
+        <item>Фронтальная камера</item>
+    </string-array>
+    <string-array name="pref_camera_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_auto_scan">Автозапуск сканера</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>Вкл.</item>
+        <item>Выкл.</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">Умный буфер обмена</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>Вкл.</item>
+        <item>Выкл.</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_day_night_mode">Режим день/ночь</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>День (Требуется перезапуск)</item>
+        <item>Ночь (Требуется перезапуск)</item>
+    </string-array>
+    <string-array name="pref_day_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_history">История</string>
+    <string-array name="pref_history_entries">
+        <item>Вкл.</item>
+        <item>Выкл.</item>
+    </string-array>
+    <string-array name="pref_history_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_search_engine">Поисковая система</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Yahoo</item>
+        <item>Yandex</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">Поисковая система для штрих-кодов</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>По умолчанию</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+    <string-array name="pref_barcode_search_engine_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
