@@ -1,0 +1,16 @@
+Copyright(c) 2018 T-Dankworth
+
+Это приложение было создано в соответствии с GNU General Public License.
+Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой.
+
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Логотип приложения был создан s-yous: https://github.com/s-yous
+
+Перевод на русский язык осуществил Vladimir Kosolapov:
+https://github.com/0x264f
+
+Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0.
+Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой.
+
+http://www.apache.org/licenses/LICENSE-2.0
