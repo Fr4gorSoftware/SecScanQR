@@ -1,7 +1,7 @@
 # SecScanQR
 ![Logo](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20-%20Logotype.png)
 
-The QR-Code Scanner/Generator that cares about your privacy!
+The QR-Code Scanner/Generator that cares about your privacy based on [XZing Library](https://github.com/zxing/zxing).
 
 
 # Download
@@ -13,6 +13,12 @@ The QR-Code Scanner/Generator that cares about your privacy!
   - Scanned QR-Codes can be shared with friends and do a web search with the information from the QR-Code
   - Generate QR-Codes, Barcodes and many more formats
   - History
+
+# Translators
+  - German (last change: 1.1.7): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Russian (last change: 1.1.7): [Vladimir Kosolapov](https://github.com/0x264f)
+  - Spanish (Last change: 1.1.6): [Aitor Beriain](https://github.com/beriain)
+  - French (Last change: 1.1.2 -> OLD): [Romain Rossi](https://github.com/romainrossi) 
 
 # Upcoming Features
 [List of upcoming Features](https://github.com/Fr4gorSoftware/SecScanQR/wiki/Upcoming-Features)
