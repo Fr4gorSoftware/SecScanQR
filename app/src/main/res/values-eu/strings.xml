@@ -34,35 +34,14 @@
     <string name="toast_save">Barneko biltekigo "SecScanQR" karpetan gorde da</string>
     <string name="toast_permission_needed">Baimena behar da</string>
     <string name="toast_erorr">Akats bat gertatu da</string>
-    <string-array name="generators">
-        <item>BARRA-KODEA</item>
-        <item>GEO</item>
-        <item>TESTUA</item>
-        <item>VCARD</item>
-    </string-array>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Barra-kode sortzailea</string>
-    <string-array name="barcode_formats_array">
-        <item>BARCODE</item>
-        <item>CODE_128</item>
-        <item>CODE_39</item>
-        <item>EAN_13</item>
-        <item>EAN_8</item>
-        <item>ITF</item>
-        <item>PDF_417</item>
-        <item>UPC_A</item>
-
-    </string-array>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Hemen idatzi dezakezu</string>
     <string name="tv_format">Formatua: </string>
-    <string-array name="text_formats_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
 
-    </string-array>
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">Idatzi ezazu zerbait lehenago</string>
     <string name="error_generate">Idatzitakoa ez du balio formatu honetarako</string>
@@ -70,10 +49,7 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">latitudearen eredua: 43.73</string>
     <string name="hint_longtitude">longitudearen eredua: -10.73</string>
-    <string-array name="formats_geo_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
-    </string-array>
+
     <string name="cbLatitude">iparra</string>
     <string name="cbLongtitude">ekialdea</string>
 
@@ -124,19 +100,11 @@
         <item>Piztuta</item>
         <item>Itzalita</item>
     </string-array>
-    <string-array name="pref_auto_scan_values">
-        <item>true</item>
-        <item>false</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">Arbel adimenduna</string>
     <string-array name="pref_auto_clipboard_entries">
         <item>Piztuta</item>
         <item>Itzalita</item>
-    </string-array>
-    <string-array name="pref_auto_clipboard_values">
-        <item>true</item>
-        <item>false</item>
     </string-array>
 
 
