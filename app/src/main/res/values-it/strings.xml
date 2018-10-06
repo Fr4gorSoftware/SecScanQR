@@ -131,15 +131,6 @@
     </string-array>
 
     <string name="pref_title_search_engine">Motore di ricerca</string>
-    <string-array name="pref_search_engine_entries">
-        <item>Bing</item>
-        <item>DuckDuckGo</item>
-        <item>Google</item>
-        <item>Qwant</item>
-        <item>Qwant Lite</item>
-        <item>Yahoo</item>
-        <item>Yandex (RUS)</item>
-    </string-array>
    
     <string name="pref_title_barcode_search_enigne">Motore di ricerca per Barcode</string>
     <string-array name="pref_barcode_search_engine_entries">
