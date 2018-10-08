@@ -27,7 +27,7 @@
     <!-- MainActivity Action Navigation-->
     <string name="title_copy">Kopieren</string>
     <string name="title_share">Teilen</string>
-    <string name="title_deleete">Zurücksetzen</string>
+    <string name="title_reset">Zurücksetzen</string>
     <string name="title_openInWeb">Öffnen im Web</string>
 
     <!-- GenerateActivity-->
