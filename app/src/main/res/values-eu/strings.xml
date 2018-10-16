@@ -106,7 +106,7 @@
         <item>Piztuta</item>
         <item>Itzalita</item>
     </string-array>
-
+    <string name="translator">Spanish translation by Aitor Beriain: https://github.com/beriain</string>
 
 
 </resources>

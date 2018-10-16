@@ -25,7 +25,6 @@
     <string name="title_copy">Copier</string>
     <string name="title_share">Partager</string>
     <string name="title_reset">Réinitialiser</string>
-    <string name="title_search">Recherche Web</string>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Saisir le texte et appuyer le bouton \"+"</string>
@@ -46,6 +45,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">À propos</string>
     <string name="copyright">Informations de Copyright</string>
+    <string name="translator">French translation by Romain Rossi: https://github.com/romainrossi</string>
 
 
 </resources>

@@ -142,5 +142,6 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
+    <string name="translator">German translation by Thore Dankworth: https://github.com/Fr4gorSoftware</string>
 
 </resources>
