@@ -150,5 +150,9 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
+    <string name="license">"Это приложение было создано в соответствии с GNU General Public License. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
+    <string name="logo_designer">"Логотип приложения был создан s-yous: https://github.com/s-yous "</string>
+    <string name="zxing_license">"Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
+    <string name="translator">Перевод на русский язык осуществил Vladimir Kosolapov: https://github.com/0x264f</string>
 
 </resources>

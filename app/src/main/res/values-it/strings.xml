@@ -32,7 +32,7 @@
     <!-- GenerateActivity-->
     <string name="btn_save">Salva</string>
     <string name="toast_save">Salvato nella cartella "SecScanQR" nella memoria interna</string>
-    <string name="toast_permission_needed">E' necessario il permesso</string>
+    <string name="toast_permission_needed">E\' necessario il permesso</string>
     <string name="toast_erorr">Si è verificato un errore</string>
 
     <!-- TextGeneratorActivity-->
@@ -138,5 +138,6 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
+    <string name="translator">Italian translation by abonte: https://github.com/abonte</string>
 
 </resources>

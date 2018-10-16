@@ -3,8 +3,6 @@ package de.t_dankworth.secscanqr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.hardware.Camera;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -16,7 +14,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.client.android.Intents;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -32,7 +29,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 19.08.2018
+ * Last Update: 16.10.2018
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -232,9 +229,14 @@ public class MainActivity extends AppCompatActivity {
             integrator.setCameraId(0);
         }
 
+        integrator.setOrientationLocked(false);
         integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(false);
-        integrator.initiateScan();
+        try {
+            integrator.initiateScan();
+        } catch (ArithmeticException e){
+            
+        }
     }
 
     /**
@@ -256,7 +258,6 @@ public class MainActivity extends AppCompatActivity {
         String history_setting = prefs.getString("pref_day_night_mode", "");
         if(history_setting.equals("1")){
             setTheme(R.style.darktheme);
-        } else {
         }
     }
 }

@@ -42,15 +42,68 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/legal_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_margin="10dp"
             android:layout_span="2"
             android:textSize="12sp"
             android:textStyle="italic"
+            android:text="@string/copyright_holder"
             android:textColor="?attr/textcolor"/>
     </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_span="2"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="@string/license"
+            android:textColor="?attr/textcolor"/>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_span="2"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="@string/logo_designer"
+            android:textColor="?attr/textcolor"/>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_span="2"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="@string/translator"
+            android:textColor="?attr/textcolor"/>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_span="2"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:text="@string/zxing_license"
+            android:textColor="?attr/textcolor"/>
+    </TableRow>
+
+
 
 </TableLayout>

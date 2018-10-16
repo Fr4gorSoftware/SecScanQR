@@ -11,7 +11,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 import de.t_dankworth.secscanqr.R;
-import de.t_dankworth.secscanqr.util.RawTextFileUtils;
 
 /**
  * Created by Thore Dankworth
@@ -43,11 +42,8 @@ public class AboutDialog extends Dialog {
     public void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.about);
         loadTheme();
-        TextView tv = (TextView) findViewById(R.id.legal_text);
 
-        tv.setText(RawTextFileUtils.readRawTextFile(mContext, R.raw.copyright));
-
-        tv = (TextView) findViewById(R.id.info_version);
+        TextView tv = (TextView) findViewById(R.id.info_version);
         String packageName = getContext().getPackageName();
         PackageInfo packageInfo;
         try {
