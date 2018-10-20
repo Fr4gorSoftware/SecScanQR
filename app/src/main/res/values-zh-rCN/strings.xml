@@ -1,0 +1,155 @@
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">二维码生成器</string>
+    <string name="activity_history">历史</string>
+    <string name="activity_history_details">历史</string>
+    <string name="title_activity_geo_generator">地理位置生成器</string>
+    <string name="title_activity_text_generator">文本生成器</string>
+    <string name="title_activity_barcode_generate">条形码生成器</string>
+    <string name="title_activity_vcard_generator">电子名片生成器</string>
+    <!-- MainActivity-->
+    <string name="title_format">编码格式：</string>
+    <string name="title_information">编码信息：</string>
+    <string name="default_text_main_activity">按“扫描”键扫描二维码/条形码</string>
+    <string name="send_to">分享到：</string>
+    <string name="xzing_label">用音量键打开闪光灯</string>
+    <string name="notice_clipoard">复制到剪贴板</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">请先扫描二维码</string>
+    <string name="error_canceled_scan">您已取消扫描</string>
+    <string name="error_add_to_database">无法将二维码添加到历史</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">扫描</string>
+    <string name="title_generate">生成</string>
+    <string name="title_history">历史</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">复制</string>
+    <string name="title_share">分享</string>
+    <string name="title_reset">重置</string>
+    <string name="title_openInWeb">在网页中打开</string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">保存</string>
+    <string name="toast_save">保存到内部存储中的 "SecScanQR" 文件夹</string>
+    <string name="toast_permission_needed">需要权限</string>
+    <string name="toast_erorr">发生了一个错误</string>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">条形码生成器</string>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">您可以在这里输入一些文字</string>
+    <string name="tv_format">格式：</string>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">请先输入一些文字</string>
+    <string name="error_generate">没有对此格式的有效输入</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">纬度示例：43.73</string>
+    <string name="hint_longtitude">经度示例：-10.73</string>
+    <string name="cbLatitude">北</string>
+    <string name="cbLongtitude">东</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">请先填写有效的纬度值和经度值</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">全名</string>
+    <string name="hint_fn">名</string>
+    <string name="hint_org">组织</string>
+    <string name="hint_web">网站</string>
+    <string name="hint_email">电子邮件</string>
+    <string name="hint_mobil">移动电话</string>
+    <string name="hint_tele_work">电话（工作）</string>
+    <string name="hint_tele_private">电话（私人）</string>
+    <string name="hint_street">街道</string>
+    <string name="hint_plz">邮编</string>
+    <string name="hint_city">市</string>
+    <string name="hint_state">省</string>
+    <string name="hint_country">国家</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">请先输入有效的名或全名</string>
+
+    <!-- HistoryActivity -->
+    <string name="reset_database">重置</string>
+    <string name="share_database">分享</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">未在历史数据库中找到</string>
+    <string name="error_sqlexception">历史功能不支持此格式</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">从历史中删除</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">删除</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">关于</string>
+    <string name="settings_settings">设置</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">关于</string>
+    <string name="copyright">版权声明</string>
+    <string name="copyright_holder">Copyright(c) 2018 T-Dankworth</string>
+    <string name="license">此应用遵循 GNU General Public License. 更多信息请查看以下链接： https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">此应用 logo 由 s-yous 创作： https://github.com/s-yous</string>
+    <string name="translator">简体中文翻译来自 linsui: https://github.com/linsui</string>
+    <string name="zxing_license">此应用使用 ZXING Libary 遵循 Apache 2.0 许可证。更多信息请查看以下链接： http://www.apache.org/licenses/LICENSE-2.0</string>
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">设置</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">扫描器</string>
+    <string name="pref_header_history_settings">历史</string>
+    <string name="pref_header_search_engine_settings">搜索引擎</string>
+
+    <string name="pref_title_camera">相机</string>
+    <string-array name="pref_camera_entries">
+        <item>后置相机</item>
+        <item>前置相机</item>
+    </string-array>
+
+    <string name="pref_title_auto_scan">自动开始扫描</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>开</item>
+        <item>关</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">智能剪贴板</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>开</item>
+        <item>关</item>
+    </string-array>
+
+    <string name="pref_title_day_night_mode">日间/夜间模式 (ALPHA Version)</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>日间（需要重启）</item>
+        <item>夜间（需要重启）</item>
+    </string-array>
+
+    <string name="pref_title_history">历史（开/关）</string>
+    <string-array name="pref_history_entries">
+        <item>开</item>
+        <item>关</item>
+    </string-array>
+
+    <string name="pref_title_search_engine">搜索引擎</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Yahoo</item>
+        <item>Yandex (俄)</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">条形码搜索引擎</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>无额外的条形码搜索引擎</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+
+</resources>
