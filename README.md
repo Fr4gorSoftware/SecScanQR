@@ -15,7 +15,8 @@ The QR-Code Scanner/Generator that cares about your privacy based on [XZing Libr
   - History
 
 # Translators
-  - German (last change: 1.1.8): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - German (last change: 1.1.9): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Chinese (last change: 1.1.9): [linsui](https://github.com/linsui)
   - Italian (last change: 1.1.8): [abonte](https://github.com/abonte)
   - Russian (last change: 1.1.8): [Vladimir Kosolapov](https://github.com/0x264f)
   - Spanish (Last change: 1.1.6): [Aitor Beriain](https://github.com/beriain)
