@@ -14,6 +14,5 @@
     <header
         android:fragment="de.t_dankworth.secscanqr.activities.SettingsActivity$SearchEnginePreferenceFragment"
         android:icon="@drawable/ic_search_24dp"
-        android:title="@string/pref_header_search_engine_settings"
-        />
+        android:title="@string/pref_header_search_engine_settings" />
 </preference-headers>

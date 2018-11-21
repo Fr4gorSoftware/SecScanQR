@@ -42,5 +42,6 @@
         android:background="?android:attr/windowBackground"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/history_action_navigation" />
 </LinearLayout>

@@ -6,7 +6,7 @@
     <string name="activity_history_details">Cronologia</string>
     <string name="title_activity_geo_generator">Geo Generator</string>
     <string name="title_activity_text_generator">Text Generator</string>
-    <string name="title_activity_barcode_generate">Barcode Generator</string>
+    <string name="title_activity_barcode_generator">Barcode Generator</string>
     <string name="title_activity_vcard_generator">VCard Generator</string>
     <!-- MainActivity-->
     <string name="title_format">Formato del codice:</string>
@@ -14,7 +14,7 @@
     <string name="default_text_main_activity">Premere sul pulsante "Scansiona" per scansionare un QR-Code/Barcode</string>
     <string name="send_to">Condividi con:</string>
     <string name="xzing_label">Attiva il flash usando il tasto del volume</string>
-    <string name="notice_clipoard">Copiato negli appunti</string>
+    <string name="notice_clipboard">Copiato negli appunti</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Scansiona prima un QR-Code</string>
     <string name="error_canceled_scan">Cancellata la scansione</string>
@@ -33,7 +33,7 @@
     <string name="btn_save">Salva</string>
     <string name="toast_save">Salvato nella cartella "SecScanQR" nella memoria interna</string>
     <string name="toast_permission_needed">E\' necessario il permesso</string>
-    <string name="toast_erorr">Si è verificato un errore</string>
+    <string name="toast_error">Si è verificato un errore</string>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Qui puoi inserire del testo</string>
@@ -46,10 +46,10 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">esempio latitudine: 43.73</string>
-    <string name="hint_longtitude">esempio longitudine: -10.73</string>
+    <string name="hint_longitude">esempio longitudine: -10.73</string>
 
     <string name="cbLatitude">nord</string>
-    <string name="cbLongtitude">est</string>
+    <string name="cbLongitude">est</string>
 
     <!-- GeoGeneratorActivity Errors-->
     <string name="error_geo_first">Inserisci prima dei valori validi per la latitudine e la longitudine</string>
@@ -60,7 +60,7 @@
     <string name="hint_org">organizzazione</string>
     <string name="hint_web">sito web</string>
     <string name="hint_email">e-mail</string>
-    <string name="hint_mobil">cellulare</string>
+    <string name="hint_mobile">cellulare</string>
     <string name="hint_tele_work">telefono(lavoro)</string>
     <string name="hint_tele_private">telefono(privato)</string>
     <string name="hint_street">via</string>

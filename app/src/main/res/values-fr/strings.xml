@@ -12,7 +12,7 @@
     <string name="default_text_main_activity">Appuyez sur le bouton \"Scanner\" pour scanner un QR-Code ou un Code-barres</string>
     <string name="send_to">Partager avec:</string>
     <string name="xzing_label">Activer la lampe de poche à l\'aide des touches de volume</string>
-    <string name="notice_clipoard">Copié dans le presse-papier</string>
+    <string name="notice_clipboard">Copié dans le presse-papier</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Commencez par scanner un QR-Code</string>
     <string name="error_canceled_scan">Scan interrompu</string>

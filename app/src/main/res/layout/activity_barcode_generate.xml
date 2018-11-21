@@ -21,11 +21,11 @@
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="1"
-        android:id="@+id/linearLayout">
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/textView3"
@@ -49,7 +49,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/tfBarcode"
@@ -63,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00"
-                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
                     android:text="@string/tv_format" />
 
                 <Spinner

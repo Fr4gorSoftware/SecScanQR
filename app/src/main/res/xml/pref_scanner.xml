@@ -7,8 +7,7 @@
         android:key="pref_camera"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
-        android:title="@string/pref_title_camera"
-        />
+        android:title="@string/pref_title_camera" />
 
     <ListPreference
         android:defaultValue="false"

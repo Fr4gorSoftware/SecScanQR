@@ -6,7 +6,7 @@
     <string name="activity_history_details">历史</string>
     <string name="title_activity_geo_generator">地理位置生成器</string>
     <string name="title_activity_text_generator">文本生成器</string>
-    <string name="title_activity_barcode_generate">条形码生成器</string>
+    <string name="title_activity_barcode_generator">条形码生成器</string>
     <string name="title_activity_vcard_generator">电子名片生成器</string>
     <!-- MainActivity-->
     <string name="title_format">编码格式：</string>
@@ -14,7 +14,7 @@
     <string name="default_text_main_activity">按“扫描”键扫描二维码/条形码</string>
     <string name="send_to">分享到：</string>
     <string name="xzing_label">用音量键打开闪光灯</string>
-    <string name="notice_clipoard">复制到剪贴板</string>
+    <string name="notice_clipboard">复制到剪贴板</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">请先扫描二维码</string>
     <string name="error_canceled_scan">您已取消扫描</string>
@@ -33,7 +33,7 @@
     <string name="btn_save">保存</string>
     <string name="toast_save">保存到内部存储中的 "SecScanQR" 文件夹</string>
     <string name="toast_permission_needed">需要权限</string>
-    <string name="toast_erorr">发生了一个错误</string>
+    <string name="toast_error">发生了一个错误</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">条形码生成器</string>
@@ -47,9 +47,9 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">纬度示例：43.73</string>
-    <string name="hint_longtitude">经度示例：-10.73</string>
+    <string name="hint_longitude">经度示例：-10.73</string>
     <string name="cbLatitude">北</string>
-    <string name="cbLongtitude">东</string>
+    <string name="cbLongitude">东</string>
 
     <!-- GeoGeneratorActivity Errors-->
     <string name="error_geo_first">请先填写有效的纬度值和经度值</string>
@@ -60,7 +60,7 @@
     <string name="hint_org">组织</string>
     <string name="hint_web">网站</string>
     <string name="hint_email">电子邮件</string>
-    <string name="hint_mobil">移动电话</string>
+    <string name="hint_mobile">移动电话</string>
     <string name="hint_tele_work">电话（工作）</string>
     <string name="hint_tele_private">电话（私人）</string>
     <string name="hint_street">街道</string>

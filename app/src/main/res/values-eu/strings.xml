@@ -6,7 +6,7 @@
     <string name="activity_history_details">Historia</string>
     <string name="title_activity_geo_generator">Geo sortzailea</string>
     <string name="title_activity_text_generator">Testu sortzailea</string>
-    <string name="title_activity_barcode_generate">Barra-kode sortzailea</string>
+    <string name="title_activity_barcode_generator">Barra-kode sortzailea</string>
     <string name="title_activity_vcard_generator">VCard sortzailea</string>
     <!-- MainActivity-->
     <string name="title_format">Kodearen formatua:</string>
@@ -14,7 +14,7 @@
     <string name="default_text_main_activity">Sakatu "Eskaneatu" botoia QR-kode edo barra-kode bat eskaneatzeko</string>
     <string name="send_to">Partekatu honekin:</string>
     <string name="xzing_label">Piztu ezazu linterna bolumenaren teklak erabiliz</string>
-    <string name="notice_clipoard">Arbelera kopiatu da</string>
+    <string name="notice_clipboard">Arbelera kopiatu da</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Eskaneatu ezazu QR-kode bat lehenago</string>
     <string name="error_canceled_scan">Eskaneatzea bertan behera utzi duzu</string>
@@ -33,7 +33,7 @@
     <string name="btn_save">Gorde</string>
     <string name="toast_save">Barneko biltekigo "SecScanQR" karpetan gorde da</string>
     <string name="toast_permission_needed">Baimena behar da</string>
-    <string name="toast_erorr">Akats bat gertatu da</string>
+    <string name="toast_error">Akats bat gertatu da</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Barra-kode sortzailea</string>
@@ -48,10 +48,10 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">latitudearen eredua: 43.73</string>
-    <string name="hint_longtitude">longitudearen eredua: -10.73</string>
+    <string name="hint_longitude">longitudearen eredua: -10.73</string>
 
     <string name="cbLatitude">iparra</string>
-    <string name="cbLongtitude">ekialdea</string>
+    <string name="cbLongitude">ekialdea</string>
 
     <!-- GeoGeneratorActivity Errors-->
     <string name="error_geo_first">Idatzi latitude eta longitude baliodunak lehenago</string>
@@ -62,7 +62,7 @@
     <string name="hint_org">Erakundea</string>
     <string name="hint_web">Webgunea</string>
     <string name="hint_email">Posta elektronikoa</string>
-    <string name="hint_mobil">Mugikorra</string>
+    <string name="hint_mobile">Mugikorra</string>
     <string name="hint_tele_work">Telefonoa (lana)</string>
     <string name="hint_tele_private">Telefonoa (pribatua)</string>
     <string name="hint_street">Kalea</string>
