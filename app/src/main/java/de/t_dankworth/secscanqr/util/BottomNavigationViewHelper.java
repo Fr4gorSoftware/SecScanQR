@@ -5,13 +5,14 @@ import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
+
 import java.lang.reflect.Field;
 
 /**
  * Created by Nabeel K. from Stackoverflow
  * Last Update: 09.09.2017
  * Last Update by Thore Dankworth
- *
+ * <p>
  * This class changes the default animations from the BottomNavigation
  */
 
@@ -27,7 +28,7 @@ public class BottomNavigationViewHelper {
             for (int i = 0; i < menuView.getChildCount(); i++) {
                 BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
                 //noinspection RestrictedApi
-                item.setShiftingMode(false);
+                //item.setShiftingMode(false);
                 // set once again checked value, so view will be updated
                 //noinspection RestrictedApi
                 item.setChecked(item.getItemData().isChecked());

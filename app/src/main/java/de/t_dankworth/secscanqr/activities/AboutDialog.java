@@ -16,7 +16,7 @@ import de.t_dankworth.secscanqr.R;
  * Created by Thore Dankworth
  * Last Update: 15.08.2017
  * Last Update by Thore Dankworth
- *
+ * <p>
  * This class is all about the About Dialog
  */
 
@@ -24,7 +24,7 @@ public class AboutDialog extends Dialog {
 
     private static final String TAG = AboutDialog.class.getName();
 
-    private Context mContext = null;
+    private Context mContext;
 
     public AboutDialog(Context context) {
         super(context);
@@ -43,7 +43,7 @@ public class AboutDialog extends Dialog {
         setContentView(R.layout.about);
         loadTheme();
 
-        TextView tv = (TextView) findViewById(R.id.info_version);
+        TextView tv = findViewById(R.id.info_version);
         String packageName = getContext().getPackageName();
         PackageInfo packageInfo;
         try {
@@ -56,20 +56,16 @@ public class AboutDialog extends Dialog {
         } catch (PackageManager.NameNotFoundException e) {
             Log.e(TAG, "Call to getPackageInfo() failed! => ", e);
         }
-
-
     }
 
     /**
      * Depending on the saved settings. The day or night mode will be loaded
      */
-    private void loadTheme(){
+    private void loadTheme() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         String history_setting = prefs.getString("pref_day_night_mode", "");
-        if(history_setting.equals("1")){
+        if (history_setting.equals("1")) {
             mContext.setTheme(R.style.darktheme);
-        } else {
         }
     }
-
 }
