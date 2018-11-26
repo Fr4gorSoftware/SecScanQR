@@ -6,7 +6,7 @@
         android:id="@+id/history_optionsmenu_share"
         android:icon="@drawable/ic_share_24dp"
         android:title="@string/share_database"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/history_optionsmenu_delete"
