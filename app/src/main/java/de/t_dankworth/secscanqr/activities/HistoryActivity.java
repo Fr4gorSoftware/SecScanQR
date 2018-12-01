@@ -1,9 +1,11 @@
 package de.t_dankworth.secscanqr.activities;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,8 +28,8 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.08.2018
- * Last Update by Nicolas Lazzari
+ * Last Update: 01.12.2018
+ * Last Update by Christian Krohmer
  *
  * This class is the HistoryActivity and lists all scanned qr-codes
  */
@@ -69,11 +71,27 @@ public class HistoryActivity extends AppCompatActivity {
     }
 
     @Override
-    public  boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.history_optionsmenu_delete) {
-            resetDatabase();
+        if (id == R.id.history_optionsmenu_delete) {
+            AlertDialog.Builder dialogBuilder;
+            dialogBuilder = new AlertDialog.Builder(HistoryActivity.this);
+            dialogBuilder.setMessage(R.string.delete_history_dialog_message);
+            dialogBuilder.setPositiveButton(R.string.delete_history_dialog_confirmation, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    resetDatabase();
+                }
+            });
+            dialogBuilder.setNegativeButton(R.string.delete_history_dialog_cancel, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            dialogBuilder.show();
+
         } else if (id == R.id.history_optionsmenu_share) {
             Cursor data = historyDatabaseHelper.getData();
             String codes = "";
