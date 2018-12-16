@@ -17,7 +17,7 @@
     <string name="notice_clipoard">Copiato negli appunti</string>
     <!--MainActivity Errors-->
     <string name="error_scan_first">Scansiona prima un QR-Code</string>
-    <string name="error_canceled_scan">Cancellata la scansione</string>
+    <string name="error_canceled_scan">Scansione cancellata</string>
     <string name="error_add_to_database">Non è stato possibile aggiuntere il QR-Code alla cronologia</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Scansiona</string>
@@ -26,7 +26,7 @@
     <!-- MainActivity Action Navigation-->
     <string name="title_copy">Copia</string>
     <string name="title_share">Condividi</string>
-    <string name="title_reset">Resetta</string>
+    <string name="title_reset">Reimposta</string>
     <string name="title_openInWeb">Apri nel Web</string>
 
     <!-- GenerateActivity-->
@@ -34,12 +34,35 @@
     <string name="toast_save">Salvato nella cartella "SecScanQR" nella memoria interna</string>
     <string name="toast_permission_needed">E\' necessario il permesso</string>
     <string name="toast_erorr">Si è verificato un errore</string>
+    <string-array name="generators">
+        <item>BARCODE</item>
+        <item>GEO</item>
+        <item>TEXT</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Generatore Barcode</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+
+    </string-array>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Qui puoi inserire del testo</string>
     <string name="tv_format">Formato: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
 
-
+    </string-array>
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">Inserisci prima del testo</string>
     <string name="error_generate">Input non valido per questo formato</string>
@@ -47,7 +70,10 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">esempio latitudine: 43.73</string>
     <string name="hint_longtitude">esempio longitudine: -10.73</string>
-
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
     <string name="cbLatitude">nord</string>
     <string name="cbLongtitude">est</string>
 
@@ -73,7 +99,7 @@
     <string name="error_fn_or_name_first">Inserisci prima un cognome o un nome</string>
 
     <!-- HistoryActivity -->
-    <string name="reset_database">Resetta</string>
+    <string name="reset_database">Reimposta</string>
     <string name="share_database">Condividi</string>
 
     <!-- HistoryActivity Errors-->
@@ -91,8 +117,12 @@
 
     <!-- AboutDialog-->
     <string name="about_dialog">Informazioni</string>
-    <string name="copyright">Copyright Notice</string>
-
+    <string name="copyright">Informazioni sul copyright</string>
+    <string name="copyright_holder">Copyright(c) 2018 T-Dankworth</string>
+    <string name="license">Questa applicazione è stata creata sotto i termini della licenza GNU General Public License. Per maggior informazioni consultare il seguente URL: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">Il logo dell\'applicazione è stato creato da s-yous: https://github.com/s-yous</string>
+    <string name="translator">Traduzione italiana di abonte e ema-pe</string>
+    <string name="zxing_license">L\'applicazione utilizza la libreria ZXING che è rilasciata sotto licenza Apache 2.0. Per maggiori informazioni consultare il seguente URL: http://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Impostazioni</string>
     <!-- Scanner settings -->
@@ -105,11 +135,19 @@
         <item>fotocamera posteriore</item>
         <item>fotocamera frontale</item>
     </string-array>
+    <string-array name="pref_camera_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 
-    <string name="pref_title_auto_scan">Autostart scanner</string>
+    <string name="pref_title_auto_scan">Avvio automatico scanner</string>
     <string-array name="pref_auto_scan_entries">
         <item>Attivo</item>
         <item>Disattivo</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>vero</item>
+        <item>falso</item>
     </string-array>
 
     <string name="pref_title_auto_clipboard">Appunti intelligenti</string>
@@ -117,11 +155,19 @@
         <item>Attivo</item>
         <item>Disattivo</item>
     </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>vero</item>
+        <item>falso</item>
+    </string-array>
 
-    <string name="pref_title_day_night_mode">Modalità Giorno/Notte (ALPHA Version)</string>
+    <string name="pref_title_day_night_mode">Modalità Giorno/Notte (versione ALPHA)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Giorno (Necessario il riavvio)</item>
         <item>Notte (Necessario il riavvio)</item>
+    </string-array>
+    <string-array name="pref_day_night_mode_values">
+        <item>0</item>
+        <item>1</item>
     </string-array>
 
     <string name="pref_title_history">Cronologia (Attiva/Disattiva)</string>
@@ -129,8 +175,30 @@
         <item>Attiva</item>
         <item>Disattiva</item>
     </string-array>
+    <string-array name="pref_history_values">
+        <item>vero</item>
+        <item>falso</item>
+    </string-array>
 
     <string name="pref_title_search_engine">Motore di ricerca</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Yahoo</item>
+        <item>Yandex (RUS)</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
    
     <string name="pref_title_barcode_search_enigne">Motore di ricerca per Barcode</string>
     <string-array name="pref_barcode_search_engine_entries">
@@ -138,6 +206,9 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-    <string name="translator">Italian translation by abonte: https://github.com/abonte</string>
-
+    <string-array name="pref_barcode_search_engine_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 </resources>
