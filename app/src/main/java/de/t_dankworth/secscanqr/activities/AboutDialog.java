@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import de.t_dankworth.secscanqr.R;
@@ -40,6 +41,8 @@ public class AboutDialog extends Dialog {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.about);
         loadTheme();
 

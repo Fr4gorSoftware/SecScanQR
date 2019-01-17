@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -30,7 +31,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.01.2019
+ * Last Update: 17.01.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
@@ -50,6 +51,8 @@ public class GeneratorResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_generator_result);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         codeImage = (ImageView) findViewById(R.id.resultImage);
@@ -66,6 +69,8 @@ public class GeneratorResultActivity extends AppCompatActivity {
             bitmap = barcodeEncoder.createBitmap(bitMatrix);
             codeImage.setImageBitmap(bitmap);
         } catch (Exception e){
+            Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_generate), Toast.LENGTH_SHORT).show();
+            finish();
         }
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override

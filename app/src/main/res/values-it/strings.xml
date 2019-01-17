@@ -98,7 +98,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">Informazioni</string>
     <string name="copyright">Informazioni sul copyright</string>
-    <string name="copyright_holder">Copyright(c) 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
     <string name="license">Questa applicazione è stata creata sotto i termini della licenza GNU. Per maggior informazioni consultare il seguente URL: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Il logo dell\'applicazione è stato creato da s-yous: https://github.com/s-yous</string>
     <string name="translator">Traduzione italiana a cura di abonte ed ema-pe</string>

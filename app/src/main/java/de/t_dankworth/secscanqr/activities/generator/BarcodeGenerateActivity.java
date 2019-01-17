@@ -9,6 +9,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ import de.t_dankworth.secscanqr.activities.MainActivity;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.01.2019
+ * Last Update: 17.01.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the value to BARCODE Generate Activity. In this Class the functionality of generating a BARCODE Picture is covered.
@@ -43,6 +44,8 @@ public class BarcodeGenerateActivity extends AppCompatActivity implements Adapte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_barcode_generate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -119,29 +122,34 @@ public class BarcodeGenerateActivity extends AppCompatActivity implements Adapte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
         String compare = adapterView.getItemAtPosition(position).toString();
-        if(compare.equals("BARCODE")){
-            format = 1;
-        }
-        else if(compare.equals("CODE_128")){
-            format = 2;
-        }
-        else if(compare.equals("CODE_39")){
-            format = 3;
-        }
-        else if(compare.equals("EAN_13")){
-            format = 4;
-        }
-        else if(compare.equals("EAN_8")){
-            format = 5;
-        }
-        else if(compare.equals("ITF")){
-            format = 5;
-        }
-        else if(compare.equals("PDF_417")){
-            format = 6;
-        }
-        else if(compare.equals("UPC_A")){
-            format = 7;
+        switch (compare) {
+            case "BARCODE":
+                format = 1;
+                break;
+            case "CODE_128":
+                format = 2;
+                break;
+            case "CODE_39":
+                format = 3;
+                break;
+            case "EAN_13":
+                format = 4;
+                break;
+            case "EAN_8":
+                format = 5;
+                break;
+            case "ITF":
+                format = 5;
+                break;
+            case "PDF_417":
+                format = 6;
+                break;
+            case "UPC_A":
+                format = 7;
+                break;
+            default:
+                format = 1;
+                break;
         }
     }
 

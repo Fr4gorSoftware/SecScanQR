@@ -96,7 +96,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">Sobre</string>
     <string name="copyright">Aviso de direitos de autor</string>
-    <string name="copyright_holder">Copyright(c) 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
     <string name="license">Esta aplicação foi criada ao abrigo da Licença Pública Geral GNU (GPL). Para mais informação, consulte o link: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">O logótipo da aplicação foi criado por s-yous: https://github.com/s-yous</string>
     <string name="translator">Tradução inglesa por Thore Dankworth: https://github.com/Fr4gorSoftware</string>
