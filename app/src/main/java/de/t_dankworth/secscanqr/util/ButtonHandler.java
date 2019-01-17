@@ -19,7 +19,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 18.08.2018
+ * Last Update: 17.01.2019
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -92,24 +92,32 @@ public class ButtonHandler {
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
                 String search_engine = prefs.getString("pref_search_engine", "");
                 String tempUrl;
-                if(search_engine.equals("1")) {
-                    tempUrl = "https://www.bing.com/search?q=";
-                }else if(search_engine.equals("2")){
-                    tempUrl = "https://duckduckgo.com/?q=";
-                }else if(search_engine.equals("3")){
-                    tempUrl = "http://www.google.com/#q=";
-                }else if(search_engine.equals("4")){
-                    tempUrl = "https://www.qwant.com/?q=";
-                }else if(search_engine.equals("5")){
-                    tempUrl = "https://lite.qwant.com/?q=";
-                }else if(search_engine.equals("6")){
-                    tempUrl = "https://search.yahoo.com/search?p=";
-                }else if(search_engine.equals("7")){
-                    tempUrl = "https://www.yandex.ru/search/?text=";
-                } else {
-                    tempUrl = "http://www.google.com/#q=";
+                switch (search_engine) {
+                    case "1":
+                        tempUrl = "https://www.bing.com/search?q=";
+                        break;
+                    case "2":
+                        tempUrl = "https://duckduckgo.com/?q=";
+                        break;
+                    case "3":
+                        tempUrl = "http://www.google.com/#q=";
+                        break;
+                    case "4":
+                        tempUrl = "https://www.qwant.com/?q=";
+                        break;
+                    case "5":
+                        tempUrl = "https://lite.qwant.com/?q=";
+                        break;
+                    case "6":
+                        tempUrl = "https://search.yahoo.com/search?p=";
+                        break;
+                    case "7":
+                        tempUrl = "https://www.yandex.ru/search/?text=";
+                        break;
+                    default:
+                        tempUrl = "http://www.google.com/#q=";
+                        break;
                 }
-
                 Uri uri = Uri.parse(tempUrl + qrcode);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 activity.startActivity(intent);
@@ -137,49 +145,71 @@ public class ButtonHandler {
                 String barcode_engine = prefs.getString("pref_barcode_search_engine", "");
                 String tempUrl;
                 if(barcode_engine.equals("0")){
-                    if(search_engine.equals("1")) {
-                        tempUrl = "https://www.bing.com/search?q=";
-                    }else if(search_engine.equals("2")){
-                        tempUrl = "https://duckduckgo.com/?q=";
-                    }else if(search_engine.equals("3")){
-                        tempUrl = "http://www.google.com/#q=";
-                    }else if(search_engine.equals("4")){
-                        tempUrl = "https://www.qwant.com/?q=";
-                    }else if(search_engine.equals("5")){
-                        tempUrl = "https://lite.qwant.com/?q=";
-                    }else if(search_engine.equals("6")){
-                        tempUrl = "https://search.yahoo.com/search?p=";
-                    }else if(search_engine.equals("7")){
-                        tempUrl = "https://www.yandex.ru/search/?text=";
-                    } else {
-                        tempUrl = "http://www.google.com/#q=";
+                    switch (search_engine) {
+                        case "1":
+                            tempUrl = "https://www.bing.com/search?q=";
+                            break;
+                        case "2":
+                            tempUrl = "https://duckduckgo.com/?q=";
+                            break;
+                        case "3":
+                            tempUrl = "http://www.google.com/#q=";
+                            break;
+                        case "4":
+                            tempUrl = "https://www.qwant.com/?q=";
+                            break;
+                        case "5":
+                            tempUrl = "https://lite.qwant.com/?q=";
+                            break;
+                        case "6":
+                            tempUrl = "https://search.yahoo.com/search?p=";
+                            break;
+                        case "7":
+                            tempUrl = "https://www.yandex.ru/search/?text=";
+                            break;
+                        default:
+                            tempUrl = "http://www.google.com/#q=";
+                            break;
                     }
                 } else {
-                    if(format.equals("QR_CODE") || format.equals("AZTEC")){
-                        if(search_engine.equals("1")) {
-                            tempUrl = "https://www.bing.com/search?q=";
-                        }else if(search_engine.equals("2")){
-                            tempUrl = "https://duckduckgo.com/?q=";
-                        }else if(search_engine.equals("3")){
-                            tempUrl = "http://www.google.com/#q=";
-                        }else if(search_engine.equals("4")){
-                            tempUrl = "https://www.qwant.com/?q=";
-                        }else if(search_engine.equals("5")){
-                            tempUrl = "https://lite.qwant.com/?q=";
-                        }else if(search_engine.equals("6")){
-                            tempUrl = "https://search.yahoo.com/search?p=";
-                        }else if(search_engine.equals("7")){
-                            tempUrl = "https://www.yandex.ru/search/?text=";
-                        } else {
-                            tempUrl = "http://www.google.com/#q=";
+                    if (format.equals("QR_CODE") || format.equals("AZTEC")) {
+                        switch (search_engine) {
+                            case "1":
+                                tempUrl = "https://www.bing.com/search?q=";
+                                break;
+                            case "2":
+                                tempUrl = "https://duckduckgo.com/?q=";
+                                break;
+                            case "3":
+                                tempUrl = "http://www.google.com/#q=";
+                                break;
+                            case "4":
+                                tempUrl = "https://www.qwant.com/?q=";
+                                break;
+                            case "5":
+                                tempUrl = "https://lite.qwant.com/?q=";
+                                break;
+                            case "6":
+                                tempUrl = "https://search.yahoo.com/search?p=";
+                                break;
+                            case "7":
+                                tempUrl = "https://www.yandex.ru/search/?text=";
+                                break;
+                            default:
+                                tempUrl = "http://www.google.com/#q=";
+                                break;
                         }
                     } else {
-                        if(barcode_engine.equals("1")){
-                            tempUrl = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=";
-                        } else if(barcode_engine.equals("2")){
-                            tempUrl = "https://www.codecheck.info/product.search?q=";
-                        } else {
-                            tempUrl = "http://www.google.com/#q=";
+                        switch (barcode_engine) {
+                            case "1":
+                                tempUrl = "https://world.openfoodfacts.org/cgi/search.pl?search_terms=";
+                                break;
+                            case "2":
+                                tempUrl = "https://www.codecheck.info/product.search?q=";
+                                break;
+                            default:
+                                tempUrl = "http://www.google.com/#q=";
+                                break;
                         }
                     }
                 }
