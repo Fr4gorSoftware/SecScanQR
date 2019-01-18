@@ -2,6 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
+        android:defaultValue="3"
         android:entries="@array/pref_search_engine_entries"
         android:entryValues="@array/pref_search_engine_values"
         android:key="pref_search_engine"
