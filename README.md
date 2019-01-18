@@ -24,7 +24,7 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
 
 ## Translators
   - Portuguese (last change: 1.1.9): [Andre-Gloria](https://github.com/Andre-Gloria)
-  - German (last change: 1.1.9): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - German (last change: 1.2.0): [Thore Dankworth](https://github.com/Fr4gorSoftware)
   - Chinese (last change: 1.1.9): [linsui](https://github.com/linsui)
   - Italian (last change: 1.1.8): [abonte](https://github.com/abonte)
   - Russian (last change: 1.1.8): [Vladimir Kosolapov](https://github.com/0x264f)
@@ -33,6 +33,8 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   
 ## Donating
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
+
+[Bitcoin](https://www.blockchain.com/btc/address/1NppzAZ7nLDXwvYK7vgJJUZBbkzHS6S6zX)
 
 ## Designer
 Logo: [s-yous](https://github.com/s-yous)
