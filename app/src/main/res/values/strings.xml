@@ -191,6 +191,7 @@
         <item>Google</item>
         <item>Qwant</item>
         <item>Qwant Lite</item>
+        <item>Startpage</item>
         <item>Yahoo</item>
         <item>Yandex (RUS)</item>
     </string-array>
@@ -202,6 +203,7 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+        <item>8</item>
     </string-array>
 
     <string name="pref_title_barcode_search_enigne">Barcode Search Engine</string>

@@ -109,9 +109,12 @@ public class ButtonHandler {
                         tempUrl = "https://lite.qwant.com/?q=";
                         break;
                     case "6":
-                        tempUrl = "https://search.yahoo.com/search?p=";
+                        tempUrl = "https://www.startpage.com/do/dsearch?query=";
                         break;
                     case "7":
+                        tempUrl = "https://search.yahoo.com/search?p=";
+                        break;
+                    case "8":
                         tempUrl = "https://www.yandex.ru/search/?text=";
                         break;
                     default:
@@ -162,9 +165,12 @@ public class ButtonHandler {
                             tempUrl = "https://lite.qwant.com/?q=";
                             break;
                         case "6":
-                            tempUrl = "https://search.yahoo.com/search?p=";
+                            tempUrl = "https://www.startpage.com/do/dsearch?query=";
                             break;
                         case "7":
+                            tempUrl = "https://search.yahoo.com/search?p=";
+                            break;
+                        case "8":
                             tempUrl = "https://www.yandex.ru/search/?text=";
                             break;
                         default:
@@ -190,9 +196,12 @@ public class ButtonHandler {
                                 tempUrl = "https://lite.qwant.com/?q=";
                                 break;
                             case "6":
-                                tempUrl = "https://search.yahoo.com/search?p=";
+                                tempUrl = "https://www.startpage.com/do/dsearch?query=";
                                 break;
                             case "7":
+                                tempUrl = "https://search.yahoo.com/search?p=";
+                                break;
+                            case "8":
                                 tempUrl = "https://www.yandex.ru/search/?text=";
                                 break;
                             default:
