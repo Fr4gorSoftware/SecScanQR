@@ -1,0 +1,221 @@
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">Generator Kodu QR</string>
+    <string name="activity_history">Historia</string>
+    <string name="activity_history_details">Historia</string>
+    <string name="title_activity_geo_generator">Generator Geograficzny</string>
+    <string name="title_activity_text_generator">Generator Tekst</string>
+    <string name="title_activity_barcode_generate">Generator kodu kreskowego</string>
+    <string name="title_activity_vcard_generator">Generator VCard</string>
+    <!-- MainActivity-->
+    <string name="title_format">Format kodu:</string>
+    <string name="title_information">Informacje o kodzie:</string>
+    <string name="default_text_main_activity">Naciśnij przycisk "Skanuj", aby zeskanować kod QR/kreskowy</string>
+    <string name="send_to">Udostępnij za pomocą:</string>
+    <string name="xzing_label">Włącz latarkę za pomocą klawiszy głośności</string>
+    <string name="notice_clipoard">Skopiowane do schowka</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">Zeskanuj najpierw kod QR</string>
+    <string name="error_canceled_scan">Anulowałeś skanowanie</string>
+    <string name="error_add_to_database">Nie udało się dodać kodu QR do historii</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">Skanuj</string>
+    <string name="title_generate">Generuj</string>
+    <string name="title_history">Historia</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Kopiuj</string>
+    <string name="title_share">Udostępnij</string>
+    <string name="title_reset">Usuń</string>
+    <string name="title_openInWeb">Otwórz w Internecie </string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">Zapisz</string>
+    <string name="toast_save">Zapisano w folderze "SecScanQR" w pamięci wewnętrznej</string>
+    <string name="toast_permission_needed">Potrzebne jest pozwolenie</string>
+    <string name="toast_erorr">Wystąpił błąd</string>
+    <string-array name="generators">
+        <item>KOD KRESKOWY</item>
+        <item>GEOGRAFICZNY</item>
+        <item>TEKST</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Generator kodów kreskowych</string>
+    <string-array name="barcode_formats_array">
+        <item>KOD KRESKOWY</item>
+        <item>KOD-128</item>
+        <item>KOD-39</item>
+        <item>EAN-13</item>
+        <item>EAN-8</item>
+        <item>ITF</item>
+        <item>PDF-417</item>
+        <item>UPC-A</item>
+
+    </string-array>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">Tutaj możesz wpisać tekst</string>
+    <string name="tv_format">Format: </string>
+    <string-array name="text_formats_array">
+        <item>KOD QR</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">Wpisz wymagany pierwszy typ Tekst</string>
+    <string name="error_generate">Brak poprawnych danych wejściowych dla tego formatu</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">szerokość geograficzna: 43,73</string>
+    <string name="hint_longtitude">długość geograficzna: -10.73</string>
+    <string-array name="formats_geo_array">
+        <item>KOD QR</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">północ</string>
+    <string name="cbLongtitude">wschód</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">Wprowadź prawidłowe wartości szerokości i długości geograficznej</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">imię</string>
+    <string name="hint_fn">nazwisko</string>
+    <string name="hint_org">organizacja</string>
+    <string name="hint_web">strona internetowa</string>
+    <string name="hint_email">e-mail</string>
+    <string name="hint_mobil">komórka</string>
+    <string name="hint_tele_work">telefon (praca)</string>
+    <string name="hint_tele_private">telefon (prywatny)</string>
+    <string name="hint_street">ulica</string>
+    <string name="hint_plz">kod pocztowy</string>
+    <string name="hint_city">miasto</string>
+    <string name="hint_state">województwo</string>
+    <string name="hint_country">kraj</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">Wpisz wymagany pierwszy typ nazwisko lub imię</string>
+
+    <!-- HistoryActivity -->
+    <string name="reset_database">Usuń</string>
+    <string name="share_database">Udostępnij</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">Wszystkie wpisy zostaną usunięte!</string>
+    <string name="delete_history_dialog_confirmation">OK</string>
+    <string name="delete_history_dialog_cancel">Anuluj</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Nie znaleziono historii w bazie danych</string>
+    <string name="error_sqlexception">Ten format nie jest obsługiwany przez funkcję historia</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Usunięto z historii</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Usuń</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">O aplikacji</string>
+    <string name="settings_settings">Ustawienia</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">O aplikacji</string>
+    <string name="copyright">Informacja o prawach autorskich</string>
+    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="license">Ta aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
+    <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/Fr4gorSoftware</string>
+    <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: http://www.apache.org/licenses/LICENSE-2.0</string>
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Ustawienia</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Skaner</string>
+    <string name="pref_header_history_settings">Historia</string>
+    <string name="pref_header_search_engine_settings">Wyszukiwarka</string>
+
+    <string name="pref_title_camera">Aparat</string>
+    <string-array name="pref_camera_entries">
+        <item>aparat tył</item>
+        <item>aparat przód</item>
+    </string-array>
+    <string-array name="pref_camera_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_auto_scan">Skanuj autostartem</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>Włącz</item>
+        <item>Wyłącz</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">Inteligentny schowek</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>Włącz</item>
+        <item>Wyłącz</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_day_night_mode">Tryb dzienny/nocny (wersja ALPHA)</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>Dzień (wymagane ponowne uruchomienie)</item>
+        <item>Noc (wymagane ponowne uruchomienie)</item>
+    </string-array>
+    <string-array name="pref_day_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_history">Historia (wł./wył.)</string>
+    <string-array name="pref_history_entries">
+        <item>Włącz</item>
+        <item>Wyłącz</item>
+    </string-array>
+    <string-array name="pref_history_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_search_engine">Wyszukiwarka</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Startpage</item>
+        <item>Yahoo</item>
+        <item>Yandex (RUS)</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">Wyszukiwarka kodów kreskowych</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>Brak dodatkowej wyszukiwarki kodów kreskowych</item>
+        <item>Fakty dotyczące otwartej żywności</item>
+        <item>CodeCheck</item>
+    </string-array>
+    <string-array name="pref_barcode_search_engine_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
