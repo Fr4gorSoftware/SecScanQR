@@ -125,7 +125,7 @@
     <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
     <string name="license">Ta aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
-    <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/Fr4gorSoftware</string>
+    <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
     <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: http://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Ustawienia</string>
