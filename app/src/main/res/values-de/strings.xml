@@ -20,6 +20,8 @@
     <string name="error_scan_first">Scanne zuerst einen QR-Code</string>
     <string name="error_canceled_scan">Scanvorgang abgebrochen</string>
     <string name="error_add_to_database">Konnte QR-Code nicht zum Verlauf hinzufügen</string>
+    <string name="error_file_not_found">Datei nicht gefunden</string>
+    <string name="error_code_not_found">Barcode/Qr-Code nicht gefunden</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Scannen</string>
     <string name="title_generate">Generieren</string>
