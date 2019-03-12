@@ -1,0 +1,223 @@
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">QR Code 產生器</string>
+    <string name="activity_history">歷史紀錄</string>
+    <string name="activity_history_details">歷史紀錄</string>
+    <string name="title_activity_geo_generator">地理座標生成器</string>
+    <string name="title_activity_text_generator">文字生成器</string>
+    <string name="title_activity_barcode_generate">條碼生成器</string>
+    <string name="title_activity_vcard_generator">vCard 生成器</string>
+    <!-- MainActivity-->
+    <string name="title_format">條碼格式：</string>
+    <string name="title_information">條碼資訊：</string>
+    <string name="default_text_main_activity">按下「掃描」按鈕以掃描 QR Code／條碼</string>
+    <string name="send_to">分享使用：</string>
+    <string name="xzing_label">使用音量鍵啟動閃光燈</string>
+    <string name="notice_clipoard">已複製到剪貼簿</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">先掃描 QR Code</string>
+    <string name="error_canceled_scan">您取消了掃描</string>
+    <string name="error_add_to_database">無法將 QR Code 新增到歷史紀錄中</string>
+    <string name="error_file_not_found">找不到檔案</string>
+    <string name="error_code_not_found">找不到條碼／QR Code</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">掃描</string>
+    <string name="title_generate">生成</string>
+    <string name="title_history">歷史紀錄</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">複製</string>
+    <string name="title_share">分享</string>
+    <string name="title_reset">重設</string>
+    <string name="title_openInWeb">在網路上開啟</string>
+
+    <!-- GenerateActivity-->
+    <string name="btn_save">儲存</string>
+    <string name="toast_save">已儲存至在內建儲存空間的「SecScanQR」資料夾</string>
+    <string name="toast_permission_needed">需要權限</string>
+    <string name="toast_erorr">遇到錯誤</string>
+    <string-array name="generators">
+        <item>BARCODE</item>
+        <item>GEO</item>
+        <item>TEXT</item>
+        <item>VCARD</item>
+    </string-array>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">條碼生成器</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+
+    </string-array>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">您可以在此輸入一些文字</string>
+    <string name="tv_format">格式：</string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">先輸入一些文字</string>
+    <string name="error_generate">此格式沒有有效的輸入</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">緯度範例：43.73</string>
+    <string name="hint_longtitude">經度範例：-10.73</string>
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">北緯</string>
+    <string name="cbLongtitude">東經</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">先填入有效的經緯度值</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">名字</string>
+    <string name="hint_fn">名</string>
+    <string name="hint_org">組織</string>
+    <string name="hint_web">網頁</string>
+    <string name="hint_email">電子郵件</string>
+    <string name="hint_mobil">手機</string>
+    <string name="hint_tele_work">電話（工作）</string>
+    <string name="hint_tele_private">電話（私人）</string>
+    <string name="hint_street">街道</string>
+    <string name="hint_plz">郵遞區號</string>
+    <string name="hint_city">城市</string>
+    <string name="hint_state">州</string>
+    <string name="hint_country">國家</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">先輸入名字</string>
+
+    <!-- HistoryActivity -->
+    <string name="reset_database">重設</string>
+    <string name="share_database">分享</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">所有項目都會被刪除！</string>
+    <string name="delete_history_dialog_confirmation">確定</string>
+    <string name="delete_history_dialog_cancel">取消</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">在歷史紀錄資料庫中找不到</string>
+    <string name="error_sqlexception">歷史紀錄功能不支援此格式</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">已從歷史紀錄中刪除</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">刪除</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">關於</string>
+    <string name="settings_settings">設定</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">關於</string>
+    <string name="copyright">著作權提醒</string>
+    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="license">這個應用程式使用 GNU 通用公眾授權條款授權。要取得更多資訊，請見後方連結：https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">應用程式圖示由 s-yous 建立：https://github.com/s-yous</string>
+    <string name="translator">Jeff 貢獻了繁體中文翻譯：https://github.com/s8321414</string>
+    <string name="zxing_license">本應用程式使用 Apache 2.0 授權的 ZXING 函式庫。要取得更多資訊，請見後方連結：http://www.apache.org/licenses/LICENSE-2.0</string>
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">設定</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">掃描器</string>
+    <string name="pref_header_history_settings">歷史紀錄</string>
+    <string name="pref_header_search_engine_settings">搜尋引擎</string>
+
+    <string name="pref_title_camera">相機</string>
+    <string-array name="pref_camera_entries">
+        <item>後置相機</item>
+        <item>前置相機</item>
+    </string-array>
+    <string-array name="pref_camera_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_auto_scan">自動啟動掃描器</string>
+    <string-array name="pref_auto_scan_entries">
+        <item>開啟</item>
+        <item>關閉</item>
+    </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_auto_clipboard">智慧剪貼簿</string>
+    <string-array name="pref_auto_clipboard_entries">
+        <item>開啟</item>
+        <item>關閉</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_day_night_mode">日／夜間模式（Alpha 版）</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>日間（需要重新啟動應用程式）</item>
+        <item>夜間（需要重新啟動應用程式）</item>
+    </string-array>
+    <string-array name="pref_day_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_history">歷史紀錄（開啟／關閉）</string>
+    <string-array name="pref_history_entries">
+        <item>開啟</item>
+        <item>關閉</item>
+    </string-array>
+    <string-array name="pref_history_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+
+    <string name="pref_title_search_engine">搜尋引擎</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Startpage</item>
+        <item>Yahoo</item>
+        <item>Yandex（俄羅斯）</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">條碼搜尋引擎</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>條碼不使用額外的搜尋引擎</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+    <string-array name="pref_barcode_search_engine_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
