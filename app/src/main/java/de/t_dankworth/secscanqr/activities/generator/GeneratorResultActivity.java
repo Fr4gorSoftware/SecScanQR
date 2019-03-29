@@ -31,7 +31,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.01.2019
+ * Last Update: 29.03.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
@@ -129,7 +129,7 @@ public class GeneratorResultActivity extends AppCompatActivity {
         android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now);
         Bitmap image = bitmap;
 
-        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator  + now + ".jpg");
+        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator  + now + ".png");
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(f);

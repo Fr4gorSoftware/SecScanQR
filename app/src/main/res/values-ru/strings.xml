@@ -49,7 +49,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">Пример широты: 43.73</string>
-    <string name="hint_longtitude">Пример долготы: -10.73</string>
+    <string name="hint_longtitude">Пример долготы: 10.73</string>
 
     <string name="cbLatitude">Север</string>
     <string name="cbLongtitude">Восток</string>
