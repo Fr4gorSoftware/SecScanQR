@@ -46,7 +46,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">Breite Beispiel: 43.73</string>
-    <string name="hint_longtitude">Länge Beispiel: -10.73</string>
+    <string name="hint_longtitude">Länge Beispiel: 10.73</string>
     <string name="cbLatitude">Nord</string>
     <string name="cbLongtitude">Ost</string>
 

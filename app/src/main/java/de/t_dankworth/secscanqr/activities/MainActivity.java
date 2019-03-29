@@ -49,7 +49,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.03.2019
+ * Last Update: 29.03.2019
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -320,11 +320,12 @@ public class MainActivity extends AppCompatActivity {
             decodeHints.put(DecodeHintType.PURE_BARCODE, Boolean.TRUE);
 
             Result result = reader.decode(bitmap, decodeHints);
-            String barcode =  result.getText();
+            qrcode =  result.getText();
 
-            if(barcode != null){
+            if(qrcode != null){
                 mLabelInformation.setVisibility(View.VISIBLE);
-                mTvInformation.setText(barcode);
+                mTvInformation.setText(qrcode);
+                action_navigation.setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
             }

@@ -48,7 +48,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">latitudearen eredua: 43.73</string>
-    <string name="hint_longtitude">longitudearen eredua: -10.73</string>
+    <string name="hint_longtitude">longitudearen eredua: 10.73</string>
 
     <string name="cbLatitude">iparra</string>
     <string name="cbLongtitude">ekialdea</string>

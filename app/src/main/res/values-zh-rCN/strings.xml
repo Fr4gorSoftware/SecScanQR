@@ -47,7 +47,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">纬度示例：43.73</string>
-    <string name="hint_longtitude">经度示例：-10.73</string>
+    <string name="hint_longtitude">经度示例：10.73</string>
     <string name="cbLatitude">北</string>
     <string name="cbLongtitude">东</string>
 

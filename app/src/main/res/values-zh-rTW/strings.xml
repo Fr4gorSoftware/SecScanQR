@@ -71,7 +71,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">緯度範例：43.73</string>
-    <string name="hint_longtitude">經度範例：-10.73</string>
+    <string name="hint_longtitude">經度範例：10.73</string>
     <string-array name="formats_geo_array">
         <item>QR_CODE</item>
         <item>AZTEC</item>

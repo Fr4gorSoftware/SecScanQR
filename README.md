@@ -23,13 +23,15 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - WRITE EXTERNAL STORAGE
 
 ## Translators
-  - German (last change: 1.2.0): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - German (last change: 1.2.1): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Chinese (last change: 1.2.1): [linsui](https://github.com/linsui) and [Jeff Huang](https://github.com/s8321414)
+  - Polish (last change: 1.2.1): [Waldemar Stoczkowski](https://github.com/WaldiSt)
+  - French (Last change: 1.2.1): [Romain Rossi](https://github.com/romainrossi) and [Cédric Frayssinet](https://github.com/bristow)
   - Italian (last change: 1.2.0): [abonte](https://github.com/abonte) and [ema-pe](https://github.com/ema-pe)
   - Portuguese (last change: 1.1.9): [Andre-Gloria](https://github.com/Andre-Gloria)
-  - Chinese (last change: 1.1.9): [linsui](https://github.com/linsui)
   - Russian (last change: 1.1.8): [Vladimir Kosolapov](https://github.com/0x264f)
   - Spanish (Last change: 1.1.6): [Aitor Beriain](https://github.com/beriain)
-  - French (Last change: 1.1.2 -> OLD): [Romain Rossi](https://github.com/romainrossi) 
+  
   
 ## Donating
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
