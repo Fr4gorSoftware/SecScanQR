@@ -327,14 +327,14 @@ public class MainActivity extends AppCompatActivity {
                 mTvInformation.setText(qrcode);
                 action_navigation.setVisibility(View.VISIBLE);
             } else {
-                Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
+                Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
             }
         } catch (FormatException e) {
-            e.printStackTrace();
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
         } catch (ChecksumException e) {
-            e.printStackTrace();
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
         } catch (NotFoundException e) {
-            e.printStackTrace();
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
         }
     }
 }
