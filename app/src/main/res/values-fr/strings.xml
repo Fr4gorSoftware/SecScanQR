@@ -97,7 +97,7 @@
     <string name="error_fn_or_name_first">Commencez par saisir le nom ou le prénom</string>
 
     <!-- HistoryActivity -->
-    <string name="reset_database">Vider l'\historique</string>
+    <string name="reset_database">Vider l historique</string>
     <string name="share_database">Partager</string>
     <!-- HistoryActivity Delete Dialog -->
     <string name="delete_history_dialog_message">Toutes les entrées vont être supprimées !</string>
