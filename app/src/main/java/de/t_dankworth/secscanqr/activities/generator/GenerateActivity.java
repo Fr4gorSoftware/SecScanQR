@@ -3,8 +3,10 @@ package de.t_dankworth.secscanqr.activities.generator;
 import android.app.Activity;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -41,10 +43,7 @@ public class GenerateActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_generate);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         lvGenerators = (ListView) findViewById(R.id.lvGenerators);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(GenerateActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.generators));
 

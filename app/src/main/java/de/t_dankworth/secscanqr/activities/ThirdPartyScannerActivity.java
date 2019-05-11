@@ -16,6 +16,15 @@ import de.t_dankworth.secscanqr.R;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 
+/**
+ * Created by Thore Dankworth
+ * Last Update: 11.05.2019
+ * Last Update by Thore Dankworth
+ *
+ * This class is used from third party apps to scan QR Codes for their needs.
+ * If your desired app does not support SecScanQR for scanning QR-Codes please ask them to implement it.
+ */
+
 public class ThirdPartyScannerActivity extends AppCompatActivity {
 
     final Activity activity = this;

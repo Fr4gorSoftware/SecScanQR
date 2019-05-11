@@ -38,8 +38,7 @@
         <activity
             android:name=".activities.generator.GenerateActivity"
             android:label="@string/activity_generate"
-            android:parentActivityName=".activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".activities.MainActivity" />
         <activity
             android:name=".activities.HistoryActivity"
             android:label="@string/activity_history" />
