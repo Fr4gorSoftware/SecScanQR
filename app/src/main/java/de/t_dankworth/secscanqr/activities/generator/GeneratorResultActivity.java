@@ -26,6 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Random;
 
 import de.t_dankworth.secscanqr.R;
 
@@ -125,11 +126,12 @@ public class GeneratorResultActivity extends AppCompatActivity {
      * This method saves the generated QR-Code on the smartphone
      */
     private void saveQrCode() {
-        Date now = new Date();
-        android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", now);
+        Random rand = new Random();
+        int n = rand.nextInt(50);
+        int p = rand.nextInt(50);
         Bitmap image = bitmap;
 
-        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator  + now + ".png");
+        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator  + n + "-" + p + ".png");
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(f);
