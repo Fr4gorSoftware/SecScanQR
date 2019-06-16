@@ -19,6 +19,8 @@
     <string name="error_scan_first">Сначала просканируйте QR-код</string>
     <string name="error_canceled_scan">Вы отменили сканирование</string>
     <string name="error_add_to_database">Не удалось добавить QR-код в историю</string>
+    <string name="error_file_not_found">Файл не найден</string>
+    <string name="error_code_not_found">Штрих-код/QR-код не найден</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Сканирование</string>
     <string name="title_generate">Генерация</string>
@@ -36,6 +38,7 @@
     <string name="toast_erorr">Произошла ошибка</string>
 
     <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Генератор Штрих-кодов</string>
     <string name="activity_barcode_generator">Генератор Штрих-кодов</string>
 
 
@@ -78,6 +81,10 @@
     <!-- HistoryActivity -->
     <string name="reset_database">Сбросить</string>
     <string name="share_database">Поделиться</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">Все записи будут удалены!</string>
+    <string name="delete_history_dialog_confirmation">ОК</string>
+    <string name="delete_history_dialog_cancel">Отмена</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Не найдено в базе данных истории</string>
@@ -95,7 +102,10 @@
     <!-- AboutDialog-->
     <string name="about_dialog">О приложении</string>
     <string name="copyright">Уведомление об авторских правах</string>
-
+    <string name="license">"Это приложение было создано в соответствии с GNU General Public License. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой: https://www.gnu.org/licenses/gpl-3.0.en.html"</string>
+    <string name="logo_designer">"Логотип приложения был создан s-yous: https://github.com/s-yous "</string>
+    <string name="translator">Перевод на русский язык осуществил Vladimir Kosolapov: https://github.com/0x264f</string>
+    <string name="zxing_license">"Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Настройки</string>
     <!-- Scanner settings -->
@@ -114,11 +124,19 @@
         <item>Вкл.</item>
         <item>Выкл.</item>
     </string-array>
+    <string-array name="pref_auto_scan_values">
+        <item>Да</item>
+        <item>Нет</item>
+    </string-array>
 
     <string name="pref_title_auto_clipboard">Умный буфер обмена</string>
     <string-array name="pref_auto_clipboard_entries">
         <item>Вкл.</item>
         <item>Выкл.</item>
+    </string-array>
+    <string-array name="pref_auto_clipboard_values">
+        <item>Да</item>
+        <item>Нет</item>
     </string-array>
 
     <string name="pref_title_day_night_mode">Режим день/ночь</string>
@@ -131,6 +149,10 @@
     <string-array name="pref_history_entries">
         <item>Вкл.</item>
         <item>Выкл.</item>
+    </string-array>
+    <string-array name="pref_history_values">
+        <item>Да</item>
+        <item>Нет</item>
     </string-array>
 
     <string name="pref_title_search_engine">Поисковая система</string>
@@ -151,9 +173,5 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-    <string name="license">"Это приложение было создано в соответствии с GNU General Public License. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
-    <string name="logo_designer">"Логотип приложения был создан s-yous: https://github.com/s-yous "</string>
-    <string name="zxing_license">"Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
-    <string name="translator">Перевод на русский язык осуществил Vladimir Kosolapov: https://github.com/0x264f</string>
 
 </resources>
