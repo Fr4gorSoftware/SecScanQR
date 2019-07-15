@@ -92,7 +92,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">关于</string>
     <string name="copyright">版权声明</string>
-    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright© 2017–2019 T-Dankworth</string>
     <string name="license">此应用遵循 GNU General Public License. 更多信息请查看以下链接： https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">此应用 logo 由 s-yous 创作： https://github.com/s-yous</string>
     <string name="translator">简体中文翻译来自 linsui: https://github.com/linsui</string>
@@ -122,7 +122,7 @@
         <item>关</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">日间/夜间模式 (ALPHA Version)</string>
+    <string name="pref_title_day_night_mode">日间/夜间模式</string>
     <string-array name="pref_day_night_mode_entries">
         <item>日间（需要重启）</item>
         <item>夜间（需要重启）</item>

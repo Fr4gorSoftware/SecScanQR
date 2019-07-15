@@ -99,7 +99,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">O aplikacji</string>
     <string name="copyright">Informacja o prawach autorskich</string>
-    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright© 2017–2019 T-Dankworth</string>
     <string name="license">Ta aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
     <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
@@ -141,7 +141,7 @@
         <item>false</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">Tryb dzienny/nocny (wersja ALPHA)</string>
+    <string name="pref_title_day_night_mode">Tryb dzienny/nocny</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Dzień (wymagane ponowne uruchomienie)</item>
         <item>Noc (wymagane ponowne uruchomienie)</item>
