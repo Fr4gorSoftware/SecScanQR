@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context="de.t_dankworth.secscanqr.activities.generator.VCardGeneratorActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -15,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -23,19 +24,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical"
-        android:weightSum="1"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_weight="0.00"
-            android:text=""
-            android:textColor="@color/zxing_status_text"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+        android:weightSum="1">
 
         <Space
             android:layout_width="match_parent"
@@ -43,21 +34,24 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.00">
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.00"
-                    android:paddingLeft="5dp"
-                    android:text="@string/tv_format" />
+                    android:paddingStart="8dp"
+                    android:text="@string/tv_format"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <Spinner
                     android:id="@+id/spinner"
@@ -71,14 +65,16 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_name"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtFN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_fn"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtOrg"
@@ -86,7 +82,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_org"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtWeb"
@@ -94,7 +91,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_web"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtEmail"
@@ -102,7 +100,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtMobil"
@@ -110,7 +109,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_mobil"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtTeleWork"
@@ -118,7 +118,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_tele_work"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtTelePrivat"
@@ -126,7 +127,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_tele_private"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtStreet"
@@ -134,7 +136,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_street"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtPLZ"
@@ -142,7 +145,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_plz"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtCity"
@@ -150,7 +154,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_city"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtState"
@@ -158,7 +163,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_state"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
                 <EditText
                     android:id="@+id/txtCountry"
@@ -166,9 +172,11 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/hint_country"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="?android:attr/textColorPrimary" />
 
             </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>
@@ -184,3 +192,4 @@
         app:srcCompat="@drawable/ic_add_white_24dp" />
 </android.support.design.widget.CoordinatorLayout>
 
+</android.support.design.widget.CoordinatorLayout>

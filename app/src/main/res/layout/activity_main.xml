@@ -5,10 +5,9 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    android:background="?attr/backgroundcolor"
-    tools:context="de.t_dankworth.secscanqr.activities.MainActivity"
-    >
+    tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"
@@ -22,19 +21,18 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
 
                 <TextView
                     android:id="@+id/labelFormat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
-
                     android:text="@string/title_format"
-                    android:textColor="?attr/textcolor"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="24sp"
                     android:visibility="gone" />
 
@@ -44,38 +42,33 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/labelFormat"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="18sp"
-                    android:visibility="gone"
-                    android:textColor="?attr/textcolor"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/labelInformation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvFormat"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:text="@string/title_information"
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="24sp"
-                    android:visibility="gone"
-                    android:textColor="?attr/textcolor"/>
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tvTxtqrcode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/labelInformation"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:text='@string/default_text_main_activity'
+                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="18sp"
-                    android:visibility="visible"
-                    android:textColor="?attr/textcolor"/>
+                    android:visibility="visible" />
 
             </RelativeLayout>
+
         </ScrollView>
 
     </FrameLayout>
@@ -85,20 +78,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?attr/bottomnavcolor"
         android:visibility="gone"
+        app:itemBackground="@color/colorBottomNav"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/main_action_navigation"/>
+        app:menu="@menu/main_action_navigation" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?attr/bottomnavcolor"
+        app:itemBackground="@color/colorBottomNav"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/navigation"/>
+        app:menu="@menu/navigation" />
 
 </LinearLayout>

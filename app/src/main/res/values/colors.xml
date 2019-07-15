@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#fafafa</color>
     <color name="colorPrimaryDark">#c7c7c7</color>
-    <color name="colorWhiteBackground">#FFFFFF</color>
+    <color name="colorBackground">#ffffff</color>
     <color name="colorAccent">#ea442d</color>
+    <color name="colorBottomNav">#f9f9f9</color>
+    <color name="colorIcons">#000000</color>
 
 </resources>

@@ -2,8 +2,9 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/colorBackground"
     android:minHeight="200dp"
-    android:background="?attr/backgroundcolor">
+    android:padding="16dp">
 
     <TableRow android:minHeight="100dp">
 
@@ -12,17 +13,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|center"
             android:contentDescription="App Icon"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/info_version"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="end|center"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary" />
     </TableRow>
 
     <TableRow>
@@ -30,13 +30,10 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_span="1"
-            android:gravity="center"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:text="@string/copyright"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary" />
     </TableRow>
 
     <TableRow>
@@ -44,12 +41,12 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_span="2"
-            android:textSize="12sp"
-            android:textStyle="italic"
             android:text="@string/copyright_holder"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="italic" />
     </TableRow>
 
     <TableRow>
@@ -57,12 +54,12 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_span="2"
-            android:textSize="12sp"
-            android:textStyle="italic"
             android:text="@string/license"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="italic" />
     </TableRow>
 
     <TableRow>
@@ -70,12 +67,12 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_span="2"
-            android:textSize="12sp"
-            android:textStyle="italic"
             android:text="@string/logo_designer"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="italic" />
     </TableRow>
 
     <TableRow>
@@ -83,12 +80,12 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_span="2"
-            android:textSize="12sp"
-            android:textStyle="italic"
             android:text="@string/translator"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="italic" />
     </TableRow>
 
     <TableRow>
@@ -96,14 +93,11 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:layout_span="2"
-            android:textSize="12sp"
-            android:textStyle="italic"
             android:text="@string/zxing_license"
-            android:textColor="?attr/textcolor"/>
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="italic" />
     </TableRow>
-
-
 
 </TableLayout>

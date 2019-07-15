@@ -5,10 +5,9 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    android:background="?attr/backgroundcolor"
-    tools:context="de.t_dankworth.secscanqr.activities.MainActivity"
-    >
+    tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
 
     <ListView
         android:id="@+id/lvGenerators"
@@ -20,5 +19,4 @@
 
     </ListView>
 
-    </LinearLayout>
-
+</LinearLayout>

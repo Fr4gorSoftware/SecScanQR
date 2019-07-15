@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -268,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             integrator.initiateScan();
         } catch (ArithmeticException e){
-            
+
         }
     }
 
@@ -290,7 +291,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String history_setting = prefs.getString("pref_day_night_mode", "");
         if(history_setting.equals("1")){
-            setTheme(R.style.darktheme);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
     }
 

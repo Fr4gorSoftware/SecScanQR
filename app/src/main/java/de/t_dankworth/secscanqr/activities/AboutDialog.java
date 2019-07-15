@@ -2,11 +2,9 @@ package de.t_dankworth.secscanqr.activities;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -44,7 +42,6 @@ public class AboutDialog extends Dialog {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.about);
-        loadTheme();
 
         TextView tv = (TextView) findViewById(R.id.info_version);
         String packageName = getContext().getPackageName();
@@ -59,20 +56,5 @@ public class AboutDialog extends Dialog {
         } catch (PackageManager.NameNotFoundException e) {
             Log.e(TAG, "Call to getPackageInfo() failed! => ", e);
         }
-
-
     }
-
-    /**
-     * Depending on the saved settings. The day or night mode will be loaded
-     */
-    private void loadTheme(){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        String history_setting = prefs.getString("pref_day_night_mode", "");
-        if(history_setting.equals("1")){
-            mContext.setTheme(R.style.darktheme);
-        } else {
-        }
-    }
-
 }
