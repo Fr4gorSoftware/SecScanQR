@@ -4,16 +4,15 @@
 
     <header
         android:fragment="de.t_dankworth.secscanqr.activities.SettingsActivity$ScannerPreferenceFragment"
-        android:icon="@drawable/ic_scan_black_24dp"
+        android:icon="@drawable/ic_scan"
         android:title="@string/pref_header_scanner" />
     <header
         android:fragment="de.t_dankworth.secscanqr.activities.SettingsActivity$HistoryPreferenceFragment"
-        android:icon="@drawable/ic_history_24dp"
+        android:icon="@drawable/ic_history"
         android:title="@string/pref_header_history_settings" />
 
     <header
         android:fragment="de.t_dankworth.secscanqr.activities.SettingsActivity$SearchEnginePreferenceFragment"
-        android:icon="@drawable/ic_search_24dp"
-        android:title="@string/pref_header_search_engine_settings"
-        />
+        android:icon="@drawable/ic_search"
+        android:title="@string/pref_header_search_engine_settings" />
 </preference-headers>
