@@ -114,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putString(STATE_QRCODEFORMAT, qrcodeFormat);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadTheme();
+    }
+
     /**
      * Standard Android on create method that gets called when the activity
      * initialized.
