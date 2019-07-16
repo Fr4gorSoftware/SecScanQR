@@ -21,165 +21,155 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <Space
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="28dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:layout_marginTop="28dp"
+                android:layout_weight="0.00"
+                android:paddingStart="8dp"
+                android:text="@string/tv_format"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00"
-                    android:paddingStart="8dp"
-                    android:text="@string/tv_format"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00" />
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_name"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_name"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtFN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_fn"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtFN"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_fn"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_org"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtOrg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_org"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtWeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_web"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtWeb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_web"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtMobil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_mobil"
+                android:inputType="phone"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtMobil"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_mobil"
-                    android:inputType="phone"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtTeleWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_tele_work"
+                android:inputType="phone"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtTeleWork"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_tele_work"
-                    android:inputType="phone"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtTelePrivat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_tele_private"
+                android:inputType="phone"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtTelePrivat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_tele_private"
-                    android:inputType="phone"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtStreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_street"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtStreet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_street"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtPLZ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_plz"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtPLZ"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_plz"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_city"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtCity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_city"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_state"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtState"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_state"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <EditText
+                android:id="@+id/txtCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:ems="10"
+                android:hint="@string/hint_country"
+                android:inputType="textPersonName"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtCountry"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/hint_country"
-                    android:inputType="textPersonName"
-                    android:textColor="?android:attr/textColorPrimary" />
+        </LinearLayout>
 
-            </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

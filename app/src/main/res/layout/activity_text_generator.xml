@@ -21,57 +21,46 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <Space
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="28dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/txtQR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:layout_marginTop="28dp"
+                android:hint="@string/hint_text2qr"
+                android:inputType="textMultiLine"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <EditText
-                    android:id="@+id/txtQR"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_text2qr"
-                    android:inputType="textMultiLine"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00"
+                android:paddingStart="8dp"
+                android:text="@string/tv_format"
+                android:textColor="?android:attr/textColorPrimary" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00"
-                    android:paddingStart="8dp"
-                    android:text="@string/tv_format"
-                    android:textColor="?android:attr/textColorPrimary" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_weight="0.00" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.00" />
+        </LinearLayout>
 
-            </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

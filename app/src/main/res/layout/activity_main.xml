@@ -9,77 +9,68 @@
     android:orientation="vertical"
     tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/labelFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/title_format"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelFormat"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/labelInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                android:layout_below="@+id/tvFormat"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/title_information"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp"
+                android:visibility="gone" />
 
-                <TextView
-                    android:id="@+id/labelFormat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:text="@string/title_format"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="24sp"
-                    android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvTxtqrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelInformation"
+                android:text='@string/default_text_main_activity'
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp"
+                android:visibility="visible" />
 
-                <TextView
-                    android:id="@+id/tvFormat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelFormat"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="18sp"
-                    android:visibility="gone" />
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/labelInformation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvFormat"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:text="@string/title_information"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="24sp"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/tvTxtqrcode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelInformation"
-                    android:text='@string/default_text_main_activity'
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="18sp"
-                    android:visibility="visible" />
-
-            </RelativeLayout>
-
-        </ScrollView>
-
-    </FrameLayout>
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_action_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:background="@color/colorBottomNav"
         android:visibility="gone"
-        app:itemBackground="@color/colorBottomNav"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
         app:menu="@menu/main_action_navigation" />
@@ -89,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:itemBackground="@color/colorBottomNav"
+        android:background="@color/colorBottomNav"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
         app:menu="@menu/navigation" />
