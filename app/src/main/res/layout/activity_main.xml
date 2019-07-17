@@ -5,80 +5,66 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="?attr/backgroundcolor"
-    tools:context="de.t_dankworth.secscanqr.activities.MainActivity"
-    >
+    android:orientation="vertical"
+    tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/content"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/labelFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/title_format"
+                android:textColor="?attr/textcolor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelFormat"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="?attr/textcolor"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/labelInformation"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFormat"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/title_information"
+                android:textColor="?attr/textcolor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
-                <TextView
-                    android:id="@+id/labelFormat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+            <TextView
+                android:id="@+id/tvTxtqrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelInformation"
+                android:text='@string/default_text_main_activity'
+                android:textColor="?attr/textcolor"
+                android:textSize="18sp"
+                android:visibility="visible" />
 
-                    android:text="@string/title_format"
-                    android:textColor="?attr/textcolor"
-                    android:textSize="24sp"
-                    android:visibility="gone" />
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/tvFormat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelFormat"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:textSize="18sp"
-                    android:visibility="gone"
-                    android:textColor="?attr/textcolor"/>
-
-                <TextView
-                    android:id="@+id/labelInformation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvFormat"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:text="@string/title_information"
-                    android:textSize="24sp"
-                    android:visibility="gone"
-                    android:textColor="?attr/textcolor"/>
-
-                <TextView
-                    android:id="@+id/tvTxtqrcode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelInformation"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="@dimen/activity_horizontal_margin"
-                    android:text='@string/default_text_main_activity'
-                    android:textSize="18sp"
-                    android:visibility="visible"
-                    android:textColor="?attr/textcolor"/>
-
-            </RelativeLayout>
-        </ScrollView>
-
-    </FrameLayout>
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_action_navigation"
@@ -89,7 +75,7 @@
         android:visibility="gone"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/main_action_navigation"/>
+        app:menu="@menu/main_action_navigation" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -99,6 +85,6 @@
         android:background="?attr/bottomnavcolor"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/navigation"/>
+        app:menu="@menu/navigation" />
 
 </LinearLayout>
