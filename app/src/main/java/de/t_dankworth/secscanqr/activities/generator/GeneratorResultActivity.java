@@ -25,6 +25,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
@@ -32,7 +33,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 29.03.2019
+ * Last Update: 26.07.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
@@ -126,12 +127,17 @@ public class GeneratorResultActivity extends AppCompatActivity {
      * This method saves the generated QR-Code on the smartphone
      */
     private void saveQrCode() {
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DATE);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        int year = calendar.get(Calendar.YEAR);
+
         Random rand = new Random();
         int n = rand.nextInt(50);
         int p = rand.nextInt(50);
         Bitmap image = bitmap;
 
-        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator  + n + "-" + p + ".png");
+        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator + day + "." + month + "." + year + " " + n + "-" + p + ".png");
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(f);
