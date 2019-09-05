@@ -80,6 +80,10 @@
     <!-- HistoryActivity -->
     <string name="reset_database">Pulisci</string>
     <string name="share_database">Condividi</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">Tutte le voci saranno eliminate!</string>
+    <string name="delete_history_dialog_confirmation">OK</string>
+    <string name="delete_history_dialog_cancel">Cancella</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Non è stato trovato nella cronologia</string>
