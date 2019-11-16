@@ -3,6 +3,7 @@ package de.t_dankworth.secscanqr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,13 +19,14 @@ import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
+import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.resetScreenInformation;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 17.03.2018
+* Last Update: 16.11.2018
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -36,6 +38,7 @@ public class HistoryDetailsActivity extends AppCompatActivity {
 
     private TextView tvCode;
     private BottomNavigationView action_navigation;
+    private BottomNavigationItemView action_navigation_web_button, action_navigation_contact_button;
 
     DatabaseHelper historyDatabaseHelper;
     final Activity activity = this;
@@ -61,10 +64,12 @@ public class HistoryDetailsActivity extends AppCompatActivity {
                 case R.id.history_action_navigation_copy:
                     copyToClipboard(tvCode, selectedCode, activity);
                     return true;
-                case R.id.main_action_navigation_openInWeb:
+                case R.id.history_action_navigation_openInWeb:
                     openInWeb(selectedCode, activity);
                     return true;
-
+                case R.id.history_action_navigation_createContact:
+                    createContact(selectedCode, activity);
+                    return true;
                 case R.id.history_action_navigation_share:
                     shareTo(selectedCode, activity);
                     return true;
@@ -84,6 +89,8 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         action_navigation = (BottomNavigationView) findViewById(R.id.history_action_navigation);
         BottomNavigationViewHelper.disableShiftMode(action_navigation);
         action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_openInWeb);
+        action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_createContact);
         historyDatabaseHelper = new DatabaseHelper(this);
 
         //Get the extra information from the history listview. and set the text in the textview eqaul to code
@@ -91,6 +98,14 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         selectedID = receivedIntent.getIntExtra("id", -1); //-1 is the default value
         selectedCode = receivedIntent.getStringExtra("code");
         tvCode.setText(selectedCode);
+
+        if(selectedCode.contains("BEGIN:VCARD") & selectedCode.contains("END:VCARD")){
+            action_navigation_web_button.setVisibility(View.GONE);
+            action_navigation_contact_button.setVisibility(View.VISIBLE);
+        } else {
+            action_navigation_contact_button.setVisibility(View.GONE);
+            action_navigation_web_button.setVisibility(View.VISIBLE);
+        }
 
     }
 }
