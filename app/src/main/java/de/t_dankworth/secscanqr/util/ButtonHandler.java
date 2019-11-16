@@ -8,18 +8,26 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
+import android.provider.ContactsContract;
 import android.support.design.widget.BottomNavigationView;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.util.concurrent.TimeUnit;
 
 import de.t_dankworth.secscanqr.R;
 
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.01.2019
+ * Last Update: 16.11.2019
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -228,5 +236,54 @@ public class ButtonHandler {
                 activity.startActivity(intent);
             }
         }
+    }
+
+    /**
+     * This method will open the contacts app and will create a contact with the given information
+     * @param qrcode = the qrcode as a String
+     * @param activity = Activty were the method was called.Needed for Toast and web intent
+     */
+    public static void createContact(String qrcode, Activity activity) {
+        Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
+        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+
+        String information[] = qrcode.split("\\r?\\n");
+        String notes = "";
+
+        for(int i = 0; i < information.length; i++){
+            if (information[i].contains("N:")){
+                String[] separeted = information[i].split(":");
+                String name = separeted[1].replace(";", " ");
+                intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
+            } else if(information[i].contains("ORG")){
+                String[] separeted = information[i].split(":");
+                intent.putExtra(ContactsContract.Intents.Insert.COMPANY, separeted[1]);
+            } else if(information[i].contains("URL")){
+                String[] separeted = information[i].split(":");
+                notes = notes + "\n" + separeted[1];
+            } else if(information[i].contains("EMAIL")){
+                String[] separeted = information[i].split(":");
+                intent.putExtra(ContactsContract.Intents.Insert.EMAIL, separeted[1]);
+            } else if(information[i].contains("TEL")){
+                String[] separeted = information[i].split(":");
+
+                if(separeted[0].contains("CELL")){
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE);
+                    intent.putExtra(ContactsContract.Intents.Insert.SECONDARY_PHONE, separeted[1]);
+                } else if(separeted[0].contains("WORK")){
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK);
+                    intent.putExtra(ContactsContract.Intents.Insert.TERTIARY_PHONE, separeted[1]);
+                } else if(separeted[0].contains("HOME")){
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_HOME);
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE, separeted[1]);
+                }
+            } else if(information[i].contains("ADR")){
+                String[] separeted = information[i].split(":");
+                String[] adr = separeted[1].split(";");
+                notes = notes + "\n" + adr[2] + "\n" + adr[3] + "\n" + adr[4] + "\n" + adr[5] + "\n" + adr[6];
+            }
+            intent.putExtra(ContactsContract.Intents.Insert.NOTES, notes);
+        }
+        activity.startActivity(intent);
     }
 }

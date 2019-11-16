@@ -30,6 +30,7 @@
     <string name="title_share">Share</string>
     <string name="title_reset">Reset</string>
     <string name="title_openInWeb">Open in Web</string>
+    <string name="title_createContact">Create Contact</string>
 
     <!-- GenerateActivity-->
     <string name="btn_save">Save</string>

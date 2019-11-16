@@ -53,4 +53,3 @@ Logo: [s-yous](https://github.com/s-yous)
 ![Screenshot 2](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20Generator.png)
 ![Screenshot 3](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20History.png)
 
-

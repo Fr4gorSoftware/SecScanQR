@@ -31,6 +31,7 @@
     <string name="title_share">Teilen</string>
     <string name="title_reset">Zurücksetzen</string>
     <string name="title_openInWeb">Öffnen im Web</string>
+    <string name="title_createContact">Kontakt anlegen</string>
 
     <!-- GenerateActivity-->
     <string name="btn_save">Speichern</string>

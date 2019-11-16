@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 25.04.2018
+ * Last Update: 16.11.2018
  * Last Update by Thore Dankworth
  *
  * This class handles all operations regarding the sql database
@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     private String CREATE_SCANNED_TABLE = "CREATE TABLE " + TABLE_SCANNED + "(" + COLUMN_SCANNED_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_SCANNED_QRCODE + " TEXT)";
 
-    private String DROP_SCANNED_TABLE = "DROP TABLE IF EXISTS" + TABLE_SCANNED;
+    private String DROP_SCANNED_TABLE = "DROP TABLE IF EXISTS " + TABLE_SCANNED;
 
 
     public DatabaseHelper(Context context){
@@ -70,7 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
      */
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_SCANNED;
+        String query = "SELECT * FROM " + TABLE_SCANNED + " ORDER BY " + COLUMN_SCANNED_ID + " DESC";
         Cursor data = db.rawQuery(query, null);
         return data;
     }

@@ -7,9 +7,14 @@
         android:title="@string/title_copy" />
 
     <item
-        android:id="@+id/main_action_navigation_openInWeb"
+        android:id="@+id/history_action_navigation_openInWeb"
         android:icon="@drawable/ic_open_in_browser_24dp"
         android:title="@string/title_openInWeb" />
+
+    <item
+        android:id="@+id/history_action_navigation_createContact"
+        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:title="@string/title_createContact" />
 
     <item
         android:id="@+id/history_action_navigation_share"

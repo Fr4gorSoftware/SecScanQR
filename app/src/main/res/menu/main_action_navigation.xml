@@ -12,6 +12,11 @@
         android:title="@string/title_openInWeb" />
 
     <item
+        android:id="@+id/main_action_navigation_createContact"
+        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:title="@string/title_createContact" />
+
+    <item
         android:id="@+id/main_action_navigation_share"
         android:icon="@drawable/ic_share_24dp"
         android:title="@string/title_share" />
