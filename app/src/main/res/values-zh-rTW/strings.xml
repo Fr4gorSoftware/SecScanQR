@@ -30,6 +30,7 @@
     <string name="title_share">分享</string>
     <string name="title_reset">重設</string>
     <string name="title_openInWeb">在網路上開啟</string>
+    <string name="title_createContact">建立聯絡人</string>
 
     <!-- GenerateActivity-->
     <string name="btn_save">儲存</string>
