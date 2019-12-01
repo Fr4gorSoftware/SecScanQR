@@ -2,11 +2,14 @@ package de.t_dankworth.secscanqr.activities.generator;
 
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -16,12 +19,16 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.01.2019
+ * Last Update: 01.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the Text to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
@@ -75,6 +82,9 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
             if("text/plain".equals(type)){
                 handleSendText(intent); //call method to handle sended text
             }
+            else if ("text/x-vcard".equals(type)){
+                handleSendContact(intent); //call method to handle sended contact
+            }
         }
 
         //OnClickListener for the "+" Button and functionality
@@ -105,7 +115,7 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
     }
 
     /**
-     * This method handles Text that was shared by an other app to SecScanQR and generates a qr code
+     * This method handles Text that was shared by an other app to SecScanQR to generate a qr code
      * @param intent from Share to from other Apps
      */
     private void handleSendText(Intent intent){
@@ -114,6 +124,33 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
             text.setText(sharedText);
             text2Qr = sharedText;
         }
+    }
+
+    /**
+     * This method handles VCF that was shared by the contacts app to SecScanQR to generate a qr code
+     * @param intent from Share to from Contacts app
+     */
+    private void handleSendContact(Intent intent){
+        Uri uri = (Uri) intent.getExtras().get(Intent.EXTRA_STREAM);
+        ContentResolver cr = getContentResolver();
+        InputStream stream = null;
+        try {
+            stream = cr.openInputStream(uri);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        StringBuffer fileContent = new StringBuffer("");
+        int ch;
+        try {
+            while( (ch = stream.read()) != -1)
+                fileContent.append((char)ch);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String data = new String(fileContent);
+        text.setText(data);
+        text2Qr = data;
     }
 
     /**
