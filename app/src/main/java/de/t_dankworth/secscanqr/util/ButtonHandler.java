@@ -27,7 +27,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.11.2019
+ * Last Update: 01.12.2019
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -275,6 +275,9 @@ public class ButtonHandler {
                     intent.putExtra(ContactsContract.Intents.Insert.TERTIARY_PHONE, separeted[1]);
                 } else if(separeted[0].contains("HOME")){
                     intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_HOME);
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE, separeted[1]);
+                } else if(separeted[0].contains("VOICE")){
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_OTHER);
                     intent.putExtra(ContactsContract.Intents.Insert.PHONE, separeted[1]);
                 }
             } else if(information[i].contains("ADR")){
