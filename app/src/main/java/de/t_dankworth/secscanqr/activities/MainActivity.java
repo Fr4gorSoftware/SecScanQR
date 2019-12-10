@@ -16,22 +16,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.FormatException;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.MultiFormatReader;
+import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.RGBLuminanceSource;
 import com.google.zxing.Reader;
 import com.google.zxing.Result;
+import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -39,8 +44,10 @@ import java.util.Hashtable;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.generator.GenerateActivity;
+import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
 import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
@@ -50,7 +57,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.11.2019
+ * Last Update: 10.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -61,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvInformation, mTvFormat, mLabelInformation, mLabelFormat;
     private BottomNavigationView action_navigation;
     private BottomNavigationItemView action_navigation_web_button, action_navigation_contact_button;
+    private ImageView codeImage;
+    private GeneralHandler generalHandler;
+    Bitmap bitmap;
+    MultiFormatWriter multiFormatWriter;
+    private BarcodeFormat format;
     final Activity activity = this;
     private String qrcode = "", qrcodeFormat = "";
     private int camera = 0;
@@ -127,12 +139,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
-        loadTheme();
+        generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_main);
         mTvInformation = (TextView) findViewById(R.id.tvTxtqrcode);
         mTvFormat = (TextView) findViewById(R.id.tvFormat);
         mLabelInformation = (TextView) findViewById(R.id.labelInformation);
         mLabelFormat = (TextView) findViewById(R.id.labelFormat);
+        codeImage = (ImageView) findViewById(R.id.resultImageMain);
+        codeImage.setClickable(true);
         mDatabaeHelper = new DatabaseHelper(this);
 
         BottomNavigationView main_navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -146,6 +161,18 @@ public class MainActivity extends AppCompatActivity {
         action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_openInWeb);
         action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_createContact);
 
+        codeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this , GeneratorResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("CODE", qrcode);
+                int formatID = generalHandler.StringToBarcodeId(qrcodeFormat);
+                bundle.putInt("FORMAT", formatID);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         //If the device were rotated then restore information
         if(savedInstanceState != null){
@@ -155,12 +182,15 @@ public class MainActivity extends AppCompatActivity {
             if(qrcode.equals("")){
 
             } else {
+                codeImage.setVisibility(View.VISIBLE);
+                showQrImage();
                 mTvFormat.setVisibility(View.VISIBLE);
                 mLabelInformation.setVisibility(View.VISIBLE);
                 mLabelFormat.setVisibility(View.VISIBLE);
                 mTvFormat.setText(qrcodeFormat);
                 mTvInformation.setText(qrcode);
                 action_navigation.setVisibility(View.VISIBLE);
+
                 if(qrcode.contains("BEGIN:VCARD") & qrcode.contains("END:VCARD")){
                     action_navigation_web_button.setVisibility(View.GONE);
                     action_navigation_contact_button.setVisibility(View.VISIBLE);
@@ -191,6 +221,24 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    /**
+     * This method creates a picture of the scanned qr code
+     */
+    private void showQrImage() {
+
+        multiFormatWriter = new MultiFormatWriter();
+        try{
+            BarcodeFormat format = generalHandler.StringToBarcodeFormat(qrcodeFormat);
+            BitMatrix bitMatrix = multiFormatWriter.encode(qrcode, format, 250,250);
+            BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+            bitmap = barcodeEncoder.createBitmap(bitMatrix);
+            codeImage.setImageBitmap(bitmap);
+        } catch (Exception e){
+            Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_generate), Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
     /**
@@ -230,6 +278,8 @@ public class MainActivity extends AppCompatActivity {
                 qrcodeFormat = result.getFormatName();
                 qrcode = result.getContents();
                 if(!qrcode.equals("")){
+                    codeImage.setVisibility(View.VISIBLE);
+                    showQrImage();
                     mTvFormat.setVisibility(View.VISIBLE);
                     mLabelInformation.setVisibility(View.VISIBLE);
                     mLabelFormat.setVisibility(View.VISIBLE);
@@ -303,17 +353,6 @@ public class MainActivity extends AppCompatActivity {
         boolean insertData = mDatabaeHelper.addData(newCode);
         if(!insertData){
             Toast.makeText(this, getResources().getText(R.string.error_add_to_database), Toast.LENGTH_LONG).show();
-        }
-    }
-
-    /**
-     * Depending on the saved settings. The day or night mode will be loaded
-     */
-    private void loadTheme(){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String history_setting = prefs.getString("pref_day_night_mode", "");
-        if(history_setting.equals("1")){
-            setTheme(R.style.darktheme);
         }
     }
 

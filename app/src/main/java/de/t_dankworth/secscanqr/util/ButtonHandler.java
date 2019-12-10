@@ -10,17 +10,10 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.support.design.widget.BottomNavigationView;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.concurrent.TimeUnit;
 
 import de.t_dankworth.secscanqr.R;
 
