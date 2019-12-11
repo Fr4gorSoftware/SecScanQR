@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.11.2018
+ * Last Update: 11.12.2019
  * Last Update by Thore Dankworth
  *
  * This class handles all operations regarding the sql database
@@ -86,6 +86,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         Cursor data = db.rawQuery(query, null);
         return  data;
 
+    }
+
+    /**
+     * Returns the data of the id given as a parameter
+     * @param id
+     * @return a Cursor pointing on the data
+     */
+    public Cursor getItemData(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT " + COLUMN_SCANNED_QRCODE + " FROM " + TABLE_SCANNED + " WHERE " + COLUMN_SCANNED_ID + " = '" + id + "'";
+        Cursor data = db.rawQuery(query, null);
+        return data;
     }
 
     /**

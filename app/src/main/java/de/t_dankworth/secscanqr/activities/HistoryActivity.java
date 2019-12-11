@@ -29,8 +29,8 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 01.12.2018
- * Last Update by Christian Krohmer
+ * Last Update: 11.12.2019
+ * Last Update by Thore Dankworth
  *
  * This class is the HistoryActivity and lists all scanned qr-codes
  */
@@ -128,16 +128,16 @@ public class HistoryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String code = adapterView.getItemAtPosition(i).toString();
+                int itemID = -1;
                 try{
+                    code = code.replace("'", "''");
                     Cursor data = historyDatabaseHelper.getItemID(code);
-                    int itemID = -1;
                     while(data.moveToNext()){
                         itemID = data.getInt(0);
                     }
                     if(itemID > -1){
                         Intent historyDetails = new Intent(HistoryActivity.this, HistoryDetailsActivity.class);
                         historyDetails.putExtra("id", itemID);
-                        historyDetails.putExtra("code", code);
                         startActivity(historyDetails);
                     } else {
                         Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_not_in_database), Toast.LENGTH_LONG).show();
@@ -145,7 +145,6 @@ public class HistoryActivity extends AppCompatActivity {
                     //Catch Exception for DataMatrix codes
                 } catch (SQLException e){
                     Toast.makeText(activity.getApplicationContext(), getResources().getText(R.string.error_sqlexception), Toast.LENGTH_LONG).show();
-
                 }
             }
         });
