@@ -2,6 +2,7 @@ package de.t_dankworth.secscanqr.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
@@ -26,7 +27,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 16.11.2018
+* Last Update: 11.12.2019
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -96,7 +97,10 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         //Get the extra information from the history listview. and set the text in the textview eqaul to code
         Intent receivedIntent = getIntent();
         selectedID = receivedIntent.getIntExtra("id", -1); //-1 is the default value
-        selectedCode = receivedIntent.getStringExtra("code");
+        Cursor data = historyDatabaseHelper.getItemData(selectedID);
+        while(data.moveToNext()){
+            selectedCode = data.getString(0);
+        }
         tvCode.setText(selectedCode);
 
         if(selectedCode.contains("BEGIN:VCARD") & selectedCode.contains("END:VCARD")){
