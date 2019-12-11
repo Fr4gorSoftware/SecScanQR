@@ -38,7 +38,7 @@
     <string name="toast_permission_needed">Nedostatočné povolenia</string>
     <string name="toast_erorr">Vyskytla sa chyba</string>
     <string-array name="generators">
-        <item>Čiarový kód</item>
+        <item>BARCODE</item>
         <item>GEO</item>
         <item>TEXT</item>
         <item>VCARD</item>
@@ -47,7 +47,7 @@
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generátor čiarového kódu</string>
     <string-array name="barcode_formats_array">
-        <item>Čiarový kód</item>
+        <item>BARCODE</item>
         <item>CODE_128</item>
         <item>CODE_39</item>
         <item>EAN_13</item>
@@ -63,7 +63,7 @@
     <string name="tv_format">Formát: </string>
     <string-array name="text_formats_array">
         <item>QR_CODE</item>
-        <item>AZTEC</item>
+        <item>AZTEC</item
 
     </string-array>
     <!-- TextGeneratorActivity Erorrs-->
@@ -128,7 +128,7 @@
     <string name="copyright_holder">Copyright © 2017-2019 T-Dankworth</string>
     <string name="license">Táto aplikácia bola vytvorená pod Všeobecnou verejnou licenciou GNU. Viac informácií na adrese http://www.gpl.sk/</string>
     <string name="logo_designer">Autor loga aplikácie: s-yous (https://github.com/s-yous)</string>
-    <string name="translator">Autor prekladu do angličtiny: Thore Dankworth (https://github.com/Fr4gorSoftware)</string>
+    <string name="translator">Autor prekladu do slovenčiny: Tibor Repček (https://github.com/tiborepcek)</string>
     <string name="zxing_license">Táto aplikácia používa knižnicu ZXING, ktorá je šírená pod licenciou The Apache 2.0. Viac informácií na adrese http://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Nastavenia</string>
