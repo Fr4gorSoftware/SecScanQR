@@ -11,7 +11,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
 import de.t_dankworth.secscanqr.R;
 
