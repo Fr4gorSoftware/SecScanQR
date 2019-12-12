@@ -63,7 +63,7 @@
     <string name="tv_format">Formát: </string>
     <string-array name="text_formats_array">
         <item>QR_CODE</item>
-        <item>AZTEC</item
+        <item>AZTEC</item>
 
     </string-array>
     <!-- TextGeneratorActivity Erorrs-->
