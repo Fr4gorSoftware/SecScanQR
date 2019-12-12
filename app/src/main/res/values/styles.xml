@@ -9,6 +9,7 @@
         <item name="backgroundcolor">#ffff</item>
         <item name="bottomnavcolor">#f9f9f9</item>
         <item name="textcolor">#000000</item>
+
     </style>
 
     <!-- Night mode-->

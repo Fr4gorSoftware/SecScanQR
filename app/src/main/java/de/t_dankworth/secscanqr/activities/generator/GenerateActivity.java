@@ -3,19 +3,18 @@ package de.t_dankworth.secscanqr.activities.generator;
 import android.app.Activity;
 import android.content.Intent;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+
 import de.t_dankworth.secscanqr.R;
+import de.t_dankworth.secscanqr.util.GeneratorListAdapter;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 
 /**
@@ -29,6 +28,7 @@ import de.t_dankworth.secscanqr.R;
 public class GenerateActivity extends AppCompatActivity {
 
     final Activity activity = this;
+    private GeneralHandler generalHandler;
     ListView lvGenerators;
 
 
@@ -42,10 +42,13 @@ public class GenerateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_generate);
         lvGenerators = (ListView) findViewById(R.id.lvGenerators);
 
-        ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(GenerateActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.generators));
+
+        GeneratorListAdapter listAdapter = new GeneratorListAdapter(GenerateActivity.this, R.layout.listview_row, getResources().getStringArray(R.array.generators));
 
         lvGenerators.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
