@@ -25,10 +25,10 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
 ## Translators
   - German (last change: 1.2.5): [Thore Dankworth](https://github.com/Fr4gorSoftware)
   - Slovak (last change: 1.2.5): [Tibor Repček](https://github.com/tiborepcek)
+  - Thai (last change: 1.2.5): [Vatunyoo Suwannapisit](https://github.com/kerlos)
   - Hindi (last change: 1.2.4): [imcmjha](https://github.com/imcmjha)
   - Italian (last change: 1.2.4): [abonte](https://github.com/abonte) and [ema-pe](https://github.com/ema-pe)
   - Russian (last change: 1.2.4): [Vladimir Kosolapov](https://github.com/0x264f)
-  - Thai (last change: 1.2.4): [Vatunyoo Suwannapisit](https://github.com/kerlos)
   - Spanish (last change: 1.2.4): [Coruna](https://github.com/Coruna)
   - Chinese (last change: 1.2.1): [linsui](https://github.com/linsui) and [Jeff Huang](https://github.com/s8321414)
   - Polish (last change: 1.2.1): [Waldemar Stoczkowski](https://github.com/WaldiSt)
