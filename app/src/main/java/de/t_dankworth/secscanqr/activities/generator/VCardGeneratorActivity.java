@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -16,10 +17,11 @@ import android.widget.Toast;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.01.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the VCard to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
@@ -31,6 +33,7 @@ public class VCardGeneratorActivity extends AppCompatActivity implements Adapter
     int format;
     String[] text2Qr = new String[13];;
     String vcardCode;
+    Button btnGenerate;
     private static final String STATE_TEXT = MainActivity.class.getName();
 
     /**
@@ -42,29 +45,12 @@ public class VCardGeneratorActivity extends AppCompatActivity implements Adapter
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        GeneralHandler generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_vcard_generator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         initializeInputFields();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //Setup the Spinner Menu for the different formats
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.text_formats_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-
-        if(savedInstanceState != null){
-            text2Qr = (String[]) savedInstanceState.get(STATE_TEXT);
-            recoverOldValues();
-        }
-
-        //OnClickListener for the "+" Button and functionality
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        btnGenerate = (Button) findViewById(R.id.btnGenerateVCard);
+        btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 insertValuesIntoArray();
@@ -74,9 +60,21 @@ public class VCardGeneratorActivity extends AppCompatActivity implements Adapter
                     buildVCardCode();
                     openResultActivity();
                 }
-
             }
         });
+        //Setup the Spinner Menu for the different formats
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.text_formats_array, R.layout.spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+
+
+        if(savedInstanceState != null){
+            text2Qr = (String[]) savedInstanceState.get(STATE_TEXT);
+            recoverOldValues();
+        }
 
     }
 

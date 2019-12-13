@@ -167,7 +167,7 @@
         <item>false</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">Denný/nočný režim (verzia ALPHA)</string>
+    <string name="pref_title_day_night_mode">Denný/nočný režim (verzia BETA)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Deň (vyžaduje reštart)</item>
         <item>Noc (vyžaduje reštart)</item>

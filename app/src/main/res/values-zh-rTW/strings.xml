@@ -167,7 +167,7 @@
         <item>false</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">日／夜間模式（Alpha 版）</string>
+    <string name="pref_title_day_night_mode">日／夜間模式（BETA 版）</string>
     <string-array name="pref_day_night_mode_entries">
         <item>日間（需要重新啟動應用程式）</item>
         <item>夜間（需要重新啟動應用程式）</item>

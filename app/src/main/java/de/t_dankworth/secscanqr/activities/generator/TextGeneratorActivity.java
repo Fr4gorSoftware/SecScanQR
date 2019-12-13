@@ -14,10 +14,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
+import com.google.zxing.MultiFormatWriter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -25,10 +28,11 @@ import java.io.InputStream;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 01.12.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the Text to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
@@ -39,6 +43,7 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
     EditText text;
     int format;
     String text2Qr;
+    Button btnGenerate;
     private static final String STATE_TEXT = MainActivity.class.getName();
 
 
@@ -52,17 +57,27 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        GeneralHandler generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_text_generator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         text = (EditText) findViewById(R.id.txtQR);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        btnGenerate = (Button) findViewById(R.id.btnGenerateText);
+        btnGenerate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text2Qr = text.getText().toString().trim();
+                if(text2Qr.equals("")){
+                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_text_first), Toast.LENGTH_SHORT).show();
+                } else {
+                    openResultActivity();
+                }
+            }
+        });
 
         //Setup the Spinner Menu for the different formats
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.text_formats_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.text_formats_array, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -86,21 +101,6 @@ public class TextGeneratorActivity extends AppCompatActivity  implements Adapter
                 handleSendContact(intent); //call method to handle sended contact
             }
         }
-
-        //OnClickListener for the "+" Button and functionality
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text2Qr = text.getText().toString().trim();
-                if(text2Qr.equals("")){
-                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_text_first), Toast.LENGTH_SHORT).show();
-                } else {
-                    openResultActivity();
-                }
-
-            }
-        });
 
     }
 

@@ -18,6 +18,7 @@ import android.widget.Toast;
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
@@ -27,7 +28,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 11.12.2019
+* Last Update: 12.12.2019
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -36,6 +37,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 public class HistoryDetailsActivity extends AppCompatActivity {
 
     private static final String TAG = "EditDataActivity";
+    private GeneralHandler generalHandler;
 
     private TextView tvCode;
     private BottomNavigationView action_navigation;
@@ -85,6 +87,8 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_history_details);
         tvCode = (TextView) findViewById(R.id.tvCodeHD);
         action_navigation = (BottomNavigationView) findViewById(R.id.history_action_navigation);

@@ -134,7 +134,7 @@
         <item>Disattivo</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">Modalità Giorno/Notte (in versione ALPHA)</string>
+    <string name="pref_title_day_night_mode">Modalità Giorno/Notte (in versione BETA)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Giorno (Necessario il riavvio)</item>
         <item>Notte (Necessario il riavvio)</item>

@@ -125,7 +125,7 @@
         <item>Desactivar</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">Modo Día/Noche (Versión ALFA)</string>
+    <string name="pref_title_day_night_mode">Modo Día/Noche (Versión BETA)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Día (Necesita un reinicio)</item>
         <item>Noche (Necesita un reinicio)</item>

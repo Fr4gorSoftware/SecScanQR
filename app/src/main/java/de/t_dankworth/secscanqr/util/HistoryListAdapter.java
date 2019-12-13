@@ -11,29 +11,31 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 
 import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 12.12.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
- * This class is the ListAdapter for the GenerateActivity
+ * This class is the ListAdapter for the HistoryActivity
  */
 
-public class GeneratorListAdapter extends ArrayAdapter<String> {
+public class HistoryListAdapter extends ArrayAdapter<String> {
 
     private Context context;
     private int resource;
     private int lastPosition = -1;
-    private String generators[];
+    private ArrayList<String> scans;
+
 
     /**
      * Holds variables in a View
      */
     private static class ViewHolder {
-        TextView tvGenerator;
+        TextView tvScanned;
     }
 
 
@@ -41,20 +43,20 @@ public class GeneratorListAdapter extends ArrayAdapter<String> {
      * Constructor for GeneratorListAdapter
      * @param context
      * @param resource
-     * @param generators
+     * @param scans
      */
-    public GeneratorListAdapter(Context context, int resource, String generators[]) {
-        super(context, resource, generators);
+    public HistoryListAdapter(Context context, int resource, ArrayList<String> scans) {
+        super(context, resource, scans);
         this.context = context;
         this.resource = resource;
-        this.generators = generators;
+        this.scans = scans;
 
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        String generator = generators[position];
+        String scan = scans.get(position);
 
         final View resultAnimation;
         ViewHolder holder;
@@ -63,7 +65,7 @@ public class GeneratorListAdapter extends ArrayAdapter<String> {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(resource, parent, false);
             holder = new ViewHolder();
-            holder.tvGenerator = (TextView) convertView.findViewById(R.id.listViewRowItem);
+            holder.tvScanned = (TextView) convertView.findViewById(R.id.listViewRowItem);
 
             resultAnimation = convertView;
             convertView.setTag(holder);
@@ -77,7 +79,7 @@ public class GeneratorListAdapter extends ArrayAdapter<String> {
         resultAnimation.startAnimation(animation);
         lastPosition = position;
 
-        holder.tvGenerator.setText(generator);
+        holder.tvScanned.setText(scan);
 
         return convertView;
 

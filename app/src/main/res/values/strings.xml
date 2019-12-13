@@ -126,6 +126,7 @@
     <string name="about_dialog">About</string>
     <string name="copyright">Copyright Notice</string>
     <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="github_link">Find SecScanQR on Github: https://github.com/Fr4gorSoftware/SecScanQR</string>
     <string name="license">This App was created under the terms of the GNU General Public License. For more information please check out the link below: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">The App logo was created by s-yous: https://github.com/s-yous</string>
     <string name="translator">English translation by Thore Dankworth: https://github.com/Fr4gorSoftware</string>
@@ -167,7 +168,7 @@
         <item>false</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">Day/Night mode (ALPHA Version)</string>
+    <string name="pref_title_day_night_mode">Day/Night mode (BETA Version)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Day (Needs a restart)</item>
         <item>Night (Needs a restart)</item>

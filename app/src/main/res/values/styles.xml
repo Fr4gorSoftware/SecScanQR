@@ -9,7 +9,7 @@
         <item name="backgroundcolor">#ffff</item>
         <item name="bottomnavcolor">#f9f9f9</item>
         <item name="textcolor">#000000</item>
-
+        <item name="actionbaricon">@color/actionBarIcon_dark</item>
     </style>
 
     <!-- Night mode-->
@@ -21,6 +21,9 @@
         <item name="backgroundcolor">#303030</item>
         <item name="bottomnavcolor">#424242</item>
         <item name="textcolor">#ffffff</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="actionbaricon">@color/actionBarIcon_light</item>
+        <item name="android:textColorHint">#8c8c8c</item>
     </style>
 
 

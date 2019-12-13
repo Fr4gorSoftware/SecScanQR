@@ -5,13 +5,12 @@ import android.app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -21,10 +20,11 @@ import com.google.zxing.MultiFormatWriter;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 16.01.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the geo location to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
@@ -35,6 +35,7 @@ public class GeoGeneratorActivity extends AppCompatActivity implements AdapterVi
     CheckBox cbLatitude, cbLongtitude;
     Boolean north = true, east = true;
     int format;
+    Button btnGenerate;
     String latitude, longtitude, geo;
     MultiFormatWriter multiFormatWriter;
 
@@ -50,42 +51,15 @@ public class GeoGeneratorActivity extends AppCompatActivity implements AdapterVi
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        GeneralHandler generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_geo_generator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         tfLatitude = (EditText) findViewById(R.id.tfLatitude);
         tfLongtitude = (EditText) findViewById(R.id.tfLongtitude);
         cbLatitude = (CheckBox) findViewById(R.id.cbLatitude);
         cbLongtitude = (CheckBox) findViewById(R.id.cbLongtitude);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //Setup the Spinner Menu for the different formats
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.formats_geo_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        //If the device were rotated then restore information
-        if(savedInstanceState != null){
-            latitude = (String) savedInstanceState.get(STATE_LATITUDE);
-            tfLatitude.setText(latitude);
-            longtitude = (String) savedInstanceState.get(STATE_LONGTITUDE);
-            tfLongtitude.setText(longtitude);
-            north = (Boolean) savedInstanceState.get(STATE_NORTH);
-            if(!north){
-                cbLatitude.setChecked(false);
-            }
-            east = (Boolean) savedInstanceState.get(STATE_EAST);
-            if(!east){
-                cbLongtitude.setChecked(false);
-            }
-        }
-
-        //OnClickListener for the "+" Button and functionality
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        btnGenerate = (Button) findViewById(R.id.btnGenerateGeo);
+        btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 latitude = tfLatitude.getText().toString().trim();
@@ -111,6 +85,29 @@ public class GeoGeneratorActivity extends AppCompatActivity implements AdapterVi
                 }
             }
         });
+
+        //Setup the Spinner Menu for the different formats
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.formats_geo_array, R.layout.spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        //If the device were rotated then restore information
+        if(savedInstanceState != null){
+            latitude = (String) savedInstanceState.get(STATE_LATITUDE);
+            tfLatitude.setText(latitude);
+            longtitude = (String) savedInstanceState.get(STATE_LONGTITUDE);
+            tfLongtitude.setText(longtitude);
+            north = (Boolean) savedInstanceState.get(STATE_NORTH);
+            if(!north){
+                cbLatitude.setChecked(false);
+            }
+            east = (Boolean) savedInstanceState.get(STATE_EAST);
+            if(!east){
+                cbLongtitude.setChecked(false);
+            }
+        }
     }
 
     /**
