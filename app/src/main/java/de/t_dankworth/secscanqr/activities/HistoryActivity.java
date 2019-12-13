@@ -23,13 +23,15 @@ import java.util.ArrayList;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
+import de.t_dankworth.secscanqr.util.HistoryListAdapter;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 
 /**
  * Created by Thore Dankworth
- * Last Update: 11.12.2019
+ * Last Update: 12.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is the HistoryActivity and lists all scanned qr-codes
@@ -41,6 +43,7 @@ public class HistoryActivity extends AppCompatActivity {
     private static final String TAG = "History";
     DatabaseHelper historyDatabaseHelper;
     private ListView historyListView;
+    private GeneralHandler generalHandler;
     final Activity activity = this;
 
     @Override
@@ -48,6 +51,8 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_history);
         historyDatabaseHelper = new DatabaseHelper(this);
         historyListView = (ListView) findViewById(R.id.listView);
@@ -121,8 +126,11 @@ public class HistoryActivity extends AppCompatActivity {
         while(data.moveToNext()){
             listData.add(data.getString(1)); //column 0 = id; column 1 = code
         }
-        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
-        historyListView.setAdapter(adapter);
+
+        HistoryListAdapter listAdapter = new HistoryListAdapter(HistoryActivity.this, R.layout.listview_row, listData);
+
+        //ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
+        historyListView.setAdapter(listAdapter);
 
         historyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

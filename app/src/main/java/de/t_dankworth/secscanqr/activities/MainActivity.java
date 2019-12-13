@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString(STATE_QRCODE, qrcode);
         savedInstanceState.putString(STATE_QRCODEFORMAT, qrcodeFormat);
+        generalHandler.loadTheme();
     }
 
     /**

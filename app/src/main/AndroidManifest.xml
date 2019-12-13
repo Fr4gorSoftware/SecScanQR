@@ -53,8 +53,7 @@
         <activity
             android:name=".activities.generator.GeoGeneratorActivity"
             android:label="@string/title_activity_geo_generator"
-            android:parentActivityName=".activities.generator.GenerateActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".activities.generator.GenerateActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
@@ -62,8 +61,7 @@
         <activity
             android:name=".activities.generator.TextGeneratorActivity"
             android:label="@string/activity_generate"
-            android:parentActivityName=".activities.generator.GenerateActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".activities.generator.GenerateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -82,8 +80,7 @@
         <activity
             android:name=".activities.generator.BarcodeGenerateActivity"
             android:label="@string/activity_barcode_generator"
-            android:parentActivityName=".activities.generator.GenerateActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".activities.generator.GenerateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -99,8 +96,7 @@
         <activity
             android:name=".activities.generator.VCardGeneratorActivity"
             android:label="@string/title_activity_vcard_generator"
-            android:parentActivityName=".activities.generator.GenerateActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".activities.generator.GenerateActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />

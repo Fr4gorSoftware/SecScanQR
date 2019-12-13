@@ -1,31 +1,27 @@
 package de.t_dankworth.secscanqr.activities.generator;
 
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.zxing.MultiFormatWriter;
-
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.01.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is all about the value to BARCODE Generate Activity. In this Class the functionality of generating a BARCODE Picture is covered.
@@ -36,9 +32,7 @@ public class BarcodeGenerateActivity extends AppCompatActivity implements Adapte
     EditText text;
     int format;
     String text2Barcode;
-    MultiFormatWriter multiFormatWriter;
-    Bitmap bitmap;
-    final Activity activity = this;
+    Button btnGenerate;
     private static final String STATE_TEXT = MainActivity.class.getName();
 
     @Override
@@ -46,17 +40,27 @@ public class BarcodeGenerateActivity extends AppCompatActivity implements Adapte
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
                 WindowManager.LayoutParams.FLAG_SECURE);
+        GeneralHandler generalHandler = new GeneralHandler(this);
+        generalHandler.loadTheme();
         setContentView(R.layout.activity_barcode_generate);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         text = (EditText) findViewById(R.id.tfBarcode);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        btnGenerate = (Button) findViewById(R.id.btnGenerateBarcode);
+        btnGenerate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text2Barcode = text.getText().toString().trim();
+                if(text2Barcode.equals("")){
+                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_text_first), Toast.LENGTH_SHORT).show();
+                } else {
+                    openResultActivity();
+                }
+            }
+        });
 
         //Setup the Spinner Menu for the different formats
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.barcode_formats_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.barcode_formats_array, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -77,21 +81,6 @@ public class BarcodeGenerateActivity extends AppCompatActivity implements Adapte
                 handleSendText(intent); //call method to handle sended text
             }
         }
-
-        //OnClickListener for the "+" Button and functionality
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text2Barcode = text.getText().toString().trim();
-                if(text2Barcode.equals("")){
-                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_text_first), Toast.LENGTH_SHORT).show();
-                } else {
-                    openResultActivity();
-                }
-
-            }
-        });
     }
 
     /**

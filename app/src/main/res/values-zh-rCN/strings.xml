@@ -122,7 +122,7 @@
         <item>关</item>
     </string-array>
 
-    <string name="pref_title_day_night_mode">日间/夜间模式 (ALPHA Version)</string>
+    <string name="pref_title_day_night_mode">日间/夜间模式 (BETA Version)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>日间（需要重启）</item>
         <item>夜间（需要重启）</item>

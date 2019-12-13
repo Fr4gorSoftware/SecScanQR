@@ -19,7 +19,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.01.2019
+ * Last Update: 12.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is just a forwarding to the specific generators

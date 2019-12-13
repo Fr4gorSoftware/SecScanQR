@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/backgroundcolor"
     tools:context="de.t_dankworth.secscanqr.activities.HistoryDetailsActivity">
 
     <LinearLayout
@@ -18,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/title_information"
-            android:textColor="@android:color/black"
+            android:textColor="?attr/textcolor"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -26,7 +27,7 @@
             android:id="@+id/tvCodeHD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textColor="?attr/textcolor"
             android:textSize="24sp" />
 
     </LinearLayout>
@@ -36,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="?attr/bottomnavcolor"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
         app:menu="@menu/history_action_navigation" />

@@ -62,6 +62,20 @@
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_span="2"
                 android:autoLink="web"
+                android:text="@string/github_link"
+                android:textColor="?attr/textcolor"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_span="2"
+                android:autoLink="web"
                 android:text="@string/license"
                 android:textColor="?attr/textcolor"
                 android:textSize="12sp"

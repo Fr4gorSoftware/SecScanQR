@@ -6,5 +6,6 @@
         <attr name="textcolor" format="color" />
         <attr name="tintcolor" format="color" />
         <attr name="buttoncolor" format="color" />
+        <attr name="actionbaricon" format="reference" />
     </declare-styleable>
 </resources>
