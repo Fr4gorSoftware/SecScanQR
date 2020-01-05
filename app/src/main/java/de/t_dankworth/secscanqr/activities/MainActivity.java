@@ -12,6 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -185,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
             qrcode = savedInstanceState.getString(STATE_QRCODE);
             qrcodeFormat = savedInstanceState.getString(STATE_QRCODEFORMAT);
 
-            if (!qrcode.isEmpty()) {
+            if (TextUtils.isEmpty(qrcode)) {
                 codeImage.setVisibility(View.VISIBLE);
                 showQrImage();
                 mTvFormat.setVisibility(View.VISIBLE);
@@ -281,7 +282,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 qrcodeFormat = result.getFormatName();
                 qrcode = result.getContents();
-                if (!qrcode.isEmpty()) {
+
+                if (TextUtils.isEmpty(qrcode)) {
                     codeImage.setVisibility(View.VISIBLE);
                     showQrImage();
                     mTvFormat.setVisibility(View.VISIBLE);
@@ -290,6 +292,7 @@ public class MainActivity extends AppCompatActivity {
                     mTvFormat.setText(qrcodeFormat);
                     mTvInformation.setText(qrcode);
                     action_navigation.setVisibility(View.VISIBLE);
+
                     if (qrcode.contains("BEGIN:VCARD") & qrcode.contains("END:VCARD")) {
                         action_navigation_web_button.setVisibility(View.GONE);
                         action_navigation_contact_button.setVisibility(View.VISIBLE);
@@ -403,8 +406,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (qrcode == null){
-
+        if (TextUtils.isEmpty(qrcode)){
             LuminanceSource source = new RGBLuminanceSource(width,
                     height, intArray);
             BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
