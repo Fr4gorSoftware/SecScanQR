@@ -21,17 +21,4 @@ public class AppUtil {
             return false;
         }
     }
-
-
-    public static boolean checkPackage(Context context, String packageName) {
-        if (TextUtils.isEmpty(packageName)) {
-            return false;
-        }
-        try {
-            context.getPackageManager().getApplicationInfo(packageName, PackageManager.GET_META_DATA);
-            return true;
-        } catch (NameNotFoundException e) {
-            return false;
-        }
-    }
 }
