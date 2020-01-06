@@ -171,9 +171,9 @@ public class MainActivity extends AppCompatActivity {
         action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_createContact);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean isJmsScannerEnabled = prefs.getBoolean("pref_use_gms_vision" ,false);
+        boolean isGmsScannerEnabled = prefs.getBoolean("pref_use_gms_vision" ,false);
 
-        isGmsScannerAvailable = isJmsScannerEnabled && AppUtil.isPackageAvailable(this,"com.google.android.gms");
+        isGmsScannerAvailable = isGmsScannerEnabled && AppUtil.isPackageAvailable(this,"com.google.android.gms");
 
         codeImage.setOnClickListener(new View.OnClickListener() {
             @Override

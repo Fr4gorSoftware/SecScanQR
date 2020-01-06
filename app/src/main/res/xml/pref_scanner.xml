@@ -1,5 +1,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <CheckBoxPreference
+        android:key="pref_use_gms_vision"
+        android:title="Use GMS scanner if available"/>
+
     <ListPreference
         android:defaultValue="0"
         android:entries="@array/pref_camera_entries"
