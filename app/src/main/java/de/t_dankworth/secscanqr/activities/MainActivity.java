@@ -45,11 +45,13 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.Hashtable;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.generator.GenerateActivity;
 import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
+import de.t_dankworth.secscanqr.util.AppUtil;
 import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private String qrcode = "", qrcodeFormat = "";
     private DatabaseHelper mDatabaeHelper;
 
-    boolean IS_GMS_SCANNER_ENABLED = true;
+    boolean isGmsScannerAvailable;
 
     private static final String STATE_QRCODE = MainActivity.class.getName();
     private static final String STATE_QRCODEFORMAT = "format";
@@ -168,6 +170,11 @@ public class MainActivity extends AppCompatActivity {
         action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_openInWeb);
         action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_createContact);
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isJmsScannerEnabled = prefs.getBoolean("pref_use_gms_vision" ,false);
+
+        isGmsScannerAvailable = isJmsScannerEnabled && AppUtil.isPackageAvailable(this,"com.google.android.gms");
+
         codeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -208,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             //Autostart Scanner if activated
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
             String auto_scan = prefs.getString("pref_auto_scan", "");
             if (auto_scan.equals("true")) {
                 zxingScan();
@@ -221,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
         String type = intent.getType();
 
         if (Intent.ACTION_SEND.equals(action) && type != null) {
-            if ("image/*".equals(type)) {
+            if (type.toLowerCase().startsWith("image")) {
                 handleSendPicture();
             }
         }
@@ -383,7 +389,7 @@ public class MainActivity extends AppCompatActivity {
         bMap.getPixels(intArray, 0, width, 0, 0, width,
                 height);
 
-        if (IS_GMS_SCANNER_ENABLED) {
+        if (isGmsScannerAvailable) {
             BarcodeDetector barcodeDetector = new BarcodeDetector.Builder(getApplicationContext())
                     .setBarcodeFormats(Barcode.ALL_FORMATS)
                     .build();
@@ -416,6 +422,20 @@ public class MainActivity extends AppCompatActivity {
                 Hashtable<DecodeHintType, Object> decodeHints = new Hashtable<DecodeHintType, Object>();
                 decodeHints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
                 decodeHints.put(DecodeHintType.PURE_BARCODE, Boolean.TRUE);
+
+                decodeHints.put(DecodeHintType.POSSIBLE_FORMATS, Arrays.asList(
+                        BarcodeFormat.UPC_A,
+                        BarcodeFormat.UPC_E,
+                        BarcodeFormat.EAN_8,
+                        BarcodeFormat.EAN_13,
+                        BarcodeFormat.CODE_39,
+                        BarcodeFormat.CODE_93,
+                        BarcodeFormat.CODE_128,
+                        BarcodeFormat.ITF,
+                        BarcodeFormat.QR_CODE,
+                        BarcodeFormat.DATA_MATRIX
+                ));
+                decodeHints.put(DecodeHintType.CHARACTER_SET, "ISO-8859-1");
 
                 Result result = reader.decode(bitmap, decodeHints);
                 qrcode = result.getText();
