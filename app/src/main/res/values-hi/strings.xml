@@ -37,12 +37,6 @@
     <string name="toast_save">आंतरिक संग्रहण पर "SecScanQR" फ़ोल्डर में सहेजा गया</string>
     <string name="toast_permission_needed">अनुमति की आवश्यकता है</string>
     <string name="toast_erorr">एक त्रुटि आई थी</string>
-    <string-array name="generators">
-        <item>बारकोड</item>
-        <item>भू</item>
-        <item>टेक्स्ट</item>
-        <item>वीकार्ड</item>
-    </string-array>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">​​बारकोड उत्पादक</string>
@@ -142,19 +136,11 @@
         <item>back कैमरा</item>
         <item>front कैमरा</item>
     </string-array>
-    <string-array name="pref_camera_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
 
     <string name="pref_title_auto_scan">ऑटोस्टार्ट स्कैनर</string>
     <string-array name="pref_auto_scan_entries">
         <item>चालू</item>
         <item>बंद</item>
-    </string-array>
-    <string-array name="pref_auto_scan_values">
-        <item>हाँ</item>
-        <item>नहीं</item>
     </string-array>
 
     <string name="pref_title_auto_clipboard">होशियार क्लिपबोर्ड</string>
@@ -162,29 +148,16 @@
         <item>चालू</item>
         <item>बंद</item>
     </string-array>
-    <string-array name="pref_auto_clipboard_values">
-        <item>हाँ</item>
-        <item>नहीं</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">दिन/रात मोड (अल्फा संस्करण)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>दिन (एक पुनरारंभ की आवश्यकता है)</item>
         <item>रात (एक पुनरारंभ की आवश्यकता है)</item>
     </string-array>
-    <string-array name="pref_day_night_mode_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
-
     <string name="pref_title_history">इतिहास (चालू/बंद)</string>
     <string-array name="pref_history_entries">
         <item>चालू</item>
         <item>बंद</item>
-    </string-array>
-    <string-array name="pref_history_values">
-        <item>हाँ</item>
-        <item>नहीं</item>
     </string-array>
 
     <string name="pref_title_search_engine">खोज इंजन</string>
@@ -198,27 +171,12 @@
         <item>याहू</item>
         <item>यांडेक्स (आरयूएस)</item>
     </string-array>
-    <string-array name="pref_search_engine_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-    </string-array>
 
     <string name="pref_title_barcode_search_enigne">​​बारकोड खोज इंजन</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>बारकोड के लिए कोई अतिरिक्त खोज इंजन नहीं</item>
         <item>ओपन फ़ूड फैक्ट्स</item>
         <item>कोडचेक</item>
-    </string-array>
-    <string-array name="pref_barcode_search_engine_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
     </string-array>
 
 </resources>

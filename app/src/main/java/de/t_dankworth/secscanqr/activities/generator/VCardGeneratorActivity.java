@@ -24,7 +24,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
- * This class is all about the VCard to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
+ * This class is all about the VCard to QR-Code Generate Activity.
  */
 
 public class VCardGeneratorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
