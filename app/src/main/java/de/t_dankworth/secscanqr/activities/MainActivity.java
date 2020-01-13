@@ -72,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
     private GeneralHandler generalHandler;
     Bitmap bitmap;
     MultiFormatWriter multiFormatWriter;
-    private BarcodeFormat format;
     final Activity activity = this;
     private String qrcode = "", qrcodeFormat = "";
-    private int camera = 0;
     private DatabaseHelper mDatabaeHelper;
+
+
     private static final String STATE_QRCODE = MainActivity.class.getName();
     private static final String STATE_QRCODEFORMAT = "format";
 
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         String type = intent.getType();
 
         if (Intent.ACTION_SEND.equals(action) && type != null){
-            if("image/*".equals(type)){
+            if(type.toLowerCase().startsWith("image")){
                 handleSendPicture();
             }
         }
@@ -360,11 +360,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleSendPicture(){
         Uri imageUri = (Uri) getIntent().getExtras().get(Intent.EXTRA_STREAM);
         InputStream imageStream = null;
+
         try{
             imageStream = getContentResolver().openInputStream(imageUri);
         } catch (FileNotFoundException e){
             Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_file_not_found), Toast.LENGTH_LONG);
         }
+
         //decoding bitmap
         Bitmap bMap = BitmapFactory.decodeStream(imageStream);
         int[] intArray = new int[bMap.getWidth() * bMap.getHeight()];
@@ -375,6 +377,7 @@ public class MainActivity extends AppCompatActivity {
         LuminanceSource source = new RGBLuminanceSource(bMap.getWidth(),
                 bMap.getHeight(), intArray);
         BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+
 
         Reader reader = new MultiFormatReader();
         try{
@@ -412,14 +415,14 @@ public class MainActivity extends AppCompatActivity {
                     action_navigation_web_button.setVisibility(View.VISIBLE);
                 }
             } else {
-                Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
+                Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
             }
         } catch (FormatException e) {
-            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         } catch (ChecksumException e) {
-            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         } catch (NotFoundException e) {
-            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG);
+            Toast.makeText(activity, getResources().getText(R.string.error_file_not_found), Toast.LENGTH_LONG).show();
         }
     }
 }
