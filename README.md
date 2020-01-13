@@ -14,9 +14,6 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - Scanned QR-Codes can be shared with friends and do a web search with the information from the QR-Code
   - Generate QR-Codes, Barcodes and many more formats
   - History
-  
-### Upcoming Features
-[List of upcoming Features](https://github.com/Fr4gorSoftware/SecScanQR/wiki/Upcoming-Features)
 
 ### Needed Permissions
   - CAMERA ACCESS
