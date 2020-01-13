@@ -27,7 +27,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
- * This class is all about the geo location to QR-Code Generate Activity. In this Class the functionality of generating a QR-Code Picture is covered.
+ * This class is all about the geo location to QR-Code Generate Activity.
  */
 public class GeoGeneratorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -59,6 +59,7 @@ public class GeoGeneratorActivity extends AppCompatActivity implements AdapterVi
         cbLatitude = (CheckBox) findViewById(R.id.cbLatitude);
         cbLongtitude = (CheckBox) findViewById(R.id.cbLongtitude);
         btnGenerate = (Button) findViewById(R.id.btnGenerateGeo);
+
         btnGenerate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

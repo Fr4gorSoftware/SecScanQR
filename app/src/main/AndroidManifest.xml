@@ -12,10 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.generator.WifiGeneratorActivity"
+            android:label="@string/title_activity_wifi_generator"
+            android:parentActivityName=".activities.generator.GenerateActivity"
+            />
         <activity android:name=".activities.ThirdPartyScannerActivity">
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.SCAN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.generator.GeneratorResultActivity" />
@@ -24,11 +30,14 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -64,13 +73,17 @@
             android:parentActivityName=".activities.generator.GenerateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="text/x-vcard"/>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/x-vcard" />
             </intent-filter>
 
             <meta-data

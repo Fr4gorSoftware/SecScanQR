@@ -24,7 +24,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
- * This class is all about the value to BARCODE Generate Activity. In this Class the functionality of generating a BARCODE Picture is covered.
+ * This class is all about the value to BARCODE Generate Activity.
  */
 
 public class BarcodeGenerateActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {

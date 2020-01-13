@@ -19,7 +19,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 12.12.2019
+ * Last Update: 13.12.2019
  * Last Update by Thore Dankworth
  *
  * This class is just a forwarding to the specific generators
@@ -66,6 +66,9 @@ public class GenerateActivity extends AppCompatActivity {
                         break;
                     case "VCARD":
                         startActivity(new Intent(GenerateActivity.this, VCardGeneratorActivity.class));
+                        break;
+                    case "WIFI":
+                        startActivity(new Intent(GenerateActivity.this, WifiGeneratorActivity.class));
                         break;
                     default:
                         startActivity(new Intent(GenerateActivity.this, BarcodeGenerateActivity.class));
