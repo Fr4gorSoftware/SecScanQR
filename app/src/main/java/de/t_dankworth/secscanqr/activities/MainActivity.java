@@ -243,6 +243,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+    This method shows the picture that ZXING tries to encrypt
+     */
+    private void showQrImage(Bitmap bMap){
+        Bitmap resized = Bitmap.createScaledBitmap(bMap, 250, 250, true);
+        codeImage.setImageBitmap(resized);
+    }
+
+    /**
      * This method inflate the menu; this adds items to the action bar if it is present.
      */
     @Override
@@ -389,6 +397,8 @@ public class MainActivity extends AppCompatActivity {
             qrcode =  result.getText();
 
             if(qrcode != null){
+                codeImage.setVisibility(View.VISIBLE);
+                showQrImage(bMap);
                 mLabelInformation.setVisibility(View.VISIBLE);
                 mTvInformation.setText(qrcode);
                 action_navigation.setVisibility(View.VISIBLE);
@@ -423,6 +433,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         } catch (NotFoundException e) {
             Toast.makeText(activity, getResources().getText(R.string.error_file_not_found), Toast.LENGTH_LONG).show();
+        } catch (ArrayIndexOutOfBoundsException e){
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         }
     }
 }

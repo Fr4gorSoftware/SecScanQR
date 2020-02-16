@@ -119,7 +119,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">關於</string>
     <string name="copyright">著作權提醒</string>
-    <string name="copyright_holder">Copyright© 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
     <string name="license">這個應用程式使用 GNU 通用公眾授權條款授權。要取得更多資訊，請見後方連結：https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">應用程式圖示由 s-yous 建立：https://github.com/s-yous</string>
     <string name="translator">Jeff 貢獻了繁體中文翻譯：https://github.com/s8321414</string>

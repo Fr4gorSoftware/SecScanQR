@@ -119,7 +119,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">O aplikácii</string>
     <string name="copyright">Copyright</string>
-    <string name="copyright_holder">Copyright © 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">Copyright © 2017-2020 T-Dankworth</string>
     <string name="license">Táto aplikácia bola vytvorená pod Všeobecnou verejnou licenciou GNU. Viac informácií na adrese http://www.gpl.sk/</string>
     <string name="logo_designer">Autor loga aplikácie: s-yous (https://github.com/s-yous)</string>
     <string name="translator">Autor prekladu do slovenčiny: Tibor Repček (https://github.com/tiborepcek)</string>
