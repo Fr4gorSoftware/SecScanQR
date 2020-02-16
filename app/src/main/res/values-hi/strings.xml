@@ -119,7 +119,7 @@
     <!-- AboutDialog-->
     <string name="about_dialog">विवरण</string>
     <string name="copyright">कॉपीराइट नोटिस</string>
-    <string name="copyright_holder">कॉपीराइट© 2017-2019 T-Dankworth</string>
+    <string name="copyright_holder">कॉपीराइट© 2017-2020 T-Dankworth</string>
     <string name="license">यह ऐप जीएनयू जनरल पब्लिक लाइसेंस की शर्तों के तहत बनाया गया था। अधिक जानकारी के लिए नीचे दिए गए लिंक को देखें: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">ऐप का लोगो s-yous द्वारा बनाया गया था: https://github.com/s-yous</string>
     <string name="translator">चंद्र मोहन झा द्वारा हिंदी अनुवाद: https://github.com/imcmjha</string>
