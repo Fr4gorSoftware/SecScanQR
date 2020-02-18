@@ -20,7 +20,8 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - WRITE EXTERNAL STORAGE
 
 ## Translators
-  - German (last change: 1.2.5): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - German (last change: 1.2.6): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Brazilian Portuguese (last change: 1.2.6): [floppyD](https://github.com/floppyD)
   - Slovak (last change: 1.2.5): [Tibor Repček](https://github.com/tiborepcek)
   - Thai (last change: 1.2.5): [Vatunyoo Suwannapisit](https://github.com/kerlos)
   - Hindi (last change: 1.2.4): [imcmjha](https://github.com/imcmjha)
