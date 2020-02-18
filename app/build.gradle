@@ -8,8 +8,8 @@ android {
         minSdkVersion 17
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
-        versionCode 18
-        versionName "1.2.5"
+        versionCode 19
+        versionName "1.2.6"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
