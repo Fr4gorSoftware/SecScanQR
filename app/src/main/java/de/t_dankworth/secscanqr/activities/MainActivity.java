@@ -57,7 +57,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.12.2019
+ * Last Update: 18.02.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
