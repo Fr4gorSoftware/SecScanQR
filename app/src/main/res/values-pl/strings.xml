@@ -5,9 +5,10 @@
     <string name="activity_history">Historia</string>
     <string name="activity_history_details">Historia</string>
     <string name="title_activity_geo_generator">Generator Geograficzny</string>
-    <string name="title_activity_text_generator">Generator Tekst</string>
-    <string name="title_activity_barcode_generate">Generator kodu kreskowego</string>
+    <string name="title_activity_text_generator">Generator Tekstu</string>
+    <string name="title_activity_barcode_generate">Generator Kodu kreskowego</string>
     <string name="title_activity_vcard_generator">Generator VCard</string>
+    <string name="title_activity_wifi_generator">Generator WiFi</string>
     <!-- MainActivity-->
     <string name="title_format">Format kodu:</string>
     <string name="title_information">Informacje o kodzie:</string>
@@ -19,6 +20,8 @@
     <string name="error_scan_first">Zeskanuj najpierw kod QR</string>
     <string name="error_canceled_scan">Anulowałeś skanowanie</string>
     <string name="error_add_to_database">Nie udało się dodać kodu QR do historii</string>
+    <string name="error_file_not_found">Nie znaleziono pliku</string>
+    <string name="error_code_not_found">Nie znaleziono kodu kreskowego/kodu Qr</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Skanuj</string>
     <string name="title_generate">Generuj</string>
@@ -28,20 +31,41 @@
     <string name="title_share">Udostępnij</string>
     <string name="title_reset">Usuń</string>
     <string name="title_openInWeb">Otwórz w Internecie </string>
+    <string name="title_createContact">Utwórz kontakt</string>
 
     <!-- GenerateActivity-->
     <string name="btn_save">Zapisz</string>
     <string name="toast_save">Zapisano w folderze "SecScanQR" w pamięci wewnętrznej</string>
     <string name="toast_permission_needed">Potrzebne jest pozwolenie</string>
     <string name="toast_erorr">Wystąpił błąd</string>
+    <string-array name="generators">
+        <item>KOD KRESKOWY</item>
+        <item>GEOGRAFICZNY</item>
+        <item>TEKSTOWY</item>
+        <item>VCARD</item>
+        <item>WIFI</item>
+    </string-array>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generator kodów kreskowych</string>
+    <string-array name="barcode_formats_array">
+        <item>KOD KRESKOWY</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+    </string-array>
 
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Tutaj możesz wpisać tekst</string>
     <string name="tv_format">Format: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
 
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">Wpisz wymagany pierwszy typ Tekst</string>
@@ -50,7 +74,10 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">szerokość geograficzna: 43,73</string>
     <string name="hint_longtitude">długość geograficzna: -10.73</string>
-
+        <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
     <string name="cbLatitude">północ</string>
     <string name="cbLongtitude">wschód</string>
 
@@ -74,6 +101,17 @@
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Wpisz wymagany pierwszy typ nazwisko lub imię</string>
+
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">Ukryty</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">Hasło</string>
+    <string name="tv_encryption">Szyfrowanie: </string>
+    <string-array name="text_formats_encryption">
+        <item>BRAK</item>
+        <item>WEP</item>
+        <item>WPA/WPA2</item>
+    </string-array>
 
     <!-- HistoryActivity -->
     <string name="reset_database">Usuń</string>
