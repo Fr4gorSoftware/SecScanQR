@@ -100,6 +100,7 @@
     <string name="about_dialog">O aplikacji</string>
     <string name="copyright">Informacja o prawach autorskich</string>
     <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
+    <string name="github_link">Znajdź SecScanQR na Github: https://github.com/Fr4gorSoftware/SecScanQR</string>    
     <string name="license">Ta aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
     <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
