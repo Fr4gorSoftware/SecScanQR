@@ -5,9 +5,10 @@
     <string name="activity_history">Historia</string>
     <string name="activity_history_details">Historia</string>
     <string name="title_activity_geo_generator">Generator Geograficzny</string>
-    <string name="title_activity_text_generator">Generator Tekst</string>
-    <string name="title_activity_barcode_generate">Generator kodu kreskowego</string>
+    <string name="title_activity_text_generator">Generator Tekstu</string>
+    <string name="title_activity_barcode_generate">Generator Kodu kreskowego</string>
     <string name="title_activity_vcard_generator">Generator VCard</string>
+    <string name="title_activity_wifi_generator">Generator WiFi</string>
     <!-- MainActivity-->
     <string name="title_format">Format kodu:</string>
     <string name="title_information">Informacje o kodzie:</string>
@@ -19,6 +20,8 @@
     <string name="error_scan_first">Zeskanuj najpierw kod QR</string>
     <string name="error_canceled_scan">Anulowałeś skanowanie</string>
     <string name="error_add_to_database">Nie udało się dodać kodu QR do historii</string>
+    <string name="error_file_not_found">Nie znaleziono pliku</string>
+    <string name="error_code_not_found">Nie znaleziono kodu kreskowego/kodu Qr</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Skanuj</string>
     <string name="title_generate">Generuj</string>
@@ -28,6 +31,7 @@
     <string name="title_share">Udostępnij</string>
     <string name="title_reset">Usuń</string>
     <string name="title_openInWeb">Otwórz w Internecie </string>
+    <string name="title_createContact">Utwórz kontakt</string>
 
     <!-- GenerateActivity-->
     <string name="btn_save">Zapisz</string>
@@ -37,7 +41,6 @@
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generator kodów kreskowych</string>
-
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Tutaj możesz wpisać tekst</string>
@@ -50,7 +53,6 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">szerokość geograficzna: 43,73</string>
     <string name="hint_longtitude">długość geograficzna: -10.73</string>
-
     <string name="cbLatitude">północ</string>
     <string name="cbLongtitude">wschód</string>
 
@@ -74,6 +76,12 @@
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Wpisz wymagany pierwszy typ nazwisko lub imię</string>
+
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">Ukryty</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">Hasło</string>
+    <string name="tv_encryption">Szyfrowanie: </string>
 
     <!-- HistoryActivity -->
     <string name="reset_database">Usuń</string>
@@ -100,6 +108,7 @@
     <string name="about_dialog">O aplikacji</string>
     <string name="copyright">Informacja o prawach autorskich</string>
     <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
+    <string name="github_link">Znajdź SecScanQR na Github: https://github.com/Fr4gorSoftware/SecScanQR</string>    
     <string name="license">Ta aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
     <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
