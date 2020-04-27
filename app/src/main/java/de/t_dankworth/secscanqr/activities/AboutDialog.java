@@ -41,11 +41,8 @@ public class AboutDialog extends Dialog {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.about);
         loadTheme();
-
         TextView tv = (TextView) findViewById(R.id.info_version);
         String packageName = getContext().getPackageName();
         PackageInfo packageInfo;

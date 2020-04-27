@@ -15,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,7 +56,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 18.02.2020
+ * Last Update: 27.04.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -138,8 +137,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                WindowManager.LayoutParams.FLAG_SECURE);
         generalHandler = new GeneralHandler(this);
         generalHandler.loadTheme();
         setContentView(R.layout.activity_main);
@@ -237,8 +234,7 @@ public class MainActivity extends AppCompatActivity {
             bitmap = barcodeEncoder.createBitmap(bitMatrix);
             codeImage.setImageBitmap(bitmap);
         } catch (Exception e){
-            Toast.makeText(getApplicationContext(), getResources().getText(R.string.error_generate), Toast.LENGTH_SHORT).show();
-            finish();
+            codeImage.setVisibility(View.GONE);
         }
     }
 
@@ -432,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (ChecksumException e) {
             Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         } catch (NotFoundException e) {
-            Toast.makeText(activity, getResources().getText(R.string.error_file_not_found), Toast.LENGTH_LONG).show();
+            Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         } catch (ArrayIndexOutOfBoundsException e){
             Toast.makeText(activity, getResources().getText(R.string.error_code_not_found), Toast.LENGTH_LONG).show();
         }

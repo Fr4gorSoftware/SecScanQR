@@ -13,19 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.generator.WifiGeneratorActivity"
-            android:label="@string/title_activity_wifi_generator"
-            android:parentActivityName=".activities.generator.GenerateActivity"
-            />
-        <activity android:name=".activities.ThirdPartyScannerActivity">
-            <intent-filter>
-                <action android:name="com.google.zxing.client.android.SCAN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.generator.GeneratorResultActivity" />
-        <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -42,6 +29,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.generator.WifiGeneratorActivity"
+            android:label="@string/title_activity_wifi_generator"
+            android:parentActivityName=".activities.generator.GenerateActivity"
+            />
+        <activity android:name=".activities.ThirdPartyScannerActivity">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.generator.GeneratorResultActivity" />
+
+        <activity
             android:name=".activities.generator.GenerateActivity"
             android:label="@string/activity_generate"
             android:parentActivityName=".activities.MainActivity" />
@@ -57,7 +58,7 @@
             android:parentActivityName=".activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.t_dankworth.secscanqr.activities.MainActivity" />
+                android:value=".activities.MainActivity" />
         </activity>
         <activity
             android:name=".activities.generator.GeoGeneratorActivity"
@@ -65,7 +66,7 @@
             android:parentActivityName=".activities.generator.GenerateActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+                android:value=".activities.generator.GenerateActivity" />
         </activity>
         <activity
             android:name=".activities.generator.TextGeneratorActivity"
@@ -88,7 +89,7 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+                android:value=".activities.generator.GenerateActivity" />
         </activity>
         <activity
             android:name=".activities.generator.BarcodeGenerateActivity"
@@ -104,7 +105,7 @@
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+                android:value=".activities.generator.GenerateActivity" />
         </activity>
         <activity
             android:name=".activities.generator.VCardGeneratorActivity"
@@ -112,7 +113,7 @@
             android:parentActivityName=".activities.generator.GenerateActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.t_dankworth.secscanqr.activities.generator.GenerateActivity" />
+                android:value=".activities.generator.GenerateActivity" />
         </activity>
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
