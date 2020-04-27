@@ -38,34 +38,13 @@
     <string name="toast_save">Zapisano w folderze "SecScanQR" w pamięci wewnętrznej</string>
     <string name="toast_permission_needed">Potrzebne jest pozwolenie</string>
     <string name="toast_erorr">Wystąpił błąd</string>
-    <string-array name="generators">
-        <item>KOD KRESKOWY</item>
-        <item>GEOGRAFICZNY</item>
-        <item>TEKSTOWY</item>
-        <item>VCARD</item>
-        <item>WIFI</item>
-    </string-array>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generator kodów kreskowych</string>
-    <string-array name="barcode_formats_array">
-        <item>KOD KRESKOWY</item>
-        <item>CODE_128</item>
-        <item>CODE_39</item>
-        <item>EAN_13</item>
-        <item>EAN_8</item>
-        <item>ITF</item>
-        <item>PDF_417</item>
-        <item>UPC_A</item>
-    </string-array>
-
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Tutaj możesz wpisać tekst</string>
     <string name="tv_format">Format: </string>
-    <string-array name="text_formats_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
 
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">Wpisz wymagany pierwszy typ Tekst</string>
@@ -74,10 +53,6 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">szerokość geograficzna: 43,73</string>
     <string name="hint_longtitude">długość geograficzna: -10.73</string>
-        <string-array name="formats_geo_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
-    </string-array>
     <string name="cbLatitude">północ</string>
     <string name="cbLongtitude">wschód</string>
 
@@ -107,11 +82,6 @@
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">Hasło</string>
     <string name="tv_encryption">Szyfrowanie: </string>
-    <string-array name="text_formats_encryption">
-        <item>BRAK</item>
-        <item>WEP</item>
-        <item>WPA/WPA2</item>
-    </string-array>
 
     <!-- HistoryActivity -->
     <string name="reset_database">Usuń</string>
