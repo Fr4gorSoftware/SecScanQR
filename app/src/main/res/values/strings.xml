@@ -87,7 +87,9 @@
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">name</string>
     <string name="hint_fn">first name</string>
+    <string name="hint_bday">Birthday</string>
     <string name="hint_org">organization</string>
+    <string name="hint_photo">URL to photo</string>
     <string name="hint_web">website</string>
     <string name="hint_email">e-mail</string>
     <string name="hint_mobil">mobil</string>
@@ -98,6 +100,7 @@
     <string name="hint_city">city</string>
     <string name="hint_state">state</string>
     <string name="hint_country">country</string>
+    <string name="hint_note">Note</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">First type in a name or first name</string>

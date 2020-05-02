@@ -57,7 +57,9 @@
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">Nachname</string>
     <string name="hint_fn">Vorname</string>
+    <string name="hint_bday">Geburtstag</string>
     <string name="hint_org">Firma</string>
+    <string name="hint_photo">Link zum Foto</string>
     <string name="hint_web">Website</string>
     <string name="hint_email">E-mail</string>
     <string name="hint_mobil">Mobil</string>
@@ -68,6 +70,7 @@
     <string name="hint_city">Stadt</string>
     <string name="hint_state">Bundesland</string>
     <string name="hint_country">Land</string>
+    <string name="hint_note">Nachricht</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Gebe zuerst einen Nachnamen oder Vornamen an</string>

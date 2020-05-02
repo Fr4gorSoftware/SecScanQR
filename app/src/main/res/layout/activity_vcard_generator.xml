@@ -60,6 +60,15 @@
                 android:inputType="textPersonName" />
 
             <EditText
+                android:id="@+id/txtBday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textcolor"
+                android:hint="@string/hint_bday"
+                android:ems="10"
+                android:inputType="date" />
+
+            <EditText
                 android:id="@+id/txtOrg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,6 +76,15 @@
                 android:ems="10"
                 android:hint="@string/hint_org"
                 android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtPhotoUri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textcolor"
+                android:hint="@string/hint_photo"
+                android:ems="10"
+                android:inputType="textUri" />
 
             <EditText
                 android:id="@+id/txtWeb"
@@ -157,6 +175,16 @@
                 android:ems="10"
                 android:hint="@string/hint_country"
                 android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textcolor"
+                android:ems="10"
+                android:hint="@string/hint_note"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
 
 
         </LinearLayout>

@@ -394,7 +394,6 @@ public class MainActivity extends AppCompatActivity {
 
             if(qrcode != null){
                 codeImage.setVisibility(View.VISIBLE);
-                showQrImage(bMap);
                 mLabelInformation.setVisibility(View.VISIBLE);
                 mTvInformation.setText(qrcode);
                 action_navigation.setVisibility(View.VISIBLE);

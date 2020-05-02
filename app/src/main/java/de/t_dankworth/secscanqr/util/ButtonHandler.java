@@ -20,7 +20,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 01.12.2019
+ * Last Update: 02.05.2020
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -247,8 +247,12 @@ public class ButtonHandler {
             if (information[i].contains("N:")){
                 String[] separeted = information[i].split(":");
                 String name = separeted[1].replace(";", " ");
+                GeneralHandler generalHandler = new GeneralHandler(activity);
+                name = generalHandler.reverseName(name);
                 intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
-            } else if(information[i].contains("ORG")){
+            } else if(information[i].contains("BDAY")){
+                notes = notes + "\n" + information[i];
+            }   else if(information[i].contains("ORG")){
                 String[] separeted = information[i].split(":");
                 intent.putExtra(ContactsContract.Intents.Insert.COMPANY, separeted[1]);
             } else if(information[i].contains("URL")){
@@ -273,10 +277,12 @@ public class ButtonHandler {
                     intent.putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_OTHER);
                     intent.putExtra(ContactsContract.Intents.Insert.PHONE, separeted[1]);
                 }
-            } else if(information[i].contains("ADR")){
+            } else if(information[i].contains("ADR")) {
                 String[] separeted = information[i].split(":");
                 String[] adr = separeted[1].split(";");
                 notes = notes + "\n" + adr[2] + "\n" + adr[3] + "\n" + adr[4] + "\n" + adr[5] + "\n" + adr[6];
+            } else if(information[i].contains("NOTE")){
+                notes = notes + "\n" + information[i];
             }
             intent.putExtra(ContactsContract.Intents.Insert.NOTES, notes);
         }

@@ -10,7 +10,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.12.2019
+ * Last Update: 02.05.2020
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality general functionality like load dark theme.
@@ -168,5 +168,28 @@ public class GeneralHandler {
                 break;
         }
         return format;
+    }
+
+    /**
+     * Method to reverse name from VCard scan to send the name of the contact in the right order
+     * @param name in reversed order
+     * @return name in correct order
+     */
+    public static String reverseName (String name) {
+        name = name.trim();
+        StringBuilder reversedNameBuilder = new StringBuilder();
+        StringBuilder subNameBuilder = new StringBuilder();
+
+        for (int i = 0; i < name.length(); i++) {
+            char currentChar = name.charAt(i);
+            if (currentChar != ' ' && currentChar != '-') {
+                subNameBuilder.append(currentChar);
+            } else {
+                reversedNameBuilder.insert(0, currentChar + subNameBuilder.toString());
+                subNameBuilder.setLength(0);
+            }
+        }
+
+        return reversedNameBuilder.insert(0, subNameBuilder.toString()).toString();
     }
 }
