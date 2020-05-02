@@ -18,14 +18,18 @@ import android.widget.Toast;
 
 
 import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.Random;
 
 import de.t_dankworth.secscanqr.R;
@@ -33,7 +37,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 10.12.2019
+ * Last Update: 02.05.2020
  * Last Update by Thore Dankworth
  *
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
@@ -65,8 +69,13 @@ public class GeneratorResultActivity extends AppCompatActivity {
         formatInt = bundle.getInt("FORMAT");
         format = generalHandler.idToBarcodeFormat(formatInt);
         multiFormatWriter = new MultiFormatWriter();
+        Map<EncodeHintType, Object> hintMap = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
+
+        hintMap.put(EncodeHintType.CHARACTER_SET, "UTF-8");
+        hintMap.put(EncodeHintType.MARGIN, 1); /* default = 4 */
+        hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         try{
-            BitMatrix bitMatrix = multiFormatWriter.encode(text2Code, format, 1000,1000);
+            BitMatrix bitMatrix = multiFormatWriter.encode(text2Code, format, 1000,1000, hintMap);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             bitmap = barcodeEncoder.createBitmap(bitMatrix);
             codeImage.setImageBitmap(bitmap);

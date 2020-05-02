@@ -23,6 +23,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
 import com.google.zxing.DecodeHintType;
+import com.google.zxing.EncodeHintType;
 import com.google.zxing.FormatException;
 import com.google.zxing.LuminanceSource;
 import com.google.zxing.MultiFormatReader;
@@ -35,11 +36,14 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.EnumMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.generator.GenerateActivity;
@@ -56,7 +60,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 27.04.2020
+ * Last Update: 02.05.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -225,11 +229,15 @@ public class MainActivity extends AppCompatActivity {
      * This method creates a picture of the scanned qr code
      */
     private void showQrImage() {
-
         multiFormatWriter = new MultiFormatWriter();
+        Map<EncodeHintType, Object> hintMap = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
+
+        hintMap.put(EncodeHintType.CHARACTER_SET, "UTF-8");
+        hintMap.put(EncodeHintType.MARGIN, 1); /* default = 4 */
+        hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
         try{
             BarcodeFormat format = generalHandler.StringToBarcodeFormat(qrcodeFormat);
-            BitMatrix bitMatrix = multiFormatWriter.encode(qrcode, format, 250,250);
+            BitMatrix bitMatrix = multiFormatWriter.encode(qrcode, format, 250,250, hintMap);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             bitmap = barcodeEncoder.createBitmap(bitMatrix);
             codeImage.setImageBitmap(bitmap);
