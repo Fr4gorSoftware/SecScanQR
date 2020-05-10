@@ -38,7 +38,7 @@
                             android:layout_width="32sp"
                             android:layout_height="32sp"
                             android:background="@drawable/circlebackgroundblue"
-                            android:src="@drawable/ic_scan_black_24dp"
+                            android:src="@drawable/ic_barcode_black"
                             android:tint="@color/colorWhiteBackground"
                             android:padding="10sp" />
                         <TextView
@@ -47,7 +47,7 @@
                             android:textStyle="bold"
                             android:layout_marginTop="10sp"
                             android:textColor="?attr/textcolor"
-                            android:text="Barcode" />
+                            android:text="@string/card_barcode_title" />
                     </LinearLayout>
                     <View
                         android:layout_width="2sp"
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:textColor="?attr/textcolor"
-                        android:text="Create different kinds of Barcodes" />
+                        android:text="@string/card_barcode_hint" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
