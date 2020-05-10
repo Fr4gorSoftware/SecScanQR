@@ -33,7 +33,19 @@
     <string name="title_openInWeb">Öffnen im Web</string>
     <string name="title_createContact">Kontakt anlegen</string>
 
-    <!-- GenerateActivity-->
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">Barcode</string>
+    <string name="card_barcode_hint">Verschiedene Arten von Barcodes erstellen</string>
+    <string name="card_text_title">Text</string>
+    <string name="card_text_hint">Text in einen QR-Code umwandeln</string>
+    <string name="card_location_title">Standort</string>
+    <string name="card_location_hint">Eine geografische Lage in einem QR-Code speichern</string>
+    <string name="card_contact_title">Kontakt</string>
+    <string name="card_contact_hint">Ein QR-Code im Format einer VCard erstellen</string>
+    <string name="card_wifi_title">WLAN</string>
+    <string name="card_wifi_hint">WLAN Informationen in einem QR-Code speichern</string>
+
+    <!-- GenerateResultActivity-->
     <string name="btn_save">Speichern</string>
     <string name="toast_save">Im "SecScanQR" Ordner gespeichert</string>
     <string name="toast_permission_needed">Berechtigung wird zum Fortfahren benötigt</string>
