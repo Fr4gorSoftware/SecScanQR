@@ -33,18 +33,23 @@
     <string name="title_openInWeb">Open in Web</string>
     <string name="title_createContact">Create Contact</string>
 
-    <!-- GenerateActivity-->
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">Barcode</string>
+    <string name="card_barcode_hint">Create different kinds of Barcodes</string>
+    <string name="card_text_title">Text</string>
+    <string name="card_text_hint">Convert text into a QR-Code</string>
+    <string name="card_location_title">Location</string>
+    <string name="card_location_hint">Create a QR-Code in the format of a geo location</string>
+    <string name="card_contact_title">Contact</string>
+    <string name="card_contact_hint">Create a QR.Code in the format of a VCard</string>
+    <string name="card_wifi_title">Wifi</string>
+    <string name="card_wifi_hint">Create a QR.Code with the information of a wifi network</string>
+
+    <!-- GenerateResultActivity-->
     <string name="btn_save">Save</string>
     <string name="toast_save">Saved in "SecScanQR" folder on the internal storage</string>
     <string name="toast_permission_needed">Permission is needed</string>
     <string name="toast_erorr">An error had occur</string>
-    <string-array name="generators">
-        <item>BARCODE</item>
-        <item>GEO</item>
-        <item>TEXT</item>
-        <item>VCARD</item>
-        <item>WIFI</item>
-    </string-array>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Barcode Generator</string>

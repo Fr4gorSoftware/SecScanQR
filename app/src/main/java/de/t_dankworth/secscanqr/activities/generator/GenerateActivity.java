@@ -6,30 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 
 import de.t_dankworth.secscanqr.R;
-import de.t_dankworth.secscanqr.util.GeneratorListAdapter;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 
 /**
  * Created by Thore Dankworth
- * Last Update: 13.12.2019
+ * Last Update: 10.05.2020
  * Last Update by Thore Dankworth
  *
  * This class is just a forwarding to the specific generators
  */
 
-public class GenerateActivity extends AppCompatActivity {
+public class GenerateActivity extends AppCompatActivity implements View.OnClickListener {
 
     final Activity activity = this;
     private GeneralHandler generalHandler;
-    ListView lvGenerators;
+    private CardView barcodeCard, textCard, geoCard, contactCard, wifiCard;
 
 
 
@@ -43,39 +40,17 @@ public class GenerateActivity extends AppCompatActivity {
         generalHandler = new GeneralHandler(this);
         generalHandler.loadTheme();
         setContentView(R.layout.activity_generate);
-        lvGenerators = (ListView) findViewById(R.id.lvGenerators);
+        barcodeCard = (CardView) findViewById(R.id.barcode_card);
+        textCard = (CardView) findViewById(R.id.text_card);
+        geoCard = (CardView) findViewById(R.id.geo_card);
+        contactCard = (CardView) findViewById(R.id.contact_card);
+        wifiCard = (CardView) findViewById(R.id.wifi_card);
 
-
-        GeneratorListAdapter listAdapter = new GeneratorListAdapter(GenerateActivity.this, R.layout.listview_row, getResources().getStringArray(R.array.generators));
-
-        lvGenerators.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String choice = lvGenerators.getItemAtPosition(i).toString();
-                switch (choice) {
-                    case "BARCODE":
-                        startActivity(new Intent(GenerateActivity.this, BarcodeGenerateActivity.class));
-                        break;
-                    case "TEXT":
-                        startActivity(new Intent(GenerateActivity.this, TextGeneratorActivity.class));
-                        break;
-                    case "GEO":
-                        startActivity(new Intent(GenerateActivity.this, GeoGeneratorActivity.class));
-                        break;
-                    case "VCARD":
-                        startActivity(new Intent(GenerateActivity.this, VCardGeneratorActivity.class));
-                        break;
-                    case "WIFI":
-                        startActivity(new Intent(GenerateActivity.this, WifiGeneratorActivity.class));
-                        break;
-                    default:
-                        startActivity(new Intent(GenerateActivity.this, BarcodeGenerateActivity.class));
-                        break;
-                }
-            }
-        });
-
-        lvGenerators.setAdapter(listAdapter);
+        barcodeCard.setOnClickListener(this);
+        textCard.setOnClickListener(this);
+        geoCard.setOnClickListener(this);
+        contactCard.setOnClickListener(this);
+        wifiCard.setOnClickListener(this);
     }
 
     /**
@@ -87,5 +62,26 @@ public class GenerateActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.barcode_card:
+                startActivity(new Intent(GenerateActivity.this, BarcodeGenerateActivity.class));
+                break;
+            case R.id.text_card:
+                startActivity(new Intent(GenerateActivity.this, TextGeneratorActivity.class));
+                break;
+            case R.id.geo_card:
+                startActivity(new Intent(GenerateActivity.this, GeoGeneratorActivity.class));
+                break;
+            case R.id.contact_card:
+                startActivity(new Intent(GenerateActivity.this, VCardGeneratorActivity.class));
+                break;
+            case R.id.wifi_card:
+                startActivity(new Intent(GenerateActivity.this, WifiGeneratorActivity.class));
+                break;
+            default:
+                break;
+        }
+    }
 }
