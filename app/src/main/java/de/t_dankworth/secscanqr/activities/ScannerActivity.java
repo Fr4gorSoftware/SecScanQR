@@ -273,8 +273,8 @@ public class ScannerActivity extends AppCompatActivity {
                         addToDatabase(mTvInformation.getText().toString(), mTvFormat.getText().toString());
                     }
                     //Automatic Clipboard if activated
-                    String auto_scan = prefs.getString("pref_auto_clipboard", "");
-                    if(auto_scan.equals("true")){
+                    Boolean auto_scan = prefs.getBoolean("pref_start_auto_clipboard", false);
+                    if(auto_scan == true){
                         copyToClipboard(mTvInformation, qrcode, activity);
                     }
                 }

@@ -20,6 +20,7 @@ import java.util.List;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.AppCompatPreferenceActivity;
+import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -27,10 +28,12 @@ import de.t_dankworth.secscanqr.util.AppCompatPreferenceActivity;
  * settings are split by category, with category headers shown to the left of
  * the list of settings.
  *
- * Last Update: 19.08.2018
+ * Last Update: 17.05.2020
  * Last Update by Thore Dankworth
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
+
+
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -153,8 +156,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // updated to reflect the new value, per the Android Design
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("pref_camera"));
-            bindPreferenceSummaryToValue(findPreference("pref_auto_scan"));
-            bindPreferenceSummaryToValue(findPreference("pref_auto_clipboard"));
             bindPreferenceSummaryToValue(findPreference("pref_day_night_mode"));
 
         }

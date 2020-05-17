@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Autostart Scanner if activated
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String auto_scan = prefs.getString("pref_auto_scan", "");
-        if(auto_scan.equals("true")){
+        Boolean auto_scan = prefs.getBoolean("pref_start_auto_scan", false);
+        if(auto_scan == true){
             startActivity(new Intent(MainActivity.this, ScannerActivity.class));
         }
 

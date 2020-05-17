@@ -123,16 +123,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">Avvio automatico dello scanner</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>Attivo</item>
-        <item>Disattivo</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">Appunti intelligenti</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>Attivo</item>
-        <item>Disattivo</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">Modalità Giorno/Notte (in versione BETA)</string>
     <string-array name="pref_day_night_mode_entries">

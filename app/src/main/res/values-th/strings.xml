@@ -137,16 +137,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">เปิดเครื่องสแกนอัตโนมัติ</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>เปิด</item>
-        <item>ปิด</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">คลิปบอร์ดอัจฉริยะ</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>เปิด</item>
-        <item>ปิด</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">โหมด กลางวัน/กลางคืน (BETA Version)</string>
     <string-array name="pref_day_night_mode_entries">

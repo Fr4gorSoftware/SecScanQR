@@ -138,16 +138,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">自動啟動掃描器</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>開啟</item>
-        <item>關閉</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">智慧剪貼簿</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>開啟</item>
-        <item>關閉</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">日／夜間模式（BETA 版）</string>
     <string-array name="pref_day_night_mode_entries">

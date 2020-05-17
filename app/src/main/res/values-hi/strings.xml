@@ -138,16 +138,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">ऑटोस्टार्ट स्कैनर</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>चालू</item>
-        <item>बंद</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">होशियार क्लिपबोर्ड</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>चालू</item>
-        <item>बंद</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">दिन/रात मोड (अल्फा संस्करण)</string>
     <string-array name="pref_day_night_mode_entries">
