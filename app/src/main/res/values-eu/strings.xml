@@ -96,16 +96,7 @@
     <string name="pref_header_scanner">Eskanerra</string>
 
     <string name="pref_title_auto_scan">Eskanerra automatikoki abiarazi</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>Piztuta</item>
-        <item>Itzalita</item>
-    </string-array>
-
     <string name="pref_title_auto_clipboard">Arbel adimenduna</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>Piztuta</item>
-        <item>Itzalita</item>
-    </string-array>
     <string name="translator">Spanish translation by Aitor Beriain: https://github.com/beriain</string>
 
 

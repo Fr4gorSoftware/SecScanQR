@@ -114,16 +114,7 @@
         <item>cámara frontal</item>
     </string-array>
     <string name="pref_title_auto_scan">Inicio automático del escáner</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>Activar</item>
-        <item>Desactivar</item>
-    </string-array>
-
     <string name="pref_title_auto_clipboard">Inteligente portapapeles</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>Activar</item>
-        <item>Desactivar</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">Modo Día/Noche (Versión BETA)</string>
     <string-array name="pref_day_night_mode_entries">

@@ -111,16 +111,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">自动开始扫描</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>开</item>
-        <item>关</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">智能剪贴板</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>开</item>
-        <item>关</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">日间/夜间模式 (BETA Version)</string>
     <string-array name="pref_day_night_mode_entries">

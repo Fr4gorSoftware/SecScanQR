@@ -126,16 +126,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">Iniciar digitalizador automaticamente</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>Ligado</item>
-        <item>Desligado</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">Área de transferência inteligente</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>Ligado</item>
-        <item>Desligado</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">Modo diurno/noturno (Versão beta)</string>
     <string-array name="pref_day_night_mode_entries">

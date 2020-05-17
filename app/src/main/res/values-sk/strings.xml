@@ -138,16 +138,8 @@
     </string-array>
 
     <string name="pref_title_auto_scan">Spustiť skener automaticky</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>Zapnuté</item>
-        <item>Vypnuté</item>
-    </string-array>
 
     <string name="pref_title_auto_clipboard">Inteligentná schránka</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>Zapnuté</item>
-        <item>Vypnuté</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">Denný/nočný režim (verzia BETA)</string>
     <string-array name="pref_day_night_mode_entries">

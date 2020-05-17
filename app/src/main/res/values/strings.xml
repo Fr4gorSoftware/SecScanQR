@@ -169,24 +169,7 @@
     </string-array>
 
     <string name="pref_title_auto_scan">Autostart scanner</string>
-    <string-array name="pref_auto_scan_entries">
-        <item>On</item>
-        <item>Off</item>
-    </string-array>
-    <string-array name="pref_auto_scan_values">
-        <item>true</item>
-        <item>false</item>
-    </string-array>
-
     <string name="pref_title_auto_clipboard">Smart clipboard</string>
-    <string-array name="pref_auto_clipboard_entries">
-        <item>On</item>
-        <item>Off</item>
-    </string-array>
-    <string-array name="pref_auto_clipboard_values">
-        <item>true</item>
-        <item>false</item>
-    </string-array>
 
     <string name="pref_title_day_night_mode">Day/Night mode (BETA Version)</string>
     <string-array name="pref_day_night_mode_entries">
