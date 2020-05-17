@@ -1,108 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/backgroundcolor"
-    android:orientation="vertical"
     tools:context="de.t_dankworth.secscanqr.activities.MainActivity">
-
-    <ScrollView
+    
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <android.support.constraint.ConstraintLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins">
 
-            <ImageView
-                android:id="@+id/resultImageMain"
+            <android.support.v7.widget.CardView
+                android:id="@+id/scan_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:maxWidth="250sp"
-                android:maxHeight="250sp"
-                android:visibility="gone"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:foreground="?android:selectableItemBackground"
+                android:clickable="true"
+                android:layout_columnWeight="1"
+                app:cardElevation="6sp"
+                app:cardCornerRadius="12sp"
+                android:layout_margin="12sp">
 
-            <TextView
-                android:id="@+id/labelFormat"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backgroundcolor"
+                    android:gravity="center"
+                    android:padding="16sp">
+
+                    <ImageView
+                        android:src="@drawable/ic_scan_black_24dp"
+                        android:background="@drawable/circlebackgroundblue"
+                        android:tint="@color/colorWhiteBackground"
+                        android:padding="15sp"
+                        android:layout_width="80sp"
+                        android:layout_height="80sp" />
+                    <TextView
+                        android:layout_marginTop="12sp"
+                        android:textColor="?attr/textcolor"
+                        android:textSize="18sp"
+                        android:text="@string/title_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/generate_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10sp"
-                android:text="@string/title_format"
-                android:textColor="?attr/textcolor"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintStart_toEndOf="@+id/resultImageMain"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:foreground="?android:selectableItemBackground"
+                android:clickable="true"
+                android:layout_columnWeight="1"
+                app:cardElevation="6sp"
+                app:cardCornerRadius="12sp"
+                android:layout_margin="12sp">
 
-            <TextView
-                android:id="@+id/tvFormat"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backgroundcolor"
+                    android:gravity="center"
+                    android:padding="16sp">
+
+                    <ImageView
+                        android:src="@drawable/ic_add_white_24dp"
+                        android:background="@drawable/circlebackgroundpurple"
+                        android:tint="@color/colorWhiteBackground"
+                        android:padding="15sp"
+                        android:layout_width="80sp"
+                        android:layout_height="80sp" />
+                    <TextView
+                        android:layout_marginTop="12sp"
+                        android:textColor="?attr/textcolor"
+                        android:textSize="18sp"
+                        android:text="@string/title_generate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/history_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/textcolor"
-                android:padding="10sp"
-                android:textSize="18sp"
-                android:visibility="gone"
-                app:layout_constraintStart_toEndOf="@+id/resultImageMain"
-                app:layout_constraintTop_toBottomOf="@+id/labelFormat" />
+                android:foreground="?android:selectableItemBackground"
+                android:clickable="true"
+                android:layout_columnWeight="1"
+                app:cardElevation="6sp"
+                app:cardCornerRadius="12sp"
+                android:layout_margin="12sp">
 
-            <TextView
-                android:id="@+id/labelInformation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/title_information"
-                android:textColor="?attr/textcolor"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:padding="10sp"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvFormat" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backgroundcolor"
+                    android:gravity="center"
+                    android:padding="16sp">
 
-            <TextView
-                android:id="@+id/tvTxtqrcode"
+                    <ImageView
+                        android:src="@drawable/ic_history_24dp"
+                        android:background="@drawable/circlebackgroundpink"
+                        android:tint="@color/colorWhiteBackground"
+                        android:padding="15sp"
+                        android:layout_width="80sp"
+                        android:layout_height="80sp" />
+                    <TextView
+                        android:layout_marginTop="12sp"
+                        android:textColor="?attr/textcolor"
+                        android:textSize="18sp"
+                        android:text="@string/title_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/settings_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10sp"
-                android:text='@string/default_text_main_activity'
-                android:textColor="?attr/textcolor"
-                android:textSize="18sp"
-                android:visibility="visible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/labelInformation" />
-        </android.support.constraint.ConstraintLayout>
+                android:foreground="?android:selectableItemBackground"
+                android:clickable="true"
+                android:layout_columnWeight="1"
+                app:cardElevation="6sp"
+                app:cardCornerRadius="12sp"
+                android:layout_margin="12sp">
 
-    </ScrollView>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backgroundcolor"
+                    android:gravity="center"
+                    android:padding="16sp">
 
+                    <ImageView
+                        android:src="@drawable/ic_settings_black_24dp"
+                        android:background="@drawable/circlebackgroundgreen"
+                        android:tint="@color/colorWhiteBackground"
+                        android:padding="15sp"
+                        android:layout_width="80sp"
+                        android:layout_height="80sp" />
+                    <TextView
+                        android:layout_marginTop="12sp"
+                        android:textColor="?attr/textcolor"
+                        android:textSize="18sp"
+                        android:text="@string/settings_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
 
+            </android.support.v7.widget.CardView>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/main_action_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?attr/bottomnavcolor"
-        android:visibility="gone"
-        app:itemIconTint="@color/colorAccent"
-        app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/main_action_navigation" />
+        </GridLayout>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?attr/bottomnavcolor"
-        app:itemIconTint="@color/colorAccent"
-        app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/navigation" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

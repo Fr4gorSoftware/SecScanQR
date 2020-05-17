@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/settings"
-        android:title="@string/settings_settings"></item>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/about"
-        android:title="@string/settings_menu_about"></item>
-
-
+        android:title="@string/settings_menu_about"
+        android:icon="@drawable/ic_info_black_24dp"
+        app:showAsAction="always"></item>
 </menu>
