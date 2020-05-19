@@ -15,7 +15,7 @@
             android:orientation="vertical"
             android:padding="10sp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/barcode_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,9 +61,9 @@
                         android:textColor="?attr/textcolor"
                         android:text="@string/card_barcode_hint" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/text_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,9 +109,9 @@
                         android:textColor="?attr/textcolor"
                         android:text="@string/card_text_hint" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/geo_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,9 +157,9 @@
                         android:textColor="?attr/textcolor"
                         android:text="@string/card_location_hint" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/contact_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -205,9 +205,9 @@
                         android:textColor="?attr/textcolor"
                         android:text="@string/card_contact_hint" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/wifi_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -253,6 +253,6 @@
                         android:textColor="?attr/textcolor"
                         android:text="@string/card_wifi_hint" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

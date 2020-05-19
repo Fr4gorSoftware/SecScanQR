@@ -8,16 +8,17 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.ChecksumException;
@@ -46,7 +47,6 @@ import java.util.Map;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
-import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
@@ -145,12 +145,12 @@ public class ScannerActivity extends AppCompatActivity {
         mDatabaeHelper = new DatabaseHelper(this);
 
         BottomNavigationView main_navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        BottomNavigationViewHelper.disableShiftMode(main_navigation);
+        main_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         main_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         main_navigation.clearFocus();
 
         action_navigation = (BottomNavigationView) findViewById(R.id.main_action_navigation);
-        BottomNavigationViewHelper.disableShiftMode(action_navigation);
+        action_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_openInWeb);
         action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.main_action_navigation_createContact);

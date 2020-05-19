@@ -3,27 +3,25 @@ package de.t_dankworth.secscanqr.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import de.t_dankworth.secscanqr.R;
-import de.t_dankworth.secscanqr.util.BottomNavigationViewHelper;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
-import static de.t_dankworth.secscanqr.util.ButtonHandler.resetScreenInformation;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
@@ -90,7 +88,7 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history_details);
         tvCode = (TextView) findViewById(R.id.tvCodeHD);
         action_navigation = (BottomNavigationView) findViewById(R.id.history_action_navigation);
-        BottomNavigationViewHelper.disableShiftMode(action_navigation);
+        action_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_openInWeb);
         action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_createContact);
