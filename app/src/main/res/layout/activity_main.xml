@@ -21,7 +21,7 @@
             android:columnOrderPreserved="false"
             android:alignmentMode="alignMargins">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/scan_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,9 +56,9 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/generate_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,9 +92,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/history_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,9 +129,9 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/settings_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </GridLayout>
 

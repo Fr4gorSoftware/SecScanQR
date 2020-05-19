@@ -4,17 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import de.t_dankworth.secscanqr.R;
-
-import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 
 /**
  * Created by Thore Dankworth

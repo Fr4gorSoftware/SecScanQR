@@ -10,17 +10,15 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import android.support.v7.app.ActionBar;
+import androidx.appcompat.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
-import android.view.WindowManager;
 
 import java.util.List;
 
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.AppCompatPreferenceActivity;
-import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
