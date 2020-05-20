@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,6 +43,8 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.EnumMap;
 import java.util.Hashtable;
 import java.util.Map;
@@ -49,6 +53,8 @@ import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
+import de.t_dankworth.secscanqr.util.HistoryEntity;
+import de.t_dankworth.secscanqr.util.HistoryViewModel;
 
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
@@ -58,7 +64,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 17.05.2020
+ * Last Update: 19.05.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -77,7 +83,7 @@ public class ScannerActivity extends AppCompatActivity {
     private String qrcode = "", qrcodeFormat = "";
     private DatabaseHelper mDatabaeHelper;
 
-
+    private static final SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
     private static final String STATE_QRCODE = MainActivity.class.getName();
     private static final String STATE_QRCODEFORMAT = "format";
 
@@ -319,10 +325,10 @@ public class ScannerActivity extends AppCompatActivity {
      * @param newCode = scanned qr-code/barcode
      */
     public void addToDatabase(String newCode, String format){
-        boolean insertData = mDatabaeHelper.addData(newCode);
-        if(!insertData){
-            Toast.makeText(this, getResources().getText(R.string.error_add_to_database), Toast.LENGTH_LONG).show();
-        }
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        HistoryEntity newEntry = new HistoryEntity(format, newCode,date.format(timestamp));
+        HistoryViewModel historyViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(HistoryViewModel.class);
+        historyViewModel.insert(newEntry);
     }
 
     private void handleSendPicture(){

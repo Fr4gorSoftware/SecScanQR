@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8sp"
+    android:layout_marginStart="8sp"
+    android:layout_marginTop="8sp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8sp"
+        android:background="?attr/backgroundcolor">
+
+        <TextView
+            android:id="@+id/tvHistoryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="?attr/textcolor"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tvHistoryFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/tvHistoryDate"
+            android:layout_alignParentStart="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/textcolor"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvHistoryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHistoryFormat"
+            android:ellipsize="end"
+            android:textColor="?attr/textcolor"
+            android:text="" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

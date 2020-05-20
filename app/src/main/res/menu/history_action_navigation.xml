@@ -21,9 +21,4 @@
         android:icon="@drawable/ic_share_24dp"
         android:title="@string/title_share" />
 
-    <item
-        android:id="@+id/history_action_navigation_delete"
-        android:icon="@drawable/ic_delete_24dp"
-        android:title="@string/title_delete" />
-
 </menu>
