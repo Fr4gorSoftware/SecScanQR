@@ -26,7 +26,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
 * Created by Thore Dankworth
-* Last Update: 12.12.2019
+* Last Update: 20.05.2020
 * Last Update by Thore Dankworth
 *
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
@@ -34,8 +34,12 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 public class HistoryDetailsActivity extends AppCompatActivity {
 
-    private static final String TAG = "EditDataActivity";
     private GeneralHandler generalHandler;
+
+    public static final String EXTRA_FORMAT =
+            "de.t-dankworth.secscanqr.EXTRA_FORMAT";
+    public static final String EXTRA_INFORMATION =
+            "de.t-dankworth.secscanqr.EXTRA_INFORMATION";
 
     private TextView tvCode;
     private BottomNavigationView action_navigation;
@@ -56,11 +60,6 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.history_action_navigation_delete:
-                    historyDatabaseHelper.deleteItem(selectedID);
-                    Toast.makeText(activity, activity.getResources().getText(R.string.notice_deleted_from_database), Toast.LENGTH_LONG).show();
-                    activity.finish();
-                    return true;
                 //Following cases using a method from ButtonHandler
                 case R.id.history_action_navigation_copy:
                     copyToClipboard(tvCode, selectedCode, activity);
@@ -96,12 +95,9 @@ public class HistoryDetailsActivity extends AppCompatActivity {
 
         //Get the extra information from the history listview. and set the text in the textview eqaul to code
         Intent receivedIntent = getIntent();
-        selectedID = receivedIntent.getIntExtra("id", -1); //-1 is the default value
-        Cursor data = historyDatabaseHelper.getItemData(selectedID);
-        while(data.moveToNext()){
-            selectedCode = data.getString(0);
-        }
+        selectedCode = receivedIntent.getStringExtra(EXTRA_INFORMATION);
         tvCode.setText(selectedCode);
+
 
         if(selectedCode.contains("BEGIN:VCARD") & selectedCode.contains("END:VCARD")){
             action_navigation_web_button.setVisibility(View.GONE);

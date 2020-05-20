@@ -1,6 +1,5 @@
 package de.t_dankworth.secscanqr.util;
-
-import android.content.ContentValues;
+;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,10 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 11.12.2019
+ * Last Update: 20.05.2020
  * Last Update by Thore Dankworth
  *
- * This class handles all operations regarding the sql database
+ * This class handles all operations regarding the old database used before version 1.2.7 for backwards compatibility. Not used functionality was removed.
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper{
@@ -44,80 +43,13 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * This method adds a scanned qr code
-     * @param code = qrcode that will be added to the database
-     * @return a boolean if the code was added to the database or not
-     */
-    public boolean addData(String code){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_SCANNED_QRCODE, code);
-        //Insert Data into Database with a checking if the insert into the database worked
-        long result = db.insert(TABLE_SCANNED, null, values);
-        if(result == -1){
-            db.close();
-            return false;
-        } else {
-            db.close();
-            return true;
-        }
-    }
-
-
-    /**
      * Returns all the data from the database
      * @return a Cursor pointing on the requested table
      */
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_SCANNED + " ORDER BY " + COLUMN_SCANNED_ID + " DESC";
+        String query = "SELECT * FROM " + TABLE_SCANNED + " ORDER BY " + COLUMN_SCANNED_ID;
         Cursor data = db.rawQuery(query, null);
         return data;
     }
-
-    /**
-     * Returns the ID of the scanned code given as a parameter
-     * @param code
-     * @return a Cursor pointing on the id
-     */
-    public Cursor getItemID(String code){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + COLUMN_SCANNED_ID + " FROM " + TABLE_SCANNED + " WHERE " + COLUMN_SCANNED_QRCODE + " = '" + code + "'";
-        Cursor data = db.rawQuery(query, null);
-        return  data;
-
-    }
-
-    /**
-     * Returns the data of the id given as a parameter
-     * @param id
-     * @return a Cursor pointing on the data
-     */
-    public Cursor getItemData(int id){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT " + COLUMN_SCANNED_QRCODE + " FROM " + TABLE_SCANNED + " WHERE " + COLUMN_SCANNED_ID + " = '" + id + "'";
-        Cursor data = db.rawQuery(query, null);
-        return data;
-    }
-
-    /**
-     * Delete a specific Item from database
-     * @param id
-     */
-    public void deleteItem(int id){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_SCANNED + " WHERE " + COLUMN_SCANNED_ID + " = '" + id + "'";
-        db.execSQL(query);
-    }
-
-    /**
-     * Reset database
-     */
-    public void resetDatabase(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String query = "DELETE FROM " + TABLE_SCANNED;
-        db.execSQL(query);
-    }
-
-
 }

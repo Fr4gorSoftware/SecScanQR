@@ -128,6 +128,9 @@
     <string name="delete_history_dialog_message">All entries will be deleted!</string>
     <string name="delete_history_dialog_confirmation">OK</string>
     <string name="delete_history_dialog_cancel">Cancel</string>
+    <string name="delete_entry_history_dialog_message">Do you want to delete this entry?</string>
+    <string name="delete_entry_history_confirmation">Yes</string>
+    <string name="delete_entry_history_cancel">No</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Was not found in the history database</string>
