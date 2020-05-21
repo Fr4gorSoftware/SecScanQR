@@ -7,15 +7,28 @@ import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.EnumMap;
+import java.util.Map;
+
 import de.t_dankworth.secscanqr.R;
+import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
@@ -41,15 +54,17 @@ public class HistoryDetailsActivity extends AppCompatActivity {
     public static final String EXTRA_INFORMATION =
             "de.t-dankworth.secscanqr.EXTRA_INFORMATION";
 
-    private TextView tvCode;
+    private TextView tvCode, tvFormat;
+    private ImageView codeImage;
     private BottomNavigationView action_navigation;
     private BottomNavigationItemView action_navigation_web_button, action_navigation_contact_button;
+    Bitmap bitmap;
+    MultiFormatWriter multiFormatWriter;
 
     DatabaseHelper historyDatabaseHelper;
     final Activity activity = this;
 
-    private String selectedCode;
-    private int selectedID;
+    private String selectedCode, selectedFormat;
 
     /**
      * This method handles the main navigation
@@ -85,7 +100,11 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         generalHandler = new GeneralHandler(this);
         generalHandler.loadTheme();
         setContentView(R.layout.activity_history_details);
-        tvCode = (TextView) findViewById(R.id.tvCodeHD);
+        tvCode = (TextView) findViewById(R.id.tvTxtqrcodeHistory);
+        tvFormat = (TextView) findViewById(R.id.tvFormatHistory);
+        codeImage = (ImageView) findViewById(R.id.resultImageHistory);
+        codeImage.setClickable(true);
+
         action_navigation = (BottomNavigationView) findViewById(R.id.history_action_navigation);
         action_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -97,7 +116,9 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         Intent receivedIntent = getIntent();
         selectedCode = receivedIntent.getStringExtra(EXTRA_INFORMATION);
         tvCode.setText(selectedCode);
-
+        selectedFormat = receivedIntent.getStringExtra(EXTRA_FORMAT);
+        tvFormat.setText(selectedFormat);
+        showQrImage();
 
         if(selectedCode.contains("BEGIN:VCARD") & selectedCode.contains("END:VCARD")){
             action_navigation_web_button.setVisibility(View.GONE);
@@ -107,5 +128,38 @@ public class HistoryDetailsActivity extends AppCompatActivity {
             action_navigation_web_button.setVisibility(View.VISIBLE);
         }
 
+        codeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HistoryDetailsActivity.this , GeneratorResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("CODE", selectedCode);
+                int formatID = generalHandler.StringToBarcodeId(selectedFormat);
+                bundle.putInt("FORMAT", formatID);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+    }
+
+    /**
+     * This method creates a picture of the scanned qr code
+     */
+    private void showQrImage() {
+        multiFormatWriter = new MultiFormatWriter();
+        Map<EncodeHintType, Object> hintMap = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
+
+        hintMap.put(EncodeHintType.CHARACTER_SET, "UTF-8");
+        hintMap.put(EncodeHintType.MARGIN, 1); /* default = 4 */
+        hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+        try{
+            BarcodeFormat format = generalHandler.StringToBarcodeFormat(selectedFormat);
+            BitMatrix bitMatrix = multiFormatWriter.encode(selectedCode, format, 250,250, hintMap);
+            BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+            bitmap = barcodeEncoder.createBitmap(bitMatrix);
+            codeImage.setImageBitmap(bitmap);
+        } catch (Exception e){
+            codeImage.setVisibility(View.GONE);
+        }
     }
 }
