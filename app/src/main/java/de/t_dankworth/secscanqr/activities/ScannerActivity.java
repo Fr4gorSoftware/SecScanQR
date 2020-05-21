@@ -81,7 +81,7 @@ public class ScannerActivity extends AppCompatActivity {
     MultiFormatWriter multiFormatWriter;
     final Activity activity = this;
     private String qrcode = "", qrcodeFormat = "";
-    private DatabaseHelper mDatabaeHelper;
+
 
     private static final SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
     private static final String STATE_QRCODE = MainActivity.class.getName();
@@ -148,7 +148,6 @@ public class ScannerActivity extends AppCompatActivity {
         mLabelFormat = (TextView) findViewById(R.id.labelFormat);
         codeImage = (ImageView) findViewById(R.id.resultImageMain);
         codeImage.setClickable(true);
-        mDatabaeHelper = new DatabaseHelper(this);
 
         BottomNavigationView main_navigation = (BottomNavigationView) findViewById(R.id.navigation);
         main_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
@@ -360,13 +359,18 @@ public class ScannerActivity extends AppCompatActivity {
             decodeHints.put(DecodeHintType.PURE_BARCODE, Boolean.TRUE);
 
             Result result = reader.decode(bitmap, decodeHints);
+            qrcodeFormat =result.getBarcodeFormat().toString();
             qrcode =  result.getText();
 
             if(qrcode != null){
                 codeImage.setVisibility(View.VISIBLE);
+                mLabelFormat.setVisibility(View.VISIBLE);
+                mTvFormat.setVisibility(View.VISIBLE);
+                mTvFormat.setText(qrcodeFormat);
                 mLabelInformation.setVisibility(View.VISIBLE);
                 mTvInformation.setText(qrcode);
                 action_navigation.setVisibility(View.VISIBLE);
+                showQrImage();
 
                 //Check if history is activated
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);

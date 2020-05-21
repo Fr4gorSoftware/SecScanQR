@@ -8,29 +8,78 @@
     android:background="?attr/backgroundcolor"
     tools:context="de.t_dankworth.secscanqr.activities.HistoryDetailsActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_weight="1">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/title_information"
-            android:textColor="?attr/textcolor"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvCodeHD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="?attr/textcolor"
-            android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/resultImageHistory"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:maxWidth="250sp"
+                android:maxHeight="250sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/labelFormatHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="@string/title_format"
+                android:textColor="?attr/textcolor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/resultImageHistory"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFormatHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textcolor"
+                android:padding="10sp"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/resultImageHistory"
+                app:layout_constraintTop_toBottomOf="@+id/labelFormatHistory" />
+
+            <TextView
+                android:id="@+id/labelInformationHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_information"
+                android:textColor="?attr/textcolor"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="10sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFormatHistory" />
+
+            <TextView
+                android:id="@+id/tvTxtqrcodeHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:textColor="?attr/textcolor"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelInformationHistory" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/history_action_navigation"
