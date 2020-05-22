@@ -57,7 +57,6 @@ public class HistoryDetailsActivity extends AppCompatActivity {
     private TextView tvCode, tvFormat;
     private ImageView codeImage;
     private BottomNavigationView action_navigation;
-    private BottomNavigationItemView action_navigation_web_button, action_navigation_contact_button;
     Bitmap bitmap;
     MultiFormatWriter multiFormatWriter;
 
@@ -108,8 +107,6 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         action_navigation = (BottomNavigationView) findViewById(R.id.history_action_navigation);
         action_navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
         action_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        action_navigation_web_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_openInWeb);
-        action_navigation_contact_button = (BottomNavigationItemView) findViewById(R.id.history_action_navigation_createContact);
         historyDatabaseHelper = new DatabaseHelper(this);
 
         //Get the extra information from the history listview. and set the text in the textview eqaul to code
@@ -121,11 +118,9 @@ public class HistoryDetailsActivity extends AppCompatActivity {
         showQrImage();
 
         if(selectedCode.contains("BEGIN:VCARD") & selectedCode.contains("END:VCARD")){
-            action_navigation_web_button.setVisibility(View.GONE);
-            action_navigation_contact_button.setVisibility(View.VISIBLE);
+            action_navigation.getMenu().removeItem(R.id.history_action_navigation_openInWeb);
         } else {
-            action_navigation_contact_button.setVisibility(View.GONE);
-            action_navigation_web_button.setVisibility(View.VISIBLE);
+            action_navigation.getMenu().removeItem(R.id.history_action_navigation_createContact);
         }
 
         codeImage.setOnClickListener(new View.OnClickListener() {
