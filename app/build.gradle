@@ -7,8 +7,8 @@ android {
         applicationId "de.t_dankworth.secscanqr"
         minSdkVersion 24
         targetSdkVersion 28
-        versionCode 19
-        versionName "1.2.6"
+        versionCode 20
+        versionName "1.2.7"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
