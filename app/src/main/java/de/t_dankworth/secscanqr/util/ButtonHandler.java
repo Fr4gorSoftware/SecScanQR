@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ import de.t_dankworth.secscanqr.R;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 02.05.2020
+ * Last Update: 03.09.2020
  * Last Update by Thore Dankworth
  *
  * This class handles the functionality of the buttons like share, reset, copy etc.
@@ -36,19 +37,17 @@ public class ButtonHandler {
      * @param tvFormat = TextView were the qrcode format is shown
      * @param mLabelInformation = TextView were the qrcode headline is shown
      * @param mLabelFormat = TextView were the qrcode format headline is shown
-     * @param qrcode = the qrcode as a String - Needs to be reset for orientation switches
-     * @param format= the qrcode format as a String - Needs to be reset for orientation switches
      * @param buttonContainer = The Container as a LinearLayout with all the Buttons
+     * @param codeImage = The ImageVIew with the Barcode/QR-Code inside
      */
-    public static void resetScreenInformation(TextView tvInformation, TextView tvFormat, TextView mLabelInformation, TextView mLabelFormat, String qrcode, String format, BottomNavigationView buttonContainer){
+    public static void resetScreenInformation(TextView tvInformation, TextView tvFormat, TextView mLabelInformation, TextView mLabelFormat, BottomNavigationView buttonContainer, ImageView codeImage){
         tvInformation.setText(R.string.default_text_main_activity);
         tvFormat.setText("");
         tvFormat.setVisibility(View.GONE);
         mLabelInformation.setVisibility(View.GONE);
         mLabelFormat.setVisibility(View.GONE);
-        qrcode = "";
-        format = "";
         buttonContainer.setVisibility(View.INVISIBLE);
+        codeImage.setVisibility(View.GONE);
     }
 
     /**
