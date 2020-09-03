@@ -48,7 +48,11 @@ Logo: [s-yous](https://github.com/s-yous)
   alt="GNU Public License v3">](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Screenshots
-![Screenshot 1](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20Main.png)
-![Screenshot 2](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20Generator.png)
-![Screenshot 3](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/SecScanQR%20History.png)
+![Screenshot 1](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/main%20screen.png)
+![Screenshot 2](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/scan1.png)
+![Screenshot 3](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/scan2.png)
+![Screenshot 4](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/scan3.png)
+![Screenshot 5](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/history.png)
+![Screenshot 6](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/generate_overview.png)
+![Screenshot 7](https://raw.githubusercontent.com/Fr4gorSoftware/SecScanQR/master/pictures/generate.png)
 
