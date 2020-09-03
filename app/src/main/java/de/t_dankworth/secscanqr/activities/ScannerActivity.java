@@ -64,7 +64,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 19.05.2020
+ * Last Update: 03.09.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -104,7 +104,9 @@ public class ScannerActivity extends AppCompatActivity {
                     copyToClipboard(mTvInformation, qrcode, activity);
                     return true;
                 case R.id.main_action_navigation_reset:
-                    resetScreenInformation(mTvInformation, mTvFormat, mLabelInformation, mLabelFormat, qrcode, qrcodeFormat, action_navigation);
+                    resetScreenInformation(mTvInformation, mTvFormat, mLabelInformation, mLabelFormat, action_navigation, codeImage);
+                    qrcode = "";
+                    qrcodeFormat = "";
                     return true;
                 case R.id.main_action_navigation_openInWeb:
                     openInWeb(qrcode, qrcodeFormat, activity);
@@ -179,7 +181,7 @@ public class ScannerActivity extends AppCompatActivity {
             qrcodeFormat = savedInstanceState.getString(STATE_QRCODEFORMAT);
 
             if(qrcode.equals("")){
-
+                zxingScan();
             } else {
                 codeImage.setVisibility(View.VISIBLE);
                 showQrImage();
@@ -200,22 +202,20 @@ public class ScannerActivity extends AppCompatActivity {
 
             }
 
-        }
-
-        // Get intent, action and MINE type and check if the intent was started by a share to module from an other app
-        Intent intent = getIntent();
-        String action = intent.getAction();
-        String type = intent.getType();
-
-        if (Intent.ACTION_SEND.equals(action) && type != null){
-            if(type.toLowerCase().startsWith("image")){
-                handleSendPicture();
-            }
         } else {
-            zxingScan();
+            // Get intent, action and MINE type and check if the intent was started by a share to module from an other app
+            Intent intent = getIntent();
+            String action = intent.getAction();
+            String type = intent.getType();
+
+            if (Intent.ACTION_SEND.equals(action) && type != null){
+                if(type.toLowerCase().startsWith("image")){
+                    handleSendPicture();
+                }
+            } else {
+                zxingScan();
+            }
         }
-
-
     }
 
     /**
