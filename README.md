@@ -20,7 +20,8 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - WRITE EXTERNAL STORAGE
 
 ## Translators
-  - German (last change: 1.2.6): [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Polish (last change: 1.2.7): [Waldemar Stoczkowski](https://github.com/WaldiSt) and [Valdnet](https://github.com/Valdnet)
+  - German (last change: 1.2.7): [Thore Dankworth](https://github.com/Fr4gorSoftware)
   - Brazilian Portuguese (last change: 1.2.6): [floppyD](https://github.com/floppyD)
   - Slovak (last change: 1.2.5): [Tibor Repček](https://github.com/tiborepcek)
   - Thai (last change: 1.2.5): [Vatunyoo Suwannapisit](https://github.com/kerlos)
@@ -29,7 +30,6 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - Russian (last change: 1.2.4): Vladimir Kosolapov
   - Spanish (last change: 1.2.4): [Coruna](https://github.com/Coruna)
   - Chinese (last change: 1.2.1): [linsui](https://github.com/linsui) and [Jeff Huang](https://github.com/s8321414)
-  - Polish (last change: 1.2.1): [Waldemar Stoczkowski](https://github.com/WaldiSt)
   - French (Last change: 1.2.1): [Romain Rossi](https://github.com/romainrossi) and [Cédric Frayssinet](https://github.com/bristow)
   - Portuguese (last change: 1.1.9): [Andre-Gloria](https://github.com/Andre-Gloria)
   - Basque (Last change: 1.1.6): [Aitor Beriain](https://github.com/beriain)
