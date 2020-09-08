@@ -21,7 +21,7 @@
     <string name="error_canceled_scan">Anulowałeś skanowanie</string>
     <string name="error_add_to_database">Nie udało się dodać kodu QR do historii</string>
     <string name="error_file_not_found">Nie znaleziono pliku</string>
-    <string name="error_code_not_found">Nie znaleziono kodu kreskowego/kodu Qr</string>
+    <string name="error_code_not_found">Nie znaleziono kodu kreskowego/kodu QR</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Skanuj</string>
     <string name="title_generate">Generuj</string>
@@ -37,11 +37,11 @@
     <string name="card_barcode_title">Kod kreskowy</string>
     <string name="card_barcode_hint">Utwórz różne rodzaje kodów kreskowych</string>
     <string name="card_text_title">Tekst</string>
-    <string name="card_text_hint">Konwertuj tekst na QR-Code</string>
+    <string name="card_text_hint">Konwertuj tekst na kod QR</string>
     <string name="card_location_title">Lokalizacja</string>
-    <string name="card_location_hint">Utwórz QR-Code w formacie lokalizacji geograficznej</string>
+    <string name="card_location_hint">Utwórz kod QR w formacie lokalizacji geograficznej</string>
     <string name="card_contact_title">Kontakt</string>
-    <string name="card_contact_hint">Utwórz QR.Code w formacie VCard</string>
+    <string name="card_contact_hint">Utwórz kod QR w formacie VCard</string>
     <string name="card_wifi_title">Wi-Fi</string>
     <string name="card_wifi_hint">Utwórz kod QR z informacjami o sieci Wi-Fi</string>
     
