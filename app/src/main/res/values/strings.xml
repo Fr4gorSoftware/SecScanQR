@@ -41,9 +41,9 @@
     <string name="card_location_title">Location</string>
     <string name="card_location_hint">Create a QR-Code in the format of a geo location</string>
     <string name="card_contact_title">Contact</string>
-    <string name="card_contact_hint">Create a QR.Code in the format of a VCard</string>
+    <string name="card_contact_hint">Create a QR-Code in the format of a VCard</string>
     <string name="card_wifi_title">Wifi</string>
-    <string name="card_wifi_hint">Create a QR.Code with the information of a wifi network</string>
+    <string name="card_wifi_hint">Create a QR-Code with the information of a wifi network</string>
 
     <!-- GenerateResultActivity-->
     <string name="btn_save">Save</string>
