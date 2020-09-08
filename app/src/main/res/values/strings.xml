@@ -116,7 +116,7 @@
     <string name="hint_password">Password</string>
     <string name="tv_encryption">Encryption: </string>
     <string-array name="text_formats_encryption">
-        <item>NONE</item>
+        <item>None</item>
         <item>WEP</item>
         <item>WPA/WPA2</item>
     </string-array>
