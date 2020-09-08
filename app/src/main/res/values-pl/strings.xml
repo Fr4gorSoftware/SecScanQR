@@ -48,7 +48,7 @@
     <!-- GenerateResultActivity-->
     <string name="btn_save">Zapisz</string>
     <string name="toast_save">Zapisano w folderze "SecScanQR" w pamięci wewnętrznej</string>
-    <string name="toast_permission_needed">Potrzebne jest pozwolenie</string>
+    <string name="toast_permission_needed">Wymagane jest zezwolenie</string>
     <string name="toast_erorr">Wystąpił błąd</string>
 
     <!-- BarcodeGeneratorActivity-->
