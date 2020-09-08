@@ -76,7 +76,7 @@
     <string name="hint_fn">nazwisko</string>
     <string name="hint_bday">urodziny</string>
     <string name="hint_org">organizacja</string>
-    <string name="hint_photo">Adres URL do zdjęcia</string>
+    <string name="hint_photo">adres URL do zdjęcia</string>
     <string name="hint_web">strona internetowa</string>
     <string name="hint_email">e-mail</string>
     <string name="hint_mobil">komórka</string>
