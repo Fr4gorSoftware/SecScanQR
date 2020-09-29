@@ -8,6 +8,7 @@
     <string name="title_activity_text_generator">文本生成器</string>
     <string name="title_activity_barcode_generate">条形码生成器</string>
     <string name="title_activity_vcard_generator">电子名片生成器</string>
+    <string name="title_activity_wifi_generator">Wifi 生成器</string>
     <!-- MainActivity-->
     <string name="title_format">编码格式：</string>
     <string name="title_information">编码信息：</string>
@@ -19,6 +20,8 @@
     <string name="error_scan_first">请先扫描二维码</string>
     <string name="error_canceled_scan">您已取消扫描</string>
     <string name="error_add_to_database">无法将二维码添加到历史</string>
+    <string name="error_file_not_found">未找到文件</string>
+    <string name="error_code_not_found">未找到条形码/Qr 码</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">扫描</string>
     <string name="title_generate">生成</string>
@@ -28,8 +31,21 @@
     <string name="title_share">分享</string>
     <string name="title_reset">重置</string>
     <string name="title_openInWeb">在网页中打开</string>
+    <string name="title_createContact">创建联系人</string>
 
-    <!-- GenerateActivity-->
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">条形码</string>
+    <string name="card_barcode_hint">创建不同种类的条形码</string>
+    <string name="card_text_title">文本</string>
+    <string name="card_text_hint">将文本转换为 QR 码</string>
+    <string name="card_location_title">位置</string>
+    <string name="card_location_hint">创建地理位置格式的 QR 码</string>
+    <string name="card_contact_title">联系人</string>
+    <string name="card_contact_hint">创建 VCard 格式的 QR 码</string>
+    <string name="card_wifi_title">Wifi</string>
+    <string name="card_wifi_hint">创建包含 wifi 网络信息的 QR 码</string>
+
+        <!-- GenerateResultActivity-->
     <string name="btn_save">保存</string>
     <string name="toast_save">保存到内部存储中的 "SecScanQR" 文件夹</string>
     <string name="toast_permission_needed">需要权限</string>
@@ -57,7 +73,9 @@
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">全名</string>
     <string name="hint_fn">名</string>
+    <string name="hint_bday">生日</string>
     <string name="hint_org">组织</string>
+    <string name="hint_photo">照片 URL</string>
     <string name="hint_web">网站</string>
     <string name="hint_email">电子邮件</string>
     <string name="hint_mobil">移动电话</string>
@@ -68,13 +86,27 @@
     <string name="hint_city">市</string>
     <string name="hint_state">省</string>
     <string name="hint_country">国家</string>
+    <string name="hint_note">备注</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">请先输入有效的名或全名</string>
 
-    <!-- HistoryActivity -->
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">隐藏</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">密码</string>
+    <string name="tv_encryption">加密：</string>
+
+   <!-- HistoryActivity -->
     <string name="reset_database">重置</string>
     <string name="share_database">分享</string>
+   <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">所有条目将被删除！</string>
+    <string name="delete_history_dialog_confirmation">好</string>
+    <string name="delete_history_dialog_cancel">取消</string>
+    <string name="delete_entry_history_dialog_message">您是否想要删除此条目？</string>
+    <string name="delete_entry_history_confirmation">是</string>
+    <string name="delete_entry_history_cancel">否</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">未在历史数据库中找到</string>
@@ -93,10 +125,11 @@
     <string name="about_dialog">关于</string>
     <string name="copyright">版权声明</string>
     <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
-    <string name="license">此应用遵循 GNU General Public License. 更多信息请查看以下链接： https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="github_link">在 Github 上了解 SecScanQR：https://github.com/Fr4gorSoftware/SecScanQR</string>
+    <string name="license">此应用遵循 GNU General Public License。更多信息请查看以下链接： https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">此应用 logo 由 s-yous 创作： https://github.com/s-yous</string>
     <string name="translator">简体中文翻译来自 linsui: https://github.com/linsui</string>
-    <string name="zxing_license">此应用使用 ZXING Libary 遵循 Apache 2.0 许可证。更多信息请查看以下链接： http://www.apache.org/licenses/LICENSE-2.0</string>
+    <string name="zxing_license">此应用使用 ZXING Library 遵循 Apache 2.0 许可证。更多信息请查看以下链接： http://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">设置</string>
     <!-- Scanner settings -->
@@ -114,7 +147,7 @@
 
     <string name="pref_title_auto_clipboard">智能剪贴板</string>
 
-    <string name="pref_title_day_night_mode">日间/夜间模式 (BETA Version)</string>
+    <string name="pref_title_day_night_mode">日间/夜间模式 (BETA 版)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>日间（需要重启）</item>
         <item>夜间（需要重启）</item>
