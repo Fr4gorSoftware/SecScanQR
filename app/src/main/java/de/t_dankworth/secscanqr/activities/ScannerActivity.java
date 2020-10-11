@@ -356,7 +356,6 @@ public class ScannerActivity extends AppCompatActivity {
         try{
             Hashtable<DecodeHintType, Object> decodeHints = new Hashtable<DecodeHintType, Object>();
             decodeHints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
-            decodeHints.put(DecodeHintType.PURE_BARCODE, Boolean.TRUE);
 
             Result result = reader.decode(bitmap, decodeHints);
             qrcodeFormat =result.getBarcodeFormat().toString();
