@@ -20,7 +20,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 13.01.2020
+ * Last Update: 24.10.2020
  * Last Update by Thore Dankworth
  *
  * This class is all about the wifi information to QR-Code Generate Activity.
@@ -133,17 +133,17 @@ public class WifiGeneratorActivity extends AppCompatActivity implements AdapterV
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String compare = parent.getItemAtPosition(position).toString();
-        if(compare.equals("AZTEC")){
+        if(compare.toUpperCase().equals("AZTEC")){
             format = 10;
-        } else if(compare.equals("QR_CODE")){
+        } else if(compare.toUpperCase().equals("QR_CODE")){
             format = 9;
-        } else if(compare.equals("NONE")){
+        } else if(compare.toUpperCase().equals("NONE")){
             encrypt = "nopass";
             tfPassword.setVisibility(View.GONE);
-        } else if (compare.equals("WEP")){
+        } else if (compare.toUpperCase().equals("WEP")){
             encrypt = "WEP";
             tfPassword.setVisibility(View.VISIBLE);
-        } else if (compare.equals("WPA/WPA2")){
+        } else if (compare.toUpperCase().equals("WPA/WPA2")){
             encrypt = "WPA";
             tfPassword.setVisibility(View.VISIBLE);
         }
