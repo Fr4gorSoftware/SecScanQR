@@ -41,9 +41,9 @@
     <string name="card_location_title">Location</string>
     <string name="card_location_hint">Create a QR-Code in the format of a geo location</string>
     <string name="card_contact_title">Contact</string>
-    <string name="card_contact_hint">Create a QR.Code in the format of a VCard</string>
+    <string name="card_contact_hint">Create a QR-Code in the format of a VCard</string>
     <string name="card_wifi_title">Wifi</string>
-    <string name="card_wifi_hint">Create a QR.Code with the information of a wifi network</string>
+    <string name="card_wifi_hint">Create a QR-Code with the information of a wifi network</string>
 
     <!-- GenerateResultActivity-->
     <string name="btn_save">Save</string>
@@ -92,7 +92,7 @@
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">name</string>
     <string name="hint_fn">first name</string>
-    <string name="hint_bday">Birthday</string>
+    <string name="hint_bday">birthday</string>
     <string name="hint_org">organization</string>
     <string name="hint_photo">URL to photo</string>
     <string name="hint_web">website</string>
@@ -105,7 +105,7 @@
     <string name="hint_city">city</string>
     <string name="hint_state">state</string>
     <string name="hint_country">country</string>
-    <string name="hint_note">Note</string>
+    <string name="hint_note">note</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">First type in a name or first name</string>
@@ -116,7 +116,7 @@
     <string name="hint_password">Password</string>
     <string name="tv_encryption">Encryption: </string>
     <string-array name="text_formats_encryption">
-        <item>NONE</item>
+        <item>None</item>
         <item>WEP</item>
         <item>WPA/WPA2</item>
     </string-array>
@@ -184,10 +184,10 @@
         <item>1</item>
     </string-array>
 
-    <string name="pref_title_history">History (on/off)</string>
+    <string name="pref_title_history">Storing history</string>
     <string-array name="pref_history_entries">
-        <item>On</item>
-        <item>Off</item>
+        <item>Enabled</item>
+        <item>Disabled</item>
     </string-array>
     <string-array name="pref_history_values">
         <item>true</item>
