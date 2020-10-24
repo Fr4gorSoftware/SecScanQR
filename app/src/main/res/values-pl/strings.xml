@@ -97,8 +97,6 @@
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">Hasło</string>
     <string name="tv_encryption">Szyfrowanie: </string>
-    <string-array name="text_formats_encryption">
-        <item>Brak</item>
 
     <!-- HistoryActivity -->
     <string name="reset_database">Usuń</string>
