@@ -34,6 +34,7 @@ import com.google.zxing.NotFoundException;
 import com.google.zxing.RGBLuminanceSource;
 import com.google.zxing.Reader;
 import com.google.zxing.Result;
+import com.google.zxing.client.android.Intents;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -64,7 +65,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 03.09.2020
+ * Last Update: 25.10.2020
  * Last Update by Thore Dankworth
  *
  * This class is the MainActivity and is the starting point of the App
@@ -298,6 +299,7 @@ public class ScannerActivity extends AppCompatActivity {
      */
     public void zxingScan(){
         IntentIntegrator integrator = new IntentIntegrator(activity);
+        integrator.addExtra(Intents.Scan.SCAN_TYPE, Intents.Scan.MIXED_SCAN);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
         integrator.setPrompt((String) getResources().getText(R.string.xzing_label));
 
