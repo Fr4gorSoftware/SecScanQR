@@ -50,6 +50,7 @@
     <string name="toast_save">Im "SecScanQR" Ordner gespeichert</string>
     <string name="toast_permission_needed">Berechtigung wird zum Fortfahren benötigt</string>
     <string name="toast_erorr">Es ist ein Fehler aufgetreten</string>
+    <string name="toast_error_data_to_big">Zu viel Informationen für einen QR-Code</string>
 
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Hier soll Text hinein</string>
