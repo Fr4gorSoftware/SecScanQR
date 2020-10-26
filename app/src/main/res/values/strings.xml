@@ -50,6 +50,7 @@
     <string name="toast_save">Saved in "SecScanQR" folder on the internal storage</string>
     <string name="toast_permission_needed">Permission is needed</string>
     <string name="toast_erorr">An error had occur</string>
+    <string name="toast_error_data_to_big">Too much information for a QR-Code</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Barcode Generator</string>
