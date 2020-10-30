@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">QR-Kod Oluşturucu</string>
+    <string name="activity_history">Geçmiş</string>
+    <string name="activity_history_details">Geçmiş</string>
+    <string name="title_activity_geo_generator">Konum Oluştur</string>
+    <string name="title_activity_text_generator">Metin Oluştur</string>
+    <string name="title_activity_barcode_generate">Barkod Oluştur</string>
+    <string name="title_activity_vcard_generator">VCard Oluştur</string>
+    <string name="title_activity_wifi_generator">Wifi Oluştur</string>
+    <!-- MainActivity-->
+    <string name="title_format">Kod Formatı:</string>
+    <string name="title_information">Kod Bilgisi:</string>
+    <string name="default_text_main_activity">QR-Kod/Barkod Okumak İçin "Tara" Butonuna Basın</string>
+    <string name="send_to">Bunlardan Biriyle Paylaş:</string>
+    <string name="xzing_label">Ses tuşlarını kullanarak el fenerini etkin hale getirebilsiniz</string>
+    <string name="notice_clipoard">Panoya Kopyalandı</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">QR-Kod Okutma ile Başlayın</string>
+    <string name="error_canceled_scan">Tarama işlemi iptal edildi</string>
+    <string name="error_add_to_database">Geçmişte QR-Kodu Bulunamadı</string>
+    <string name="error_file_not_found">Dosya Bulunamadı</string>
+    <string name="error_code_not_found">QR-Kod/Barkod Bulunamadı</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">Tara</string>
+    <string name="title_generate">Oluştur</string>
+    <string name="title_history">Geçmiş</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">Kopyala</string>
+    <string name="title_share">Paylaş</string>
+    <string name="title_reset">Sıfırla</string>
+    <string name="title_openInWeb">Tarayıcıda Aç</string>
+    <string name="title_createContact">Kişi Oluştur</string>
+
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">Barkod</string>
+    <string name="card_barcode_hint">Farklı türde barkodlar oluşturun</string>
+    <string name="card_text_title">Metin</string>
+    <string name="card_text_hint">Yazdığınız Metini QR Kod Haline Getirin</string>
+    <string name="card_location_title">Konum</string>
+    <string name="card_location_hint">Konum Bilginizi QR Kod Haline Getirin</string>
+    <string name="card_contact_title">Kişi</string>
+    <string name="card_contact_hint">Kişinizi VCard Olarak Paylaşılacak Şekilde QR Kod Haline Getirin</string>
+    <string name="card_wifi_title">Wifi</string>
+    <string name="card_wifi_hint">WiFi Ağınızın Bilgilerini QR Kod Haline Getirin</string>
+
+    <!-- GenerateResultActivity-->
+    <string name="btn_save">Kaydet</string>
+    <string name="toast_save">Dahili depolama" SecScanQR " klasörüne kaydedilir</string>
+    <string name="toast_permission_needed">İzin gereklidir</string>
+    <string name="toast_erorr">Bir hata var</string>
+
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">Barkod Oluşturucu</string>
+    <string-array name="barcode_formats_array">
+        <item>BARCODE</item>
+        <item>CODE_128</item>
+        <item>CODE_39</item>
+        <item>EAN_13</item>
+        <item>EAN_8</item>
+        <item>ITF</item>
+        <item>PDF_417</item>
+        <item>UPC_A</item>
+    </string-array>
+
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">Burada bazı metin girebilirsiniz</string>
+    <string name="tv_format">Biçim: </string>
+    <string-array name="text_formats_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+
+    </string-array>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">Öncelikle bir metin yazın</string>
+    <string name="error_generate">Oluşturulamadı</string>
+
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">Enlem Örneği: 43.73</string>
+    <string name="hint_longtitude">Boyşam Örneği: 10.73</string>
+    <string-array name="formats_geo_array">
+        <item>QR_CODE</item>
+        <item>AZTEC</item>
+    </string-array>
+    <string name="cbLatitude">Kuzey</string>
+    <string name="cbLongtitude">Güney</string>
+
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">Önce enlem ve boylam için geçerli değerleri doldurun</string>
+
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">Ad</string>
+    <string name="hint_fn">İsim</string>
+    <string name="hint_bday">Doğum Günü</string>
+    <string name="hint_org">Organizasyon</string>
+    <string name="hint_photo">Fotoğrafın URLsi</string>
+    <string name="hint_web">Website</string>
+    <string name="hint_email">E-Mail</string>
+    <string name="hint_mobil">Mobil</string>
+    <string name="hint_tele_work">Telefon(İş)</string>
+    <string name="hint_tele_private">Telefon(Gizli)</string>
+    <string name="hint_street">Sokak</string>
+    <string name="hint_plz">Posta kodu</string>
+    <string name="hint_city">Şehir</string>
+    <string name="hint_state">İlçe</string>
+    <string name="hint_country">Ülke</string>
+    <string name="hint_note">Not</string>
+
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">Öncelikle bir isim yazarak başlayabilirsin</string>
+
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">Gizlenmiş</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">Şifre</string>
+    <string name="tv_encryption">Şifre: </string>
+    <string-array name="text_formats_encryption">
+        <item>NONE</item>
+        <item>WEP</item>
+        <item>WPA/WPA2</item>
+    </string-array>
+
+    <!-- HistoryActivity -->
+    <string name="reset_database">Sıfırla</string>
+    <string name="share_database">Paylaş</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">Tüm girişler silinecek!</string>
+    <string name="delete_history_dialog_confirmation">Tamam</string>
+    <string name="delete_history_dialog_cancel">Vazgeç</string>
+    <string name="delete_entry_history_dialog_message">Bu girişi silmek istiyor musunuz?</string>
+    <string name="delete_entry_history_confirmation">Evet</string>
+    <string name="delete_entry_history_cancel">Hayır</string>
+
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">Geçmiş veritabanında bulunamadı</string>
+    <string name="error_sqlexception">Bu biçim geçmiş özelliği için desteklenmiyor</string>
+
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">Geçmişten silindi</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">Sil</string>
+
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">Hakkında</string>
+    <string name="settings_settings">Ayarlar</string>
+
+    <!-- AboutDialog-->
+    <string name="about_dialog">Hakkında</string>
+    <string name="copyright">Telif Hakkı Bildirimi</string>
+    <string name="copyright_holder">Telif hakkı© 2017-2020 T-Dankworth</string>
+    <string name="github_link">Github'da SecScanQR bul: https://github.com/Fr4gorSoftware/SecScanQR</string>
+    <string name="license">Bu uygulama GNU Genel Kamu Lisansı şartları altında oluşturuldu. Daha fazla bilgi için lütfen aşağıdaki bağlantıyı kontrol edin: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">Uygulama logosu s-yous tarafından oluşturuldu: https://github.com/s-yous</string>
+    <string name="translator">Türkçe Çeviri: https://github.com/EypCnn</string>
+    <string name="zxing_license">Uygulama Apache 2.0 Lisansı altında olan ZXİNG kütüphanesini kullanır. Daha fazla bilgi için lütfen aşağıdaki bağlantıyı kontrol edin: http://www.apache.org/licenses/LICENSE-2.0</string>
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Ayarlar</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">Tarama</string>
+    <string name="pref_header_history_settings">Geçmiş</string>
+    <string name="pref_header_search_engine_settings">Arama Motoru</string>
+
+    <string name="pref_title_camera">Kamera</string>
+    <string-array name="pref_camera_entries">
+        <item>Arka Kamera</item>
+        <item>Ön Kamera</item>
+    </string-array>
+    <string-array name="pref_camera_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_auto_scan">Tarayıcıyı otomatik başlat</string>
+    <string name="pref_title_auto_clipboard">Akıllı pano</string>
+
+    <string name="pref_title_day_night_mode">Gündüz / Gece Modu (BETA Sürüm)</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>Gündüz (Yeniden başlatma gerekli)</item>
+        <item>Gece (Yeniden başlatma gerekli)</item>
+    </string-array>
+    <string-array name="pref_day_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="pref_title_history">Geçmiş (Açık/Kapalı)</string>
+    <string-array name="pref_history_entries">
+        <item>AÇık</item>
+        <item>Kapalı</item>
+    </string-array>
+    <string-array name="pref_history_values">
+        <item>Doğru</item>
+        <item>Yanlış</item>
+    </string-array>
+
+    <string name="pref_title_search_engine">Arama Motoru</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Startpage</item>
+        <item>Yahoo</item>
+        <item>Yandex (Rusya)</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="pref_title_barcode_search_enigne">Barkod Arama Motoru</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>Barkodlar için ekstra arama motoru yok</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+    <string-array name="pref_barcode_search_engine_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
