@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8sp"
-        android:background="?attr/backgroundcolor">
+        android:background="?attr/colorPrimary">
 
         <TextView
             android:id="@+id/tvHistoryDate"
