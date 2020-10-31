@@ -18,8 +18,8 @@
         <item name="colorPrimary">#212121</item>
         <item name="colorPrimaryDark">#000000</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="backgroundcolor">#303030</item>
-        <item name="bottomnavcolor">#424242</item>
+        <item name="backgroundcolor">#000000</item>
+        <item name="bottomnavcolor">#212121</item>
         <item name="textcolor">#ffffff</item>
         <item name="colorControlNormal">#ffffff</item>
         <item name="actionbaricon">@color/actionBarIcon_light</item>
