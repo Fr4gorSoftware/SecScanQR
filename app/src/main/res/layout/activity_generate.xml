@@ -19,14 +19,13 @@
                 android:id="@+id/barcode_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_margin="10sp" >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center|left">
                     <LinearLayout
                         android:layout_width="100sp"
@@ -67,14 +66,13 @@
                 android:id="@+id/text_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_margin="10sp" >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center|left">
                     <LinearLayout
                         android:layout_width="100sp"
@@ -115,14 +113,13 @@
                 android:id="@+id/geo_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_margin="10sp" >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center|left">
                     <LinearLayout
                         android:layout_width="100sp"
@@ -163,14 +160,13 @@
                 android:id="@+id/contact_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_margin="10sp" >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center|left">
                     <LinearLayout
                         android:layout_width="100sp"
@@ -211,14 +207,13 @@
                 android:id="@+id/wifi_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_margin="10sp" >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center|left">
                     <LinearLayout
                         android:layout_width="100sp"

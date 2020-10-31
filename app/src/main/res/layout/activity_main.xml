@@ -25,7 +25,6 @@
                 android:id="@+id/scan_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_columnWeight="1"
                 app:cardElevation="6sp"
@@ -36,14 +35,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center"
                     android:padding="16sp">
 
                     <ImageView
                         android:src="@drawable/ic_scan_black_24dp"
                         android:background="@drawable/circlebackgroundblue"
-                        android:tint="@color/colorWhiteBackground"
+                        app:tint="@color/colorWhiteBackground"
                         android:padding="15sp"
                         android:layout_width="80sp"
                         android:layout_height="80sp" />
@@ -62,7 +61,6 @@
                 android:id="@+id/generate_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_columnWeight="1"
                 app:cardElevation="6sp"
@@ -73,14 +71,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center"
                     android:padding="16sp">
 
                     <ImageView
                         android:src="@drawable/ic_add_white_24dp"
                         android:background="@drawable/circlebackgroundpurple"
-                        android:tint="@color/colorWhiteBackground"
+                        app:tint="@color/colorWhiteBackground"
                         android:padding="15sp"
                         android:layout_width="80sp"
                         android:layout_height="80sp" />
@@ -98,7 +96,6 @@
                 android:id="@+id/history_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_columnWeight="1"
                 app:cardElevation="6sp"
@@ -109,14 +106,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center"
                     android:padding="16sp">
 
                     <ImageView
                         android:src="@drawable/ic_history_24dp"
                         android:background="@drawable/circlebackgroundpink"
-                        android:tint="@color/colorWhiteBackground"
+                        app:tint="@color/colorWhiteBackground"
                         android:padding="15sp"
                         android:layout_width="80sp"
                         android:layout_height="80sp" />
@@ -135,7 +132,6 @@
                 android:id="@+id/settings_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:foreground="?android:selectableItemBackground"
                 android:clickable="true"
                 android:layout_columnWeight="1"
                 app:cardElevation="6sp"
@@ -146,14 +142,14 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="?attr/backgroundcolor"
+                    android:background="?attr/colorPrimary"
                     android:gravity="center"
                     android:padding="16sp">
 
                     <ImageView
                         android:src="@drawable/ic_settings_black_24dp"
                         android:background="@drawable/circlebackgroundgreen"
-                        android:tint="@color/colorWhiteBackground"
+                        app:tint="@color/colorWhiteBackground"
                         android:padding="15sp"
                         android:layout_width="80sp"
                         android:layout_height="80sp" />
