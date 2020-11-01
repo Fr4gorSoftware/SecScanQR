@@ -54,7 +54,7 @@
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Barcode Generator</string>
-    <string-array name="barcode_formats_array">
+    <string-array name="barcode_formats_array" translatable="false">
         <item>BARCODE</item>
         <item>CODE_128</item>
         <item>CODE_39</item>
@@ -68,7 +68,7 @@
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Here you can enter some text</string>
     <string name="tv_format">Format: </string>
-    <string-array name="text_formats_array">
+    <string-array name="text_formats_array" translatable="false">
         <item>QR_CODE</item>
         <item>AZTEC</item>
 
@@ -80,7 +80,7 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">latitude example: 43.73</string>
     <string name="hint_longtitude">longtitude example: 10.73</string>
-    <string-array name="formats_geo_array">
+    <string-array name="formats_geo_array" translatable="false">
         <item>QR_CODE</item>
         <item>AZTEC</item>
     </string-array>
@@ -116,7 +116,7 @@
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">Password</string>
     <string name="tv_encryption">Encryption: </string>
-    <string-array name="text_formats_encryption">
+    <string-array name="text_formats_encryption" translatable="false">
         <item>None</item>
         <item>WEP</item>
         <item>WPA/WPA2</item>
@@ -167,7 +167,7 @@
         <item>back camera</item>
         <item>front camera</item>
     </string-array>
-    <string-array name="pref_camera_values">
+    <string-array name="pref_camera_values" translatable="false">
         <item>0</item>
         <item>1</item>
     </string-array>
@@ -180,7 +180,7 @@
         <item>Day (Needs a restart)</item>
         <item>Night (Needs a restart)</item>
     </string-array>
-    <string-array name="pref_day_night_mode_values">
+    <string-array name="pref_day_night_mode_values" translatable="false">
         <item>0</item>
         <item>1</item>
     </string-array>
@@ -190,7 +190,7 @@
         <item>Enabled</item>
         <item>Disabled</item>
     </string-array>
-    <string-array name="pref_history_values">
+    <string-array name="pref_history_values" translatable="false">
         <item>true</item>
         <item>false</item>
     </string-array>
@@ -206,7 +206,7 @@
         <item>Yahoo</item>
         <item>Yandex (RUS)</item>
     </string-array>
-    <string-array name="pref_search_engine_values">
+    <string-array name="pref_search_engine_values" translatable="false">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -223,7 +223,7 @@
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-    <string-array name="pref_barcode_search_engine_values">
+    <string-array name="pref_barcode_search_engine_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
