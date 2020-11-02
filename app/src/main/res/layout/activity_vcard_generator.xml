@@ -111,7 +111,8 @@
                 android:textColor="?attr/textcolor"
                 android:ems="10"
                 android:hint="@string/hint_mobil"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textAlignment="viewStart"/>
 
             <EditText
                 android:id="@+id/txtTeleWork"
@@ -120,7 +121,8 @@
                 android:textColor="?attr/textcolor"
                 android:ems="10"
                 android:hint="@string/hint_tele_work"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textAlignment="viewStart"/>
 
             <EditText
                 android:id="@+id/txtTelePrivat"
@@ -129,7 +131,8 @@
                 android:textColor="?attr/textcolor"
                 android:ems="10"
                 android:hint="@string/hint_tele_private"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textAlignment="viewStart"/>
 
             <EditText
                 android:id="@+id/txtStreet"
