@@ -19,21 +19,28 @@ The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Lib
   - CAMERA ACCESS
   - WRITE EXTERNAL STORAGE
 
+## Translation status
+SecScanQR uses Transifex for translations. You can help us bring SecScanQR to your language or just edit single wordings right from within your browser by visiting our [Transifex project page](https://www.transifex.com/projects/p/secscanqr/).<br>
+| SecScanQR |
+|:-:|
+| [![SecScanQR Translation Status](https://www.transifex.com/projects/p/secscanqr/resource/App/chart/image_png/)](https://www.transifex.com/projects/p/secscanqr/) |
+Check out our [Translator FAQ](https://github.com/Fr4gorSoftware/SecScanQR/wiki/Translation-FAQ) for more information about contributing
+
 ## Translators
-  - Polish (last change: 1.2.7): [Waldemar Stoczkowski](https://github.com/WaldiSt) and [Valdnet](https://github.com/Valdnet)
-  - German (last change: 1.2.7): [Thore Dankworth](https://github.com/Fr4gorSoftware)
-  - Brazilian Portuguese (last change: 1.2.6): [floppyD](https://github.com/floppyD)
-  - Slovak (last change: 1.2.5): [Tibor Repček](https://github.com/tiborepcek)
-  - Thai (last change: 1.2.5): [Vatunyoo Suwannapisit](https://github.com/kerlos)
-  - Hindi (last change: 1.2.4): [imcmjha](https://github.com/imcmjha)
-  - Italian (last change: 1.2.4): [abonte](https://github.com/abonte) and [ema-pe](https://github.com/ema-pe)
-  - Russian (last change: 1.2.4): Vladimir Kosolapov
-  - Spanish (last change: 1.2.4): [Coruna](https://github.com/Coruna)
-  - Chinese (last change: 1.2.1): [linsui](https://github.com/linsui) and [Jeff Huang](https://github.com/s8321414)
-  - French (Last change: 1.2.1): [Romain Rossi](https://github.com/romainrossi) and [Cédric Frayssinet](https://github.com/bristow)
-  - Portuguese (last change: 1.1.9): [Andre-Gloria](https://github.com/Andre-Gloria)
-  - Basque (Last change: 1.1.6): [Aitor Beriain](https://github.com/beriain)
-  
+  - Basque: [Aitor Beriain](https://github.com/beriain)
+  - Brazilian Portuguese: [floppyD](https://github.com/floppyD)
+  - Chinese: [linsui](https://github.com/linsui) and [Jeff Huang](https://github.com/s8321414)
+  - French: [Romain Rossi](https://github.com/romainrossi) and [Cédric Frayssinet](https://github.com/bristow)
+  - German: [Thore Dankworth](https://github.com/Fr4gorSoftware)
+  - Hebrew: [Yaron Shahrabani](https://github.com/yarons)
+  - Hindi: [imcmjha](https://github.com/imcmjha)
+  - Italian: [abonte](https://github.com/abonte) and [ema-pe](https://github.com/ema-pe)
+  - Polish: [Waldemar Stoczkowski](https://github.com/WaldiSt) and [Valdnet](https://github.com/Valdnet)
+  - Portuguese: [Andre-Gloria](https://github.com/Andre-Gloria)
+  - Russian: Vladimir Kosolapov
+  - Slovak: [Tibor Repček](https://github.com/tiborepcek)
+  - Spanish: [Coruna](https://github.com/Coruna)
+  - Thai: [Vatunyoo Suwannapisit](https://github.com/kerlos)  
   
 ## Donating
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
