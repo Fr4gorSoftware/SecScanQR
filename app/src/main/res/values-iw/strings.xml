@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Activity labels -->
+    <string name="app_name">SecScanQR</string>
+    <string name="activity_generate">מחולל קודים מסוג QR</string>
+    <string name="activity_history">היסטוריה</string>
+    <string name="activity_history_details">היסטוריה</string>
+    <string name="title_activity_geo_generator">מחולל גאו</string>
+    <string name="title_activity_text_generator">מחולל טקסט</string>
+    <string name="title_activity_barcode_generate">מחולל ברקוד</string>
+    <string name="title_activity_vcard_generator">מחולל כרטיס ביקור</string>
+    <string name="title_activity_wifi_generator">מחולל רשת אלחוטית</string>
+    <!-- MainActivity-->
+    <string name="title_format">תצורת קוד:</string>
+    <string name="title_information">פרטי קוד:</string>
+    <string name="default_text_main_activity">נא ללחוץ על הכפתור „סריקה” כדי לסרוק קוד QR/ברקוד</string>
+    <string name="send_to">לשתף עם:</string>
+    <string name="xzing_label">ניתן להפעיל את הפנס עם לחצני עצמת השמע</string>
+    <string name="notice_clipoard">הועתק ללוח הגזירים</string>
+    <!--MainActivity Errors-->
+    <string name="error_scan_first">יש לסרוק קוד QR תחילה</string>
+    <string name="error_canceled_scan">ביטלת את הסריקה</string>
+    <string name="error_add_to_database">הוספת קוד ה־QR להיסטוריה נכשלה</string>
+    <string name="error_file_not_found">קובץ לא נמצא</string>
+    <string name="error_code_not_found">ברקוד/קוד QR לא נמצא</string>
+    <!-- MainActivity Navigation-->
+    <string name="title_scan">לסרוק</string>
+    <string name="title_generate">לחולל</string>
+    <string name="title_history">היסטוריה</string>
+    <!-- MainActivity Action Navigation-->
+    <string name="title_copy">העתקה</string>
+    <string name="title_share">שיתוף</string>
+    <string name="title_reset">איפוס</string>
+    <string name="title_openInWeb">פתיחה בדפדפן</string>
+    <string name="title_createContact">יצירת איש קשר</string>
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">ברקוד</string>
+    <string name="card_barcode_hint">יצירת סוגים שונים של ברקודים</string>
+    <string name="card_text_title">טקסט</string>
+    <string name="card_text_hint">המרת טקסט לקוד QR</string>
+    <string name="card_location_title">מיקום</string>
+    <string name="card_location_hint">יצירת קוד QR בתצורת מיקום גאוגרפי</string>
+    <string name="card_contact_title">פרטי קשר</string>
+    <string name="card_contact_hint">יצירת קוד QR בתצורת כרטיס ביקור וירטואלי (vCard)</string>
+    <string name="card_wifi_title">רשת אלחוטית</string>
+    <string name="card_wifi_hint">יצירת קוד QR עם מידע על רשת אלחוטית (Wifi)</string>
+    <!-- GenerateResultActivity-->
+    <string name="btn_save">שמירה</string>
+    <string name="toast_save">נשמר לתיקייה „SecScanQR” באחסון הפנימי</string>
+    <string name="toast_permission_needed">נדרשת הרשאה</string>
+    <string name="toast_erorr">אירעה שגיאה</string>
+    <string name="toast_error_data_to_big">יותר מדי מידע לקוד QR</string>
+    <!-- BarcodeGeneratorActivity-->
+    <string name="activity_barcode_generator">מחולל ברקודים</string>
+    <!-- TextGeneratorActivity-->
+    <string name="hint_text2qr">כאן ניתן למלא קצת טקסט</string>
+    <string name="tv_format">תצורה:</string>
+    <!-- TextGeneratorActivity Erorrs-->
+    <string name="error_text_first">תחילה יש למלא מעט טקסט</string>
+    <string name="error_generate">אין קלט תקני לתצורה הזאת</string>
+    <!-- GeoGeneratorActivity-->
+    <string name="hint_latitude">דוגמה לקו רוחב: 43.73</string>
+    <string name="hint_longtitude">דוגמה לקו אורך: 10.73</string>
+    <string name="cbLatitude">צפון</string>
+    <string name="cbLongtitude">מזרח</string>
+    <!-- GeoGeneratorActivity Errors-->
+    <string name="error_geo_first">תחילה יש למלא ערכים תקניים לקו רוחב ולקו אורך</string>
+    <!-- VCARDGeneratorActivity-->
+    <string name="hint_name">שם</string>
+    <string name="hint_fn">שם פרטי</string>
+    <string name="hint_bday">יום הולדת</string>
+    <string name="hint_org">ארגון</string>
+    <string name="hint_photo">כתובת לתמונה</string>
+    <string name="hint_web">אתר</string>
+    <string name="hint_email">דוא״ל</string>
+    <string name="hint_mobil">טלפון נייד</string>
+    <string name="hint_tele_work">טלפון (עבודה)</string>
+    <string name="hint_tele_private">טלפון (פרטי)</string>
+    <string name="hint_street">רחוב</string>
+    <string name="hint_plz">מיקוד</string>
+    <string name="hint_city">עיר</string>
+    <string name="hint_state">מחוז</string>
+    <string name="hint_country">מדינה</string>
+    <string name="hint_note">הערה</string>
+    <!-- VCARDGeneratorActivity Errors-->
+    <string name="error_fn_or_name_first">יש להקליד את השמות הפרטי והמשפחה תחילה</string>
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">מוסתר</string>
+    <string name="hint_ssid">מזהה רשת אלחוטית</string>
+    <string name="hint_password">ססמה</string>
+    <string name="tv_encryption">הצפנה:</string>
+    <!-- HistoryActivity -->
+    <string name="reset_database">איפוס</string>
+    <string name="share_database">שיתוף</string>
+    <!-- HistoryActivity Delete Dialog -->
+    <string name="delete_history_dialog_message">כל הרשומות תימחקנה!</string>
+    <string name="delete_history_dialog_confirmation">אישור</string>
+    <string name="delete_history_dialog_cancel">ביטול</string>
+    <string name="delete_entry_history_dialog_message">למחוק את הרשומה הזאת?</string>
+    <string name="delete_entry_history_confirmation">כן</string>
+    <string name="delete_entry_history_cancel">לא</string>
+    <!-- HistoryActivity Errors-->
+    <string name="error_not_in_database">לא נמצא במסד הנתונים של ההיסטוריה</string>
+    <string name="error_sqlexception">תצורה זו אינה נתמכת עבור תכונת ההיסטוריה</string>
+    <!-- HistoryDetailsActivity-->
+    <string name="notice_deleted_from_database">נמחק מההיסטוריה</string>
+    <!-- HistoryDetailsActivity Action Navigation-->
+    <string name="title_delete">מחיקה</string>
+    <!-- Optionsmenu-->
+    <string name="settings_menu_about">על אודות</string>
+    <string name="settings_settings">הגדרות</string>
+    <!-- AboutDialog-->
+    <string name="about_dialog">על אודות</string>
+    <string name="copyright">הודעת זכויות יוצרים</string>
+    <string name="copyright_holder">כל הזכויות שמורות © 2012‏-2020 ל־T-Dankworth</string>
+    <string name="github_link">
+ניתן למצוא את SecScanQR ב־GitHub:‏ https://github.com/Fr4gorSoftware/SecScanQR
+</string>
+    <string name="license">
+יישומון זה כפוף לתנאי הרישיון הציבורי הכללי של גנו. למידע נוסף כדאי לבקר בכתובת הנ״ל: https://www.gnu.org/licenses/gpl-3.0.en.html
+</string>
+    <string name="logo_designer">
+סמל היישומון נוצר על ידי s-yous:‏ https://github.com/s-yous
+</string>
+    <string name="translator">
+תורגם לעברית על ידי ירון שהרבני: https://github.com/yarons
+</string>
+    <string name="zxing_license">
+יישומון זה משתמש בספריית ZXING שכפופה לרישיון Apache 2.0. למידע נוסף נא לפנות לקישור הנ״ל: http://www.apache.org/licenses/LICENSE-2.0
+</string>
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">הגדרות</string>
+    <!-- Scanner settings -->
+    <string name="pref_header_scanner">סורק</string>
+    <string name="pref_header_history_settings">היסטוריה</string>
+    <string name="pref_header_search_engine_settings">מנוע חיפוש</string>
+    <string name="pref_title_camera">מצלמה</string>
+    <string-array name="pref_camera_entries">
+        <item>מצלמה אחורית</item>
+        <item>מצלמה קדמית</item>
+    </string-array>
+    <string name="pref_title_auto_scan">התחלת הסורק אוטומטית</string>
+    <string name="pref_title_auto_clipboard">לוח גזירים חכם</string>
+    <string name="pref_title_day_night_mode">מצב יום/לילה (גרסה ניסיונית)</string>
+    <string-array name="pref_day_night_mode_entries">
+        <item>יום (דורש אתחול)</item>
+        <item>לילה (דורש אתחול)</item>
+    </string-array>
+    <string name="pref_title_history">אחסון היסטוריה</string>
+    <string-array name="pref_history_entries">
+        <item>מופעל</item>
+        <item>מושבת</item>
+    </string-array>
+    <string name="pref_title_search_engine">מנוע חיפוש</string>
+    <string-array name="pref_search_engine_entries">
+        <item>Bing</item>
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Qwant</item>
+        <item>Qwant Lite</item>
+        <item>Startpage</item>
+        <item>Yahoo</item>
+        <item>Yandex (רוסיה)</item>
+    </string-array>
+    <string name="pref_title_barcode_search_enigne">מנוע חיפוש ברקודים</string>
+    <string-array name="pref_barcode_search_engine_entries">
+        <item>אין מנוע חיפוש נוסף לברקודים</item>
+        <item>Open Food Facts</item>
+        <item>CodeCheck</item>
+    </string-array>
+</resources>
