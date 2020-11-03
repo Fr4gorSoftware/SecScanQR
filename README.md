@@ -3,7 +3,6 @@
 
 The QR-Code Scanner/Generator that cares about your privacy, based on [XZing Library](https://github.com/zxing/zxing).
 
-
 ## Download
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
   alt="Get it on F-Droid"
