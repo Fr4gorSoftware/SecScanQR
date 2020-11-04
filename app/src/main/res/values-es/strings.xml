@@ -2,12 +2,13 @@
     <!--Activity labels -->
     <string name="app_name">SecScanQR</string>
     <string name="activity_generate">Generador de códigos de QR</string>
-    <string name="activity_history">Trayectoria</string>
-    <string name="activity_history_details">Trayectoria</string>
-    <string name="title_activity_geo_generator">Generador de geo</string>
+    <string name="activity_history">Historial</string>
+    <string name="activity_history_details">Historial</string>
+    <string name="title_activity_geo_generator">Generador de ubicación</string>
     <string name="title_activity_text_generator">Generador de texto</string>
     <string name="title_activity_barcode_generate">Generador de código de barras</string>
     <string name="title_activity_vcard_generator">Generador de tarjetas VCard</string>
+    <string name="title_activity_wifi_generator">Generador de Wifi</string>
     <!-- MainActivity-->
     <string name="title_format">Formato de código:</string>
     <string name="title_information">Información de código:</string>
@@ -16,51 +17,65 @@
     <string name="xzing_label">Activar la linterna con las teclas de volumen</string>
     <string name="notice_clipoard">Copiado al portapapeles</string>
     <!--MainActivity Errors-->
-    <string name="error_scan_first">Escanear un código de QR primero</string>
+    <string name="error_scan_first">Primero escanee un código QR</string>
     <string name="error_canceled_scan">Canceló el escaneo</string>
-    <string name="error_add_to_database">No fue capaz de añadir código de QR a la trayectoria</string>
+    <string name="error_add_to_database">No se pudo agregar el código QR al historial</string>
     <string name="error_file_not_found">Archivo no encontrado</string>
     <string name="error_code_not_found">Código de QR/barras no encontrado</string>
     <!-- MainActivity Navigation-->
     <string name="title_scan">Escanear</string>
     <string name="title_generate">Generar</string>
-    <string name="title_history">Trayectoria</string>
+    <string name="title_history">Historial</string>
     <!-- MainActivity Action Navigation-->
-    <string name="title_copy">Copia</string>
+    <string name="title_copy">Copiar</string>
     <string name="title_share">Compartir</string>
     <string name="title_reset">Reiniciar</string>
     <string name="title_openInWeb">Abrir en Web</string>
+    <string name="title_createContact">Crear contacto</string>
 
-    <!-- GenerateActivity-->
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">Código de barras</string>
+    <string name="card_barcode_hint">Crear distintos tipos de códigos de barras</string>
+    <string name="card_text_title">Texto</string>
+    <string name="card_text_hint">Convertir texto en código QR</string>
+    <string name="card_location_title">Ubicación</string>
+    <string name="card_location_hint">Crear un código QR de ubicación</string>
+    <string name="card_contact_title">Contacto</string>
+    <string name="card_contact_hint">Crear código QR en formato de tarjeta VCard</string>
+    <string name="card_wifi_title">Wifi</string>
+    <string name="card_wifi_hint">Crear código QR con información de una red wifi</string>
+
+    <!-- GenerateResultActivity-->
     <string name="btn_save">Guardar</string>
     <string name="toast_save">Guardado en la carpeta "SecScanQR" de la memoria interna</string>
     <string name="toast_permission_needed">Se necesita permiso</string>
     <string name="toast_erorr">Se ha producido un error</string>
+    <string name="toast_error_data_to_big">Se ha sobrepasado el límite de tamaño</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generador de código de barras</string>
-
-
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Aquí puede introducir texto</string>
     <string name="tv_format">Formato: </string>
     <!-- TextGeneratorActivity Erorrs-->
-    <string name="error_text_first">Escriba primero un poco de texto</string>
-    <string name="error_generate">No hay entradas válidas para este formato</string>
+    <string name="error_text_first">Introduzca primero algún texto</string>
+    <string name="error_generate">Los datos introducidos no son válidos.</string>
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">ejemplo de latitud: 43.73</string>
     <string name="hint_longtitude">ejemplo de longtitud: 10.73</string>
-    <string name="cbLatitude">hacia el norte</string>
+    <string name="cbLatitude">norte</string>
     <string name="cbLongtitude">este</string>
 
     <!-- GeoGeneratorActivity Errors-->
-    <string name="error_geo_first">En primer lugar, rellene los valores válidos para la latitud y la longitud.</string>
+    <string name="error_geo_first">Rellene primero las casillas de latitud y longitud con valores válidos.</string>
 
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">apellido</string>
     <string name="hint_fn">nombre</string>
+    <string name="hint_bday">cumpleaños</string>
     <string name="hint_org">institución</string>
+    <string name="hint_photo">Enlace a foto</string>
     <string name="hint_web">página-web</string>
     <string name="hint_email">correo electrónico</string>
     <string name="hint_mobil">teléfono celular</string>
@@ -68,13 +83,19 @@
     <string name="hint_tele_private">teléfono(privado)</string>
     <string name="hint_street">calle </string>
     <string name="hint_plz">código postal</string>
-    <string name="hint_city">localidad</string>
+    <string name="hint_city">ciudad</string>
     <string name="hint_state">estado</string>
-    <string name="hint_country">campestre</string>
+    <string name="hint_country">país</string>
+    <string name="hint_note">nota</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Escriba un nombre o un apellido</string>
 
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">Oculto</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="tv_encryption">Encripción:</string>
     <!-- HistoryActivity -->
     <string name="reset_database">Reiniciar</string>
     <string name="share_database">Compartir</string>
@@ -82,13 +103,16 @@
     <string name="delete_history_dialog_message">Todas las entradas serán borradas!</string>
     <string name="delete_history_dialog_confirmation">OK</string>
     <string name="delete_history_dialog_cancel">Cancelar</string>
+    <string name="delete_entry_history_dialog_message">¿Quiere borrar esta entrada?</string>
+    <string name="delete_entry_history_confirmation">Sí</string>
+    <string name="delete_entry_history_cancel">No</string>
 
     <!-- HistoryActivity Errors-->
-    <string name="error_not_in_database">No se encontró en la base de datos de trayectoria</string>
-    <string name="error_sqlexception">Este formato no es compatible con la función de trayectoria</string>
+    <string name="error_not_in_database">No ha sido encontrado en el historial.</string>
+    <string name="error_sqlexception">El historial no es compatible con este formato.</string>
 
     <!-- HistoryDetailsActivity-->
-    <string name="notice_deleted_from_database">Borrado de la trayectoria</string>
+    <string name="notice_deleted_from_database">Borrado del historial</string>
     <!-- HistoryDetailsActivity Action Navigation-->
     <string name="title_delete">Borrar</string>
 
@@ -99,35 +123,37 @@
     <!-- AboutDialog-->
     <string name="about_dialog">Acerca de</string>
     <string name="copyright">Aviso de derechos de autor</string>
-    <string name="translator">Traducción al español de Coruna: https://github.com/Coruna</string>
-
+    <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
+    <string name="github_link">Encuentre SecScanQR en Github: https://github.com/Fr4gorSoftware/SecScanQR</string>
+    <string name="license">Esta aplicación ha sido creada bajo los términos de la Licencia Pública General GNU, versión 2. Para más información visite: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="logo_designer">Logo creado por s-yours: https://github.com/s-yous</string>
+    <string name="translator">Traducción al español de Coruna: https://github.com/Coruna y Ludovit: https://github.com/ludovitkramar</string>
+    <string name="zxing_license">La aplicación utiliza la librería ZXING que es distribuida bajo la licencia Apache Software License 2.0. Para más información visite: http://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Ajustes</string>
     <!-- Scanner settings -->
     <string name="pref_header_scanner">Escáner</string>
-    <string name="pref_header_history_settings">Trayectoria</string>
-    <string name="pref_header_search_engine_settings">Search Engine</string>
+    <string name="pref_header_history_settings">Historial</string>
+    <string name="pref_header_search_engine_settings">Motor de búsqueda</string>
 
-    <string name="pref_title_camera">Cámara fotográfica</string>
+    <string name="pref_title_camera">Cámara</string>
     <string-array name="pref_camera_entries">
-        <item>cámara posterior</item>
+        <item>cámara trasera</item>
         <item>cámara frontal</item>
     </string-array>
     <string name="pref_title_auto_scan">Inicio automático del escáner</string>
-    <string name="pref_title_auto_clipboard">Inteligente portapapeles</string>
+    <string name="pref_title_auto_clipboard">Portapapeles inteligente</string>
 
-    <string name="pref_title_day_night_mode">Modo Día/Noche (Versión BETA)</string>
+    <string name="pref_title_day_night_mode">Modo Claro/Oscuro (Versión BETA)</string>
     <string-array name="pref_day_night_mode_entries">
-        <item>Día (Necesita un reinicio)</item>
-        <item>Noche (Necesita un reinicio)</item>
+        <item>Claro (requiere reinicio)</item>
+        <item>Oscuro (requiere reinicio)</item>
     </string-array>
-
-    <string name="pref_title_history">Trayectoria (encendido/apagado)</string>
+    <string name="pref_title_history">Historial (activar/desactivar)</string>
     <string-array name="pref_history_entries">
         <item>Activar</item>
         <item>Desactivar</item>
     </string-array>
-
     <string name="pref_title_search_engine">Buscador</string>
     <string-array name="pref_search_engine_entries">
         <item>Bing</item>
@@ -139,12 +165,10 @@
         <item>Yahoo</item>
         <item>Yandex (RUS)</item>
     </string-array>
-
-    <string name="pref_title_barcode_search_enigne">Buscador de código de barras</string>
+    <string name="pref_title_barcode_search_enigne">Buscador para códigos de barras</string>
     <string-array name="pref_barcode_search_engine_entries">
-        <item>No buscador adicional para los códigos de barras</item>
+        <item>Ningún buscador</item>
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-
-</resources>
+    </resources>
