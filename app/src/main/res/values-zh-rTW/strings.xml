@@ -32,7 +32,7 @@
     <string name="title_reset">重設</string>
     <string name="title_openInWeb">在網路上開啟</string>
     <string name="title_createContact">建立聯絡人</string>
-    
+
     <!-- GenerateActivity -->
     <string name="card_barcode_title">條碼</string>
     <string name="card_barcode_hint">建立不同類型的條碼</string>
@@ -50,28 +50,13 @@
     <string name="toast_save">已儲存至在內建儲存空間的「SecScanQR」資料夾</string>
     <string name="toast_permission_needed">需要權限</string>
     <string name="toast_erorr">遇到錯誤</string>
+    <string name="toast_error_data_to_big">超過了QR碼大小限制</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">條碼生成器</string>
-    <string-array name="barcode_formats_array">
-        <item>BARCODE</item>
-        <item>CODE_128</item>
-        <item>CODE_39</item>
-        <item>EAN_13</item>
-        <item>EAN_8</item>
-        <item>ITF</item>
-        <item>PDF_417</item>
-        <item>UPC_A</item>
-    </string-array>
-
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">您可以在此輸入一些文字</string>
     <string name="tv_format">格式：</string>
-    <string-array name="text_formats_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
-
-    </string-array>
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">先輸入一些文字</string>
     <string name="error_generate">此格式沒有有效的輸入</string>
@@ -79,10 +64,6 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">緯度範例：43.73</string>
     <string name="hint_longtitude">經度範例：10.73</string>
-    <string-array name="formats_geo_array">
-        <item>QR_CODE</item>
-        <item>AZTEC</item>
-    </string-array>
     <string name="cbLatitude">北緯</string>
     <string name="cbLongtitude">東經</string>
 
@@ -109,13 +90,12 @@
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">先輸入名字</string>
-    
+
     <!-- WifiGeneratorActivity -->
     <string name="cbHidden">隱藏</string>
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">密碼</string>
     <string name="tv_encryption">加密：</string>
-
     <!-- HistoryActivity -->
     <string name="reset_database">重設</string>
     <string name="share_database">分享</string>
@@ -161,11 +141,6 @@
         <item>後置相機</item>
         <item>前置相機</item>
     </string-array>
-    <string-array name="pref_camera_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
-
     <string name="pref_title_auto_scan">自動啟動掃描器</string>
     <string name="pref_title_auto_clipboard">智慧剪貼簿</string>
 
@@ -174,21 +149,11 @@
         <item>日間（需要重新啟動應用程式）</item>
         <item>夜間（需要重新啟動應用程式）</item>
     </string-array>
-    <string-array name="pref_day_night_mode_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
-
     <string name="pref_title_history">歷史紀錄（開啟／關閉）</string>
     <string-array name="pref_history_entries">
         <item>開啟</item>
         <item>關閉</item>
     </string-array>
-    <string-array name="pref_history_values">
-        <item>true</item>
-        <item>false</item>
-    </string-array>
-
     <string name="pref_title_search_engine">搜尋引擎</string>
     <string-array name="pref_search_engine_entries">
         <item>Bing</item>
@@ -200,27 +165,10 @@
         <item>Yahoo</item>
         <item>Yandex（俄羅斯）</item>
     </string-array>
-    <string-array name="pref_search_engine_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-    </string-array>
-
     <string name="pref_title_barcode_search_enigne">條碼搜尋引擎</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>條碼不使用額外的搜尋引擎</item>
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-    <string-array name="pref_barcode_search_engine_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
-</resources>
+    </resources>
