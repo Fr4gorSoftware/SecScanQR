@@ -44,8 +44,6 @@ Check out our [Translator FAQ](https://github.com/Fr4gorSoftware/SecScanQR/wiki/
 ## Donating
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
 
-[Bitcoin](https://www.blockchain.com/btc/address/1NppzAZ7nLDXwvYK7vgJJUZBbkzHS6S6zX)
-
 ## Designer
 Logo: [s-yous](https://github.com/s-yous)
 
