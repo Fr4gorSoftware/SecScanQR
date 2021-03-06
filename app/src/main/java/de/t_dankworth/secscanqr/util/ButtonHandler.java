@@ -104,7 +104,7 @@ public class ButtonHandler {
                         tempUrl = "https://duckduckgo.com/?q=";
                         break;
                     case "3":
-                        tempUrl = "http://www.google.com/#q=";
+                        tempUrl = "https://www.google.com/search?q=";
                         break;
                     case "4":
                         tempUrl = "https://www.qwant.com/?q=";
@@ -122,7 +122,7 @@ public class ButtonHandler {
                         tempUrl = "https://www.yandex.ru/search/?text=";
                         break;
                     default:
-                        tempUrl = "http://www.google.com/#q=";
+                        tempUrl = "https://www.google.com/search?q=";
                         break;
                 }
                 Uri uri = Uri.parse(tempUrl + qrcode);
@@ -160,7 +160,7 @@ public class ButtonHandler {
                             tempUrl = "https://duckduckgo.com/?q=";
                             break;
                         case "3":
-                            tempUrl = "http://www.google.com/#q=";
+                            tempUrl = "https://www.google.com/search?q=";
                             break;
                         case "4":
                             tempUrl = "https://www.qwant.com/?q=";
@@ -178,7 +178,7 @@ public class ButtonHandler {
                             tempUrl = "https://www.yandex.ru/search/?text=";
                             break;
                         default:
-                            tempUrl = "http://www.google.com/#q=";
+                            tempUrl = "https://www.google.com/search?q=";
                             break;
                     }
                 } else {
@@ -191,7 +191,7 @@ public class ButtonHandler {
                                 tempUrl = "https://duckduckgo.com/?q=";
                                 break;
                             case "3":
-                                tempUrl = "http://www.google.com/#q=";
+                                tempUrl = "https://www.google.com/search?q=";
                                 break;
                             case "4":
                                 tempUrl = "https://www.qwant.com/?q=";
@@ -209,7 +209,7 @@ public class ButtonHandler {
                                 tempUrl = "https://www.yandex.ru/search/?text=";
                                 break;
                             default:
-                                tempUrl = "http://www.google.com/#q=";
+                                tempUrl = "https://www.google.com/search?q=";
                                 break;
                         }
                     } else {
@@ -221,7 +221,7 @@ public class ButtonHandler {
                                 tempUrl = "https://www.codecheck.info/product.search?q=";
                                 break;
                             default:
-                                tempUrl = "http://www.google.com/#q=";
+                                tempUrl = "https://www.google.com/search?q=";
                                 break;
                         }
                     }

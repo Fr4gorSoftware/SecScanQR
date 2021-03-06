@@ -4,14 +4,15 @@
     <string name="activity_generate">Генератор QR-кодов</string>
     <string name="activity_history">История</string>
     <string name="activity_history_details">История</string>
-    <string name="title_activity_geo_generator">Гео Генератор</string>
-    <string name="title_activity_text_generator">Текстовый Генератор</string>
-    <string name="title_activity_barcode_generate">Генератор Штрих-кодов</string>
-    <string name="title_activity_vcard_generator">vCard Генератор</string>
+    <string name="title_activity_geo_generator">Геогенератор</string>
+    <string name="title_activity_text_generator">Текстовый генератор</string>
+    <string name="title_activity_barcode_generate">Генератор штрих-кодов</string>
+    <string name="title_activity_vcard_generator">Генератор vCard</string>
+    <string name="title_activity_wifi_generator">Генератор Wi-Fi</string>
     <!-- MainActivity-->
     <string name="title_format">Формат кода:</string>
     <string name="title_information">Информация о кодах:</string>
-    <string name="default_text_main_activity">Нажмите кнопку «Сканировать» для сканирования QR-кода/штрих-кода</string>
+    <string name="default_text_main_activity">Нажмите кнопку «Сканирование» для сканирования QR-кода/штрих-кода</string>
     <string name="send_to">Поделиться с:</string>
     <string name="xzing_label">Для активации вспышки используйте клавиши регулировки громкости</string>
     <string name="notice_clipoard">Скопировано в буфер обмена</string>
@@ -29,22 +30,33 @@
     <string name="title_copy">Копировать</string>
     <string name="title_share">Поделиться</string>
     <string name="title_reset">Сбросить</string>
-    <string name="title_openInWeb">Открыть в Интернете</string>
+    <string name="title_openInWeb">Поиск в сети</string>
+    <string name="title_createContact">Создать контакт</string>
 
-    <!-- GenerateActivity-->
+    <!-- GenerateActivity -->
+    <string name="card_barcode_title">Штрих-код</string>
+    <string name="card_barcode_hint">Создание различных видов штрих-кодов</string>
+    <string name="card_text_title">Текст</string>
+    <string name="card_text_hint">Преобразование текста в QR-код</string>
+    <string name="card_location_title">Местоположение</string>
+    <string name="card_location_hint">Создание QR-кода в формате геолокации</string>
+    <string name="card_contact_title">Контакт</string>
+    <string name="card_contact_hint">Создание QR-кода в формате визитной карточки vCard</string>
+    <string name="card_wifi_title">Wi-Fi</string>
+    <string name="card_wifi_hint">Создание QR-кода с информацией о сети Wi-Fi</string>
+
+    <!-- GenerateResultActivity-->
     <string name="btn_save">Сохранить</string>
     <string name="toast_save">Сохранено в папке «SecScanQR» на внутренней памяти</string>
     <string name="toast_permission_needed">Требуется разрешение</string>
     <string name="toast_erorr">Произошла ошибка</string>
+    <string name="toast_error_data_to_big">Слишком много информации для QR-кода</string>
 
     <!-- BarcodeGeneratorActivity-->
-    <string name="activity_barcode_generator">Генератор Штрих-кодов</string>
-
-
+    <string name="activity_barcode_generator">Генератор штрих-кодов</string>
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Здесь вы можете ввести текст</string>
     <string name="tv_format">Формат: </string>
-
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">Сначала введите текст</string>
     <string name="error_generate">Недействительный ввод для этого формата</string>
@@ -52,9 +64,8 @@
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">Пример широты: 43.73</string>
     <string name="hint_longtitude">Пример долготы: 10.73</string>
-
-    <string name="cbLatitude">Север</string>
-    <string name="cbLongtitude">Восток</string>
+    <string name="cbLatitude">Северная</string>
+    <string name="cbLongtitude">Восточная</string>
 
     <!-- GeoGeneratorActivity Errors-->
     <string name="error_geo_first">Сначала заполните действительные значения широты и долготы</string>
@@ -62,7 +73,9 @@
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">Имя</string>
     <string name="hint_fn">Фамилия</string>
+    <string name="hint_bday">День рождения</string>
     <string name="hint_org">Организация</string>
+    <string name="hint_photo">Ссылка на фото</string>
     <string name="hint_web">Веб-сайт</string>
     <string name="hint_email">Эл. почта</string>
     <string name="hint_mobil">Мобильный номер</string>
@@ -73,18 +86,26 @@
     <string name="hint_city">Город</string>
     <string name="hint_state">Штат/Пригород</string>
     <string name="hint_country">Страна</string>
+    <string name="hint_note">Заметка</string>
 
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">Сначала введите имя или фамилию</string>
 
+    <!-- WifiGeneratorActivity -->
+    <string name="cbHidden">Скрытая</string>
+    <string name="hint_ssid">SSID</string>
+    <string name="hint_password">Пароль</string>
+    <string name="tv_encryption">Шифрование: </string>
     <!-- HistoryActivity -->
     <string name="reset_database">Сбросить</string>
     <string name="share_database">Поделиться</string>
-
     <!-- HistoryActivity Delete Dialog -->
     <string name="delete_history_dialog_message">Все записи будут удалены!</string>
     <string name="delete_history_dialog_confirmation">ОК</string>
     <string name="delete_history_dialog_cancel">Отмена</string>
+    <string name="delete_entry_history_dialog_message">Удалить эту запись?</string>
+    <string name="delete_entry_history_confirmation">Да</string>
+    <string name="delete_entry_history_cancel">Нет</string>
 
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Не найдено в базе данных истории</string>
@@ -102,11 +123,12 @@
     <!-- AboutDialog-->
     <string name="about_dialog">О приложении</string>
     <string name="copyright">Уведомление об авторских правах</string>
-    <string name="license">"Это приложение было создано в соответствии с GNU General Public License. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой: https://www.gnu.org/licenses/gpl-3.0.en.html"</string>
+    <string name="copyright_holder">Авторское право © 2017-2020 T-Dankworth</string>
+    <string name="github_link">SecScanQR на Github: https://github.com/Fr4gorSoftware/SecScanQR</string>
+    <string name="license">"Это приложение было создано в соответствии с GNU General Public License. Для получения дополнительной информации ознакомьтесь с приведённой ниже ссылкой: https://www.gnu.org/licenses/gpl-3.0.en.html"</string>
     <string name="logo_designer">"Логотип приложения был создан s-yous: https://github.com/s-yous "</string>
-    <string name="translator">Перевод на русский язык осуществил Vladimir Kosolapov: https://github.com/0x264f</string>
-    <string name="zxing_license">"Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0. Для получения дополнительной информации ознакомьтесь с приведенной ниже ссылкой. "</string>
-
+    <string name="translator">Перевод на русский язык осуществляли Vladimir Kosolapov (https://github.com/0x264f), solokot</string>
+    <string name="zxing_license">"Приложение использует библиотеку ZXING, которая находится под лицензией Apache 2.0. Для получения дополнительной информации ознакомьтесь с приведённой ниже ссылкой. "</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Настройки</string>
     <!-- Scanner settings -->
@@ -119,23 +141,19 @@
         <item>Задняя камера</item>
         <item>Фронтальная камера</item>
     </string-array>
-
     <string name="pref_title_auto_scan">Автозапуск сканера</string>
-
     <string name="pref_title_auto_clipboard">Умный буфер обмена</string>
 
     <string name="pref_title_day_night_mode">Режим день/ночь</string>
     <string-array name="pref_day_night_mode_entries">
-        <item>День (Требуется перезапуск)</item>
-        <item>Ночь (Требуется перезапуск)</item>
+        <item>День (требуется перезапуск)</item>
+        <item>Ночь (требуется перезапуск)</item>
     </string-array>
-
     <string name="pref_title_history">История</string>
     <string-array name="pref_history_entries">
-        <item>Вкл.</item>
-        <item>Выкл.</item>
+        <item>ВКЛ</item>
+        <item>ОТКЛ</item>
     </string-array>
-
     <string name="pref_title_search_engine">Поисковая система</string>
     <string-array name="pref_search_engine_entries">
         <item>Bing</item>
@@ -145,14 +163,12 @@
         <item>Qwant Lite</item>
         <item>Startpage</item>
         <item>Yahoo</item>
-        <item>Yandex</item>
+        <item>Яндекс</item>
     </string-array>
-
     <string name="pref_title_barcode_search_enigne">Поисковая система для штрих-кодов</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>По умолчанию</item>
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-
 </resources>
