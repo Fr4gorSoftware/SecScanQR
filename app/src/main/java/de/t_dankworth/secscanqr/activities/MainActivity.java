@@ -93,10 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.about:
-                AboutDialog aboutDialog = new AboutDialog(this);
-                aboutDialog.setTitle(R.string.about_dialog);
-                aboutDialog.show();
-                return true;
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
