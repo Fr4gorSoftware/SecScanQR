@@ -45,15 +45,15 @@
     <string name="card_wifi_title">Wifi</string>
     <string name="card_wifi_hint">创建包含 wifi 网络信息的 QR 码</string>
 
-        <!-- GenerateResultActivity-->
+    <!-- GenerateResultActivity-->
     <string name="btn_save">保存</string>
-    <string name="toast_save">保存到内部存储中的 "SecScanQR" 文件夹</string>
+    <string name="toast_save">保存到内部存储中的 \'SecScanQR\' 文件夹</string>
     <string name="toast_permission_needed">需要权限</string>
     <string name="toast_erorr">发生了一个错误</string>
+    <string name="toast_error_data_to_big">对一个二维码来说信息太多了</string>
 
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">条形码生成器</string>
-
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">您可以在这里输入一些文字</string>
     <string name="tv_format">格式：</string>
@@ -96,11 +96,10 @@
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">密码</string>
     <string name="tv_encryption">加密：</string>
-
-   <!-- HistoryActivity -->
+    <!-- HistoryActivity -->
     <string name="reset_database">重置</string>
     <string name="share_database">分享</string>
-   <!-- HistoryActivity Delete Dialog -->
+    <!-- HistoryActivity Delete Dialog -->
     <string name="delete_history_dialog_message">所有条目将被删除！</string>
     <string name="delete_history_dialog_confirmation">好</string>
     <string name="delete_history_dialog_cancel">取消</string>
@@ -142,9 +141,7 @@
         <item>后置相机</item>
         <item>前置相机</item>
     </string-array>
-
     <string name="pref_title_auto_scan">自动开始扫描</string>
-
     <string name="pref_title_auto_clipboard">智能剪贴板</string>
 
     <string name="pref_title_day_night_mode">日间/夜间模式 (BETA 版)</string>
@@ -152,13 +149,11 @@
         <item>日间（需要重启）</item>
         <item>夜间（需要重启）</item>
     </string-array>
-
     <string name="pref_title_history">历史（开/关）</string>
     <string-array name="pref_history_entries">
         <item>开</item>
         <item>关</item>
     </string-array>
-
     <string name="pref_title_search_engine">搜索引擎</string>
     <string-array name="pref_search_engine_entries">
         <item>Bing</item>
@@ -170,12 +165,10 @@
         <item>Yahoo</item>
         <item>Yandex (俄)</item>
     </string-array>
-
     <string name="pref_title_barcode_search_enigne">条形码搜索引擎</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>无额外的条形码搜索引擎</item>
         <item>Open Food Facts</item>
         <item>CodeCheck</item>
     </string-array>
-
 </resources>
