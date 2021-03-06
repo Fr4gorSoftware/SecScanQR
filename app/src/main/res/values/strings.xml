@@ -151,7 +151,7 @@
     <string name="copyright">Copyright Notice</string>
     <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
     <string name="github_link">Find SecScanQR on Github: https://github.com/Fr4gorSoftware/SecScanQR</string>
-    <string name="license">This App was created under the terms of the GNU General Public License. For more information please check out the link below: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="license">This App was created under the termsq of the GNU General Public License. For more information please check out the link below: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">The App logo was created by s-yous: https://github.com/s-yous</string>
     <string name="translator">English translation by Thore Dankworth: https://github.com/Fr4gorSoftware</string>
     <string name="zxing_license">The App uses the ZXING Library which is under the Apache 2.0 license. For more information please check out the link below: http://www.apache.org/licenses/LICENSE-2.0</string>
