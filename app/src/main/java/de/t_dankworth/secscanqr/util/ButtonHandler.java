@@ -89,6 +89,9 @@ public class ButtonHandler {
             Toast.makeText(activity.getApplicationContext(), activity.getResources().getText(R.string.error_scan_first), Toast.LENGTH_SHORT).show();
         } else {
             try {
+                if(qrcode.startsWith("URL:")){
+                    qrcode = qrcode.replace("URL:", "");
+                }
                 Uri uri = Uri.parse(qrcode);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 activity.startActivity(intent);
@@ -143,6 +146,9 @@ public class ButtonHandler {
             Toast.makeText(activity.getApplicationContext(), activity.getResources().getText(R.string.error_scan_first), Toast.LENGTH_SHORT).show();
         } else {
             try {
+                if(qrcode.startsWith("URL:")){
+                    qrcode = qrcode.replace("URL:", "");
+                }
                 Uri uri = Uri.parse(qrcode);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 activity.startActivity(intent);
