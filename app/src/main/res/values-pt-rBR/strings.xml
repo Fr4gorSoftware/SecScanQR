@@ -106,7 +106,6 @@
     <!-- AboutDialog-->
     <string name="about_dialog">Sobre</string>
     <string name="copyright">Aviso de Direitos Autorais</string>
-    <string name="copyright_holder">Copyright© 2017-2020 T-Dankworth</string>
     <string name="github_link">Encontre SecScanQR no Github: https://github.com/Fr4gorSoftware/SecScanQR</string>
     <string name="license">Este aplicativo foi criado sobre os termos da Licença Pública Geral GNU. Para mais informações, consulte o link: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">O logotipo deste aplicativo foi criado por s-yous: https://github.com/s-yous</string>

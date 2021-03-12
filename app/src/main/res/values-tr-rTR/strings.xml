@@ -126,7 +126,6 @@
     <!-- AboutDialog-->
     <string name="about_dialog">Hakkında</string>
     <string name="copyright">Telif Hakkı Bildirimi</string>
-    <string name="copyright_holder">Telif hakkı© 2017-2020 T-Dankworth</string>
     <string name="github_link">Github da SecScanQR bul: https://github.com/Fr4gorSoftware/SecScanQR</string>
     <string name="license">Bu uygulama GNU Genel Kamu Lisansı şartları altında oluşturuldu. Daha fazla bilgi için lütfen aşağıdaki bağlantıyı kontrol edin: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Uygulama logosu s-yous tarafından oluşturuldu: https://github.com/s-yous</string>
