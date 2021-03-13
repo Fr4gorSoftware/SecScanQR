@@ -74,7 +74,18 @@ public class GeneratorResultActivity extends AppCompatActivity {
 
         hintMap.put(EncodeHintType.CHARACTER_SET, "UTF-8");
         hintMap.put(EncodeHintType.MARGIN, 1); /* default = 4 */
-        hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+        switch(format){
+            case AZTEC:
+                hintMap.put(EncodeHintType.ERROR_CORRECTION, 25);
+                break;
+            case PDF_417:
+                hintMap.put(EncodeHintType.ERROR_CORRECTION, 0);
+            default:
+                hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+                break;
+
+        }
+
         try{
             BitMatrix bitMatrix = multiFormatWriter.encode(text2Code, format, 1000,1000, hintMap);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
