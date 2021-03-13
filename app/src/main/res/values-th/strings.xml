@@ -118,7 +118,6 @@
     <!-- AboutDialog-->
     <string name="about_dialog">เกีย่วกับ</string>
     <string name="copyright">ประกาศเกี่ยวกับลิขสิทธิ์</string>
-    <string name="copyright_holder">ลิขสิทธิ์© 2017-2020 T-Dankworth</string>
     <string name="license">แอพพลิเคชันนี้สร้างภายใต้ใบอนุญาต GNU General Public สำหรับข้อมูลเพิ่มเติมสามารถดูได้ที่ลิงค์ด้านล่างนี้: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">โลโก้ของแอพพลิเคชันนี้สร้างโดย s-yous: https://github.com/s-yous</string>
     <string name="translator">แปลภาษาไทยโดย Vatunyoo Suwannapisit: https://github.com/kerlos</string>

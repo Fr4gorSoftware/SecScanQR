@@ -112,7 +112,6 @@
     <!-- AboutDialog-->
     <string name="about_dialog">על אודות</string>
     <string name="copyright">הודעת זכויות יוצרים</string>
-    <string name="copyright_holder">כל הזכויות שמורות © 2012‏-2020 ל־T-Dankworth</string>
     <string name="github_link">
 ניתן למצוא את SecScanQR ב־GitHub:‏ https://github.com/Fr4gorSoftware/SecScanQR
 </string>
