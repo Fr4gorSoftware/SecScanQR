@@ -20,15 +20,17 @@
 
             <ImageView
                 android:id="@+id/resultImageMain"
-                android:clickable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/border_image"
+                android:layout_width="250px"
+                android:layout_height="250px"
                 android:layout_margin="10sp"
+                android:clickable="true"
                 android:maxWidth="250sp"
                 android:maxHeight="250sp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/labelFormat"
@@ -41,32 +43,35 @@
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/resultImageMain"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/tvFormat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/textcolor"
                 android:padding="10sp"
+                android:textColor="?attr/textcolor"
                 android:textSize="18sp"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/resultImageMain"
-                app:layout_constraintTop_toBottomOf="@+id/labelFormat" />
+                app:layout_constraintTop_toBottomOf="@+id/labelFormat"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/labelInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10sp"
                 android:text="@string/title_information"
                 android:textColor="?attr/textcolor"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:padding="10sp"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvFormat" />
+                app:layout_constraintTop_toBottomOf="@+id/resultImageMain"
+                tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/tvTxtqrcode"
@@ -92,7 +97,8 @@
         android:visibility="gone"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/main_action_navigation" />
+        app:menu="@menu/main_action_navigation"
+        tools:visibility="visible" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
