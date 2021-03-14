@@ -8,44 +8,36 @@
     <string name="title_activity_text_generator">Text Generator</string>
     <string name="title_activity_barcode_generate">Barcode Generator</string>
     <string name="title_activity_vcard_generator">VCard Generator</string>
-    
     <!-- MainActivity-->
     <string name="title_format">Formato del codice:</string>
     <string name="title_information">Informazioni sul codice:</string>
-    <string name="default_text_main_activity">Premere il pulsante "Scansiona" per scansionare un QR-Code/Barcode</string>
+    <string name="default_text_main_activity">Premere il pulsante \'Scansiona\' per scansionare un QR-Code/Barcode</string>
     <string name="send_to">Condividi con:</string>
     <string name="xzing_label">Attiva il flash usando il tasto del volume</string>
     <string name="notice_clipoard">Copiato negli appunti</string>
-    
     <!--MainActivity Errors-->
     <string name="error_scan_first">È necessario scansionare prima un QR-Code</string>
     <string name="error_canceled_scan">Scansione cancellata</string>
     <string name="error_add_to_database">Non è stato possibile aggiuntere il QR-Code alla cronologia</string>
-    
     <!-- MainActivity Navigation-->
     <string name="title_scan">Scansiona</string>
     <string name="title_generate">Genera</string>
     <string name="title_history">Cronologia</string>
-    
     <!-- MainActivity Action Navigation-->
     <string name="title_copy">Copia</string>
     <string name="title_share">Condividi</string>
     <string name="title_reset">Reimposta</string>
     <string name="title_openInWeb">Apri nel Web</string>
-
-    <!-- GenerateActivity-->
+    <!-- GenerateResultActivity-->
     <string name="btn_save">Salva</string>
-    <string name="toast_save">Salvato nella cartella "SecScanQR" nella memoria interna</string>
+    <string name="toast_save">Salvato nella cartella \'SecScanQR\' nella memoria interna</string>
     <string name="toast_permission_needed">È necessario il permesso</string>
     <string name="toast_erorr">Si è verificato un errore</string>
-
     <!-- BarcodeGeneratorActivity-->
     <string name="activity_barcode_generator">Generatore Barcode</string>
-
     <!-- TextGeneratorActivity-->
     <string name="hint_text2qr">Inserire qui il testo</string>
     <string name="tv_format">Formato: </string>
-
     <!-- TextGeneratorActivity Erorrs-->
     <string name="error_text_first">È necessario inserire prima del testo</string>
     <string name="error_generate">Input non valido per questo formato</string>
@@ -73,7 +65,6 @@
     <string name="hint_city">città</string>
     <string name="hint_state">regione</string>
     <string name="hint_country">stato</string>
-
     <!-- VCARDGeneratorActivity Errors-->
     <string name="error_fn_or_name_first">È nencessario inserire prima un cognome o un nome</string>
 
@@ -84,14 +75,12 @@
     <string name="delete_history_dialog_message">Tutte le voci saranno eliminate!</string>
     <string name="delete_history_dialog_confirmation">OK</string>
     <string name="delete_history_dialog_cancel">Cancella</string>
-
     <!-- HistoryActivity Errors-->
     <string name="error_not_in_database">Non è stato trovato nella cronologia</string>
     <string name="error_sqlexception">Questo formato non è supportato nella cronologia</string>
 
     <!-- HistoryDetailsActivity-->
     <string name="notice_deleted_from_database">Eliminato dalla cronologia</string>
-
     <!-- HistoryDetailsActivity Action Navigation-->
     <string name="title_delete">Elimina</string>
 
@@ -101,15 +90,12 @@
 
     <!-- AboutDialog-->
     <string name="about_dialog">Informazioni</string>
-    <string name="copyright">Informazioni sul copyright</string>
     <string name="license">Questa applicazione è stata creata sotto i termini della licenza GNU. Per maggior informazioni consultare il seguente URL: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Il logo dell\'applicazione è stato creato da s-yous: https://github.com/s-yous</string>
     <string name="translator">Traduzione italiana a cura di abonte ed ema-pe</string>
     <string name="zxing_license">L\'applicazione utilizza la libreria ZXING che è rilasciata sotto licenza Apache 2.0. Per maggiori informazioni consultare il seguente URL: http://www.apache.org/licenses/LICENSE-2.0</string>
-
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Impostazioni</string>
-
     <!-- Scanner settings -->
     <string name="pref_header_scanner">Scanner</string>
     <string name="pref_header_history_settings">Cronologia</string>
@@ -120,9 +106,7 @@
         <item>fotocamera posteriore</item>
         <item>fotocamera frontale</item>
     </string-array>
-
     <string name="pref_title_auto_scan">Avvio automatico dello scanner</string>
-
     <string name="pref_title_auto_clipboard">Appunti intelligenti</string>
 
     <string name="pref_title_day_night_mode">Modalità Giorno/Notte (in versione BETA)</string>
@@ -130,15 +114,12 @@
         <item>Giorno (Necessario il riavvio)</item>
         <item>Notte (Necessario il riavvio)</item>
     </string-array>
-
     <string name="pref_title_history">Cronologia (Attiva/Disattiva)</string>
     <string-array name="pref_history_entries">
         <item>Attiva</item>
         <item>Disattiva</item>
     </string-array>
-
     <string name="pref_title_search_engine">Motore di ricerca</string>
-   
     <string name="pref_title_barcode_search_enigne">Motore di ricerca per i Barcode</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>Nessun ulteriore motore di ricerca per i Barcode</item>
