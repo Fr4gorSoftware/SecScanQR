@@ -4,10 +4,13 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -38,7 +41,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 
 /**
  * Created by Thore Dankworth
- * Last Update: 26.10.2020
+ * Last Update: 14.03.2021
  * Last Update by Thore Dankworth
  *
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
@@ -47,7 +50,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 public class GeneratorResultActivity extends AppCompatActivity {
 
     ImageView codeImage;
-    Button btnSave;
+    Button btnSave, btnShare;
     MultiFormatWriter multiFormatWriter;
     private String text2Code;
     private int formatInt;
@@ -64,6 +67,7 @@ public class GeneratorResultActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         codeImage = (ImageView) findViewById(R.id.resultImage);
         btnSave = (Button) findViewById(R.id.btnSave);
+        btnShare = (Button) findViewById(R.id.btnShare);
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         text2Code = intent.getStringExtra("CODE");
@@ -106,6 +110,57 @@ public class GeneratorResultActivity extends AppCompatActivity {
             }
         });
 
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareQrCode(saveQrCodeInCache(bitmap));
+            }
+        });
+
+    }
+
+    /**
+     * This method handles the share intent itself
+     */
+    private void shareQrCode(Uri uri){
+        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_STREAM, uri);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.setType("image/png");
+        startActivity(intent);
+    }
+
+    /**
+     * Saves the QR Code as PNG to the app's cache directory.
+     * @param image Bitmap to save.
+     * @return Uri of the saved file or null
+     */
+    private Uri saveQrCodeInCache(Bitmap image) {
+        File imagesFolder = new File(getCacheDir(), "images");
+        Uri uri = null;
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DATE);
+        int month = calendar.get(Calendar.MONTH) + 1;
+        int year = calendar.get(Calendar.YEAR);
+        Random rand = new Random();
+        int n = rand.nextInt(50);
+        int p = rand.nextInt(50);
+
+        try {
+            imagesFolder.mkdirs();
+            File file = new File(imagesFolder, "SecScanQR" + " " + day + "." + month + "." + year + " " + n + "-" + p + ".png");
+
+            FileOutputStream fos = new FileOutputStream(file);
+            image.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            fos.flush();
+            fos.close();
+            uri = FileProvider.getUriForFile(this, "de.t_dankworth.fileprovider", file);
+
+        } catch (IOException e) {
+            Log.d("ERROR:", "IOException while trying to write file for sharing: " + e.getMessage());
+        }
+        return uri;
     }
 
     /**
@@ -122,10 +177,10 @@ public class GeneratorResultActivity extends AppCompatActivity {
         int p = rand.nextInt(50);
         Bitmap image = bitmap;
 
-        File f = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator + day + "." + month + "." + year + " " + n + "-" + p + ".png");
+        File file = new File(Environment.getExternalStorageDirectory().toString() + File.separator + "SecScanQR" + File.separator + day + "." + month + "." + year + " " + n + "-" + p + ".png");
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream(f);
+            fos = new FileOutputStream(file);
             // Use the compress method on the BitMap object to write image to the OutputStream
             image.compress(Bitmap.CompressFormat.PNG, 100, fos);
         } catch (Exception e) {
