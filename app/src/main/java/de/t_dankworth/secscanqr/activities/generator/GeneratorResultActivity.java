@@ -159,6 +159,7 @@ public class GeneratorResultActivity extends AppCompatActivity {
 
         } catch (IOException e) {
             Log.d("ERROR:", "IOException while trying to write file for sharing: " + e.getMessage());
+            Toast.makeText(this, this.getResources().getText(R.string.toast_erorr), Toast.LENGTH_LONG).show();
         }
         return uri;
     }
