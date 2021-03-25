@@ -123,10 +123,10 @@
     <string name="about_dialog">O aplikacji</string>
     <string name="copyright">Informacja o prawach autorskich</string>
     <string name="github_link">Znajdź SecScanQR na Github: https://github.com/Fr4gorSoftware/SecScanQR</string>    
-    <string name="license">Aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="license">Aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, skorzystaj z poniższego linku:\nhttps://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
     <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
-    <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: http://www.apache.org/licenses/LICENSE-2.0</string>
+    <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, skorzystaj z poniższego linku:\nhttp://www.apache.org/licenses/LICENSE-2.0</string>
     <!-- Strings related to Settings -->
     <string name="title_activity_settings">Ustawienia</string>
     <!-- Scanner settings -->
@@ -136,8 +136,8 @@
 
     <string name="pref_title_camera">Aparat</string>
     <string-array name="pref_camera_entries">
-        <item>tylna kamera</item>
-        <item>przednia kamera</item>
+        <item>Kamera tylna</item>
+        <item>Kamera przednia</item>
     </string-array>
 
     <string name="pref_title_auto_scan">Autostart skanera</string>
