@@ -79,7 +79,7 @@
 
     <!-- GeoGeneratorActivity-->
     <string name="hint_latitude">latitude example: 43.73</string>
-    <string name="hint_longtitude">longtitude example: 10.73</string>
+    <string name="hint_longitude">longitude example: 10.73</string>
     <string-array name="formats_geo_array" translatable="false">
         <item>QR_CODE</item>
         <item>AZTEC</item>
@@ -88,7 +88,7 @@
     <string name="cbLongtitude">east</string>
 
     <!-- GeoGeneratorActivity Errors-->
-    <string name="error_geo_first">First fill in valid values for the latitude and longtitude</string>
+    <string name="error_geo_first">First fill in valid values for the latitude and longitude</string>
 
     <!-- VCARDGeneratorActivity-->
     <string name="hint_name">name</string>
