@@ -1,39 +1,38 @@
 <resources>
-    <!--Activity labels -->
+    <!-- Activity labels  -->
     <string name="app_name">SecScanQR</string>
-    <string name="activity_generate">Generator Kodu QR</string>
+    <string name="activity_generate">Generator kodu QR</string>
     <string name="activity_history">Historia</string>
     <string name="activity_history_details">Historia</string>
-    <string name="title_activity_geo_generator">Generator Geograficzny</string>
-    <string name="title_activity_text_generator">Generator Tekstu</string>
-    <string name="title_activity_barcode_generate">Generator Kodu kreskowego</string>
+    <string name="title_activity_geo_generator">Generator geograficzny</string>
+    <string name="title_activity_text_generator">Generator tekstu</string>
+    <string name="title_activity_barcode_generate">Generator kodu kreskowego</string>
     <string name="title_activity_vcard_generator">Generator VCard</string>
     <string name="title_activity_wifi_generator">Generator Wi-Fi</string>
-    <!-- MainActivity-->
+    <!--  MainActivity -->
     <string name="title_format">Format kodu:</string>
     <string name="title_information">Informacje o kodzie:</string>
-    <string name="default_text_main_activity">Naciśnij przycisk "Skanuj", aby zeskanować kod QR/kreskowy</string>
+    <string name="default_text_main_activity">Naciśnij przycisk \'Skanuj\', aby zeskanować kod QR/kreskowy</string>
     <string name="send_to">Udostępnij za pomocą:</string>
     <string name="xzing_label">Włącz latarkę za pomocą klawiszy głośności</string>
     <string name="notice_clipoard">Skopiowane do schowka</string>
-    <!--MainActivity Errors-->
+    <!-- MainActivity Errors -->
     <string name="error_scan_first">Zeskanuj najpierw kod QR</string>
     <string name="error_canceled_scan">Anulowałeś skanowanie</string>
     <string name="error_add_to_database">Nie udało się dodać kodu QR do historii</string>
     <string name="error_file_not_found">Nie znaleziono pliku</string>
     <string name="error_code_not_found">Nie znaleziono kodu kreskowego/kodu QR</string>
-    <!-- MainActivity Navigation-->
+    <!--  MainActivity Navigation -->
     <string name="title_scan">Skanuj</string>
     <string name="title_generate">Generuj</string>
     <string name="title_history">Historia</string>
-    <!-- MainActivity Action Navigation-->
+    <!--  MainActivity Action Navigation -->
     <string name="title_copy">Kopiuj</string>
     <string name="title_share">Udostępnij</string>
     <string name="title_reset">Usuń</string>
     <string name="title_openInWeb">Otwórz w Internecie </string>
     <string name="title_createContact">Utwórz kontakt</string>
-
-    <!-- GenerateActivity-->
+    <!--  GenerateActivity  -->
     <string name="card_barcode_title">Kod kreskowy</string>
     <string name="card_barcode_hint">Utwórz różne rodzaje kodów kreskowych</string>
     <string name="card_text_title">Tekst</string>
@@ -44,34 +43,28 @@
     <string name="card_contact_hint">Utwórz kod QR w formacie VCard</string>
     <string name="card_wifi_title">Wi-Fi</string>
     <string name="card_wifi_hint">Utwórz kod QR z informacjami o sieci Wi-Fi</string>
-    
-    <!-- GenerateResultActivity-->
+    <!--  GenerateResultActivity -->
     <string name="btn_save">Zapisz</string>
-    <string name="toast_save">Zapisano w folderze "SecScanQR" w pamięci wewnętrznej</string>
+    <string name="toast_save">Zapisano w folderze \'SecScanQR\' w pamięci wewnętrznej</string>
     <string name="toast_permission_needed">Wymagane jest zezwolenie</string>
     <string name="toast_erorr">Wystąpił błąd</string>
-
-    <!-- BarcodeGeneratorActivity-->
+    <string name="toast_error_data_to_big">Za dużo informacji w przypadku kodu QR</string>
+    <!--  BarcodeGeneratorActivity -->
     <string name="activity_barcode_generator">Generator kodów kreskowych</string>
-
-    <!-- TextGeneratorActivity-->
+    <!--  TextGeneratorActivity -->
     <string name="hint_text2qr">Tutaj możesz wpisać tekst</string>
     <string name="tv_format">Format: </string>
-
-    <!-- TextGeneratorActivity Erorrs-->
-    <string name="error_text_first">Wpisz wymagany pierwszy typ Tekst</string>
+    <!--  TextGeneratorActivity Erorrs -->
+    <string name="error_text_first">Najpierw wpisz wymagany tekst</string>
     <string name="error_generate">Brak poprawnych danych wejściowych dla tego formatu</string>
-
-    <!-- GeoGeneratorActivity-->
+    <!--  GeoGeneratorActivity -->
     <string name="hint_latitude">szerokość geograficzna: 43,73</string>
     <string name="hint_longtitude">długość geograficzna: 10.73</string>
     <string name="cbLatitude">północ</string>
     <string name="cbLongtitude">wschód</string>
-
-    <!-- GeoGeneratorActivity Errors-->
-    <string name="error_geo_first">Wprowadź prawidłowe wartości szerokości i długości geograficznej</string>
-
-    <!-- VCARDGeneratorActivity-->
+    <!--  GeoGeneratorActivity Errors -->
+    <string name="error_geo_first">Najpierw wprowadź prawidłowe wartości szerokości i długości geograficznej</string>
+    <!--  VCARDGeneratorActivity -->
     <string name="hint_name">imię</string>
     <string name="hint_fn">nazwisko</string>
     <string name="hint_bday">urodziny</string>
@@ -88,74 +81,63 @@
     <string name="hint_state">województwo</string>
     <string name="hint_country">kraj</string>
     <string name="hint_note">uwagi</string>
-
-    <!-- VCARDGeneratorActivity Errors-->
-    <string name="error_fn_or_name_first">Wpisz wymagany pierwszy typ nazwisko lub imię</string>
-
-    <!-- WifiGeneratorActivity -->
+    <!--  VCARDGeneratorActivity Errors -->
+    <string name="error_fn_or_name_first">Najpierw wpisz nazwisko lub imię</string>
+    <!--  WifiGeneratorActivity  -->
     <string name="cbHidden">Ukryty</string>
     <string name="hint_ssid">SSID</string>
     <string name="hint_password">Hasło</string>
     <string name="tv_encryption">Szyfrowanie: </string>
-
-    <!-- HistoryActivity -->
+    <!--  HistoryActivity  -->
     <string name="reset_database">Usuń</string>
     <string name="share_database">Udostępnij</string>
-    <!-- HistoryActivity Delete Dialog -->
+    <!--  HistoryActivity Delete Dialog  -->
     <string name="delete_history_dialog_message">Wszystkie wpisy zostaną usunięte!</string>
     <string name="delete_history_dialog_confirmation">OK</string>
     <string name="delete_history_dialog_cancel">Anuluj</string>
-
-    <!-- HistoryActivity Errors-->
+    <string name="delete_entry_history_dialog_message">Czy chcesz usunąć ten wpis?</string>
+    <string name="delete_entry_history_confirmation">Tak</string>
+    <string name="delete_entry_history_cancel">Nie</string>
+    <!--  HistoryActivity Errors -->
     <string name="error_not_in_database">Nie znaleziono historii w bazie danych</string>
     <string name="error_sqlexception">Ten format nie jest obsługiwany przez funkcję historia</string>
-
-    <!-- HistoryDetailsActivity-->
+    <!--  HistoryDetailsActivity -->
     <string name="notice_deleted_from_database">Usunięto z historii</string>
-    <!-- HistoryDetailsActivity Action Navigation-->
+    <!--  HistoryDetailsActivity Action Navigation -->
     <string name="title_delete">Usuń</string>
-
-    <!-- Optionsmenu-->
+    <!--  Optionsmenu -->
     <string name="settings_menu_about">O aplikacji</string>
     <string name="settings_settings">Ustawienia</string>
-
-    <!-- AboutDialog-->
+    <!--  AboutDialog -->
     <string name="about_dialog">O aplikacji</string>
-    <string name="copyright">Informacja o prawach autorskich</string>
-    <string name="github_link">Znajdź SecScanQR na Github: https://github.com/Fr4gorSoftware/SecScanQR</string>    
-    <string name="license">Aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: https://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="copyright_holder">Copyright© 2017-2021 T-Dankworth</string>
+    <string name="license">Aplikacja została stworzona na warunkach Powszechnej Licencji Publicznej GNU. Aby uzyskać więcej informacji, skorzystaj z poniższego linku:\nhttps://www.gnu.org/licenses/gpl-3.0.en.html</string>
     <string name="logo_designer">Logo aplikacji zostało utworzone przez s-yous: https://github.com/s-yous</string>
     <string name="translator">Tłumaczenie na język polski Waldemar Stoczkowski: https://github.com/WaldiSt</string>
-    <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, zapoznaj się z linkiem poniżej: http://www.apache.org/licenses/LICENSE-2.0</string>
-    <!-- Strings related to Settings -->
+    <string name="zxing_license">Aplikacja korzysta z biblioteki ZXING, która jest objęta licencją Apache 2.0. Aby uzyskać więcej informacji, skorzystaj z poniższego linku:\nhttp://www.apache.org/licenses/LICENSE-2.0</string>
+    <!--  Strings related to Settings  -->
     <string name="title_activity_settings">Ustawienia</string>
-    <!-- Scanner settings -->
+    <!--  Scanner settings  -->
     <string name="pref_header_scanner">Skaner</string>
     <string name="pref_header_history_settings">Historia</string>
     <string name="pref_header_search_engine_settings">Wyszukiwarka</string>
-
     <string name="pref_title_camera">Aparat</string>
     <string-array name="pref_camera_entries">
-        <item>tylna kamera</item>
-        <item>przednia kamera</item>
+        <item>Kamera tylna</item>
+        <item>Kamera przednia</item>
     </string-array>
-
     <string name="pref_title_auto_scan">Autostart skanera</string>
-
     <string name="pref_title_auto_clipboard">Inteligentny schowek</string>
-
     <string name="pref_title_day_night_mode">Tryb dzienny/nocny (wersja BETA)</string>
     <string-array name="pref_day_night_mode_entries">
         <item>Dzień (wymaga ponownego uruchomienia)</item>
         <item>Noc (wymaga ponownego uruchomienia)</item>
     </string-array>
-
     <string name="pref_title_history">Przechowywanie historii</string>
     <string-array name="pref_history_entries">
         <item>Włączone</item>
         <item>Wyłączone</item>
     </string-array>
-
     <string name="pref_title_search_engine">Wyszukiwarka</string>
     <string-array name="pref_search_engine_entries">
         <item>Bing</item>
@@ -167,12 +149,10 @@
         <item>Yahoo</item>
         <item>Yandex (RUS)</item>
     </string-array>
-
     <string name="pref_title_barcode_search_enigne">Wyszukiwarka kodów kreskowych</string>
     <string-array name="pref_barcode_search_engine_entries">
         <item>Brak dodatkowej wyszukiwarki kodów kreskowych</item>
         <item>Fakty dotyczące otwartej żywności</item>
         <item>CodeCheck</item>
     </string-array>
-
 </resources>
