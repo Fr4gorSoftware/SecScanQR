@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.view.MenuItem;
@@ -57,6 +56,8 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
 import de.t_dankworth.secscanqr.util.HistoryEntity;
 import de.t_dankworth.secscanqr.util.HistoryViewModel;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
@@ -71,7 +72,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
  * This class is the MainActivity and is the starting point of the App
  * From here the User can start a QR-Code scan and can go to the Generate Activity
  */
-public class ScannerActivity extends AppCompatActivity {
+public class ScannerActivity extends MyAppCompatActivity {
 
     private TextView mTvInformation, mTvFormat, mLabelInformation, mLabelFormat;
     private BottomNavigationView action_navigation;

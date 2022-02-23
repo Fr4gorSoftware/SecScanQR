@@ -5,7 +5,6 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.view.View;
 
@@ -13,6 +12,7 @@ import android.view.View;
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
 
 /**
  * Created by Thore Dankworth
@@ -22,7 +22,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * This class is just a forwarding to the specific generators
  */
 
-public class GenerateActivity extends AppCompatActivity implements View.OnClickListener {
+public class GenerateActivity extends MyAppCompatActivity implements View.OnClickListener {
 
     final Activity activity = this;
     private GeneralHandler generalHandler;

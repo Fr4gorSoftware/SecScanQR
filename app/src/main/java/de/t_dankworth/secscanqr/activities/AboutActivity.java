@@ -1,7 +1,5 @@
 package de.t_dankworth.secscanqr.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -14,7 +12,9 @@ import de.t_dankworth.secscanqr.R;
 import mehdi.sakout.aboutpage.AboutPage;
 import mehdi.sakout.aboutpage.Element;
 
-public class AboutActivity extends AppCompatActivity {
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
+public class AboutActivity extends MyAppCompatActivity {
 
     private boolean drakMode = false;
 

@@ -14,8 +14,6 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -32,6 +30,8 @@ import de.t_dankworth.secscanqr.activities.generator.GeneratorResultActivity;
 import de.t_dankworth.secscanqr.util.DatabaseHelper;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 import static de.t_dankworth.secscanqr.util.ButtonHandler.copyToClipboard;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.createContact;
 import static de.t_dankworth.secscanqr.util.ButtonHandler.openInWeb;
@@ -45,7 +45,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 * This class is the HistoryDetailsActivity shows details and further functionality for the chosen item
 */
 
-public class HistoryDetailsActivity extends AppCompatActivity {
+public class HistoryDetailsActivity extends MyAppCompatActivity {
 
     private GeneralHandler generalHandler;
 

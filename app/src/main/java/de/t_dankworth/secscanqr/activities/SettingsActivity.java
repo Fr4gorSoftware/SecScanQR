@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
-import androidx.appcompat.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
@@ -94,19 +93,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
-    }
-
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
-    private void setupActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            // Show the Up button in the action bar.
-            //Because of a NUG deactivated
-            //actionBar.setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     /**
@@ -221,16 +207,5 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return super.onOptionsItemSelected(item);
         }
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                super.onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-
-    }
+    
 }

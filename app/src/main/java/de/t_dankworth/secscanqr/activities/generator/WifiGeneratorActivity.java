@@ -2,7 +2,6 @@ package de.t_dankworth.secscanqr.activities.generator;
 
 import android.app.Activity;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +17,8 @@ import com.google.zxing.MultiFormatWriter;
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 /**
  * Created by Thore Dankworth
  * Last Update: 24.10.2020
@@ -26,7 +27,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * This class is all about the wifi information to QR-Code Generate Activity.
  */
 
-public class WifiGeneratorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class WifiGeneratorActivity extends MyAppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     EditText tfSSID, tfPassword;
     CheckBox cbHidden;
