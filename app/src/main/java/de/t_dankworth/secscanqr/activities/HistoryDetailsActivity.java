@@ -153,8 +153,10 @@ public class HistoryDetailsActivity extends AppCompatActivity {
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             bitmap = barcodeEncoder.createBitmap(bitMatrix);
             codeImage.setImageBitmap(bitmap);
+            codeImage.setEnabled(true);
         } catch (Exception e){
-            codeImage.setVisibility(View.GONE);
+            codeImage.setImageResource(R.drawable.ic_baseline_error_24);
+            codeImage.setEnabled(false);
         }
     }
 }
