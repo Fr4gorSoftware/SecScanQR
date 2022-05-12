@@ -40,9 +40,6 @@ Check out our [Translator FAQ](https://github.com/Fr4gorSoftware/SecScanQR/wiki/
   - Slovak: [Tibor Repček](https://github.com/tiborepcek)
   - Spanish: [Coruna](https://github.com/Coruna)
   - Thai: [Vatunyoo Suwannapisit](https://github.com/kerlos)  
-  
-## Donating
-[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=A98V4N7DX232C)
 
 ## Designer
 Logo: [s-yous](https://github.com/s-yous)
