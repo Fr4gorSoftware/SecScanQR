@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.google.zxing.client.android.Intents;
@@ -12,6 +11,8 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import de.t_dankworth.secscanqr.R;
+
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
 
 /**
  * Created by Thore Dankworth
@@ -22,7 +23,7 @@ import de.t_dankworth.secscanqr.R;
  * If your desired app does not support SecScanQR for scanning QR-Codes please ask them to implement it.
  */
 
-public class ThirdPartyScannerActivity extends AppCompatActivity {
+public class ThirdPartyScannerActivity extends MyAppCompatActivity {
 
     final Activity activity = this;
     private String qrcode = "";

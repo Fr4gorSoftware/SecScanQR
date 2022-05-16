@@ -5,7 +5,6 @@ import android.app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +20,8 @@ import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 /**
  * Created by Thore Dankworth
  * Last Update: 13.12.2019
@@ -28,7 +29,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  *
  * This class is all about the geo location to QR-Code Generate Activity.
  */
-public class GeoGeneratorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class GeoGeneratorActivity extends MyAppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     EditText tfLatitude, tfLongtitude;
     CheckBox cbLatitude, cbLongtitude;

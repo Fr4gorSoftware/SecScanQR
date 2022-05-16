@@ -3,7 +3,6 @@ package de.t_dankworth.secscanqr.activities.generator;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,6 +16,7 @@ import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
 
 /**
  * Created by Thore Dankworth
@@ -26,7 +26,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * This class is all about the value to BARCODE Generate Activity.
  */
 
-public class BarcodeGenerateActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class BarcodeGenerateActivity extends MyAppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText text;
     int format;

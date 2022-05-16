@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -29,6 +28,8 @@ import de.t_dankworth.secscanqr.util.HistoryEntity;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 import de.t_dankworth.secscanqr.util.HistoryViewModel;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
 
 
@@ -41,7 +42,7 @@ import static de.t_dankworth.secscanqr.util.ButtonHandler.shareTo;
  */
 
 
-public class HistoryActivity extends AppCompatActivity {
+public class HistoryActivity extends MyAppCompatActivity {
 
     private static final String TAG = "History";
     private GeneralHandler generalHandler;

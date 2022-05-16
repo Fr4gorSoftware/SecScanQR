@@ -3,7 +3,6 @@ package de.t_dankworth.secscanqr.activities.generator;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +17,8 @@ import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.activities.MainActivity;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 /**
  * Created by Thore Dankworth
  * Last Update: 01.05.2020
@@ -26,7 +27,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * This class is all about the VCard to QR-Code Generate Activity.
  */
 
-public class VCardGeneratorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class VCardGeneratorActivity extends MyAppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     EditText tfFirstName, tfName, tfOrg, tfTeleWork, tfTelePrivate, tfMobil, tfEmail, tfWeb, tfStreet, tfPLZ, tfCity, tfState, tfCountry, tfPhoto, tfBday, tfNote;
     int format;

@@ -8,12 +8,10 @@ import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -39,6 +37,8 @@ import java.util.Random;
 import de.t_dankworth.secscanqr.R;
 import de.t_dankworth.secscanqr.util.GeneralHandler;
 
+import de.t_dankworth.secscanqr.util.MyAppCompatActivity;
+
 /**
  * Created by Thore Dankworth
  * Last Update: 14.03.2021
@@ -47,7 +47,7 @@ import de.t_dankworth.secscanqr.util.GeneralHandler;
  * This class is all about showing the QR Code/Barcode and give the opportunity to save them
  */
 
-public class GeneratorResultActivity extends AppCompatActivity {
+public class GeneratorResultActivity extends MyAppCompatActivity {
 
     ImageView codeImage;
     Button btnSave, btnShare;
@@ -236,9 +236,5 @@ public class GeneratorResultActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQ_EXTERNAL_STORAGE_PERMISSION);
         }
     }
-
-    public boolean onOptionsItemSelected(MenuItem item){
-        finish();
-        return true;
-    }
+    
 }
